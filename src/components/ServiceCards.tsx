@@ -36,7 +36,7 @@ const services = [
 
 const ServiceCards = () => {
   return (
-    <section className="py-16 px-4">
+    <section id="services" className="py-16 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <Card key={index} className="group relative overflow-hidden h-[400px] transition-all duration-300">
@@ -56,7 +56,10 @@ const ServiceCards = () => {
                 <p className="mb-4 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {service.description}
                 </p>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+                <Button 
+                  variant="outline" 
+                  className="bg-accent hover:bg-accent/90 text-white border-none"
+                >
                   LÄS MER
                 </Button>
               </div>
