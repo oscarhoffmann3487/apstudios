@@ -1,11 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-sm">
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${
+      isScrolled ? "bg-white text-black" : "bg-transparent text-white"
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -23,25 +35,25 @@ const Navbar = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 to="/"
-                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium"
+                className="hover:text-orange-500 px-3 py-2 rounded-md text-sm font-medium"
               >
                 HEM
               </Link>
               <Link
                 to="/tjanster"
-                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium"
+                className="hover:text-orange-500 px-3 py-2 rounded-md text-sm font-medium"
               >
                 TJÄNSTER
               </Link>
               <Link
                 to="/projekt"
-                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium"
+                className="hover:text-orange-500 px-3 py-2 rounded-md text-sm font-medium"
               >
                 PROJEKT
               </Link>
               <a
                 href="#contact"
-                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium"
+                className="hover:text-orange-500 px-3 py-2 rounded-md text-sm font-medium"
               >
                 KONTAKT
               </a>
@@ -50,7 +62,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md focus:outline-none"
             >
               <span className="sr-only">Öppna meny</span>
               {!isOpen ? (
@@ -90,28 +102,30 @@ const Navbar = () => {
       </div>
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black">
+          <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 ${
+            isScrolled ? "bg-white" : "bg-black"
+          }`}>
             <Link
               to="/"
-              className="text-white hover:text-gray-300 block px-3 py-2 rounded-md text-base font-medium"
+              className="hover:text-orange-500 block px-3 py-2 rounded-md text-base font-medium"
             >
               HEM
             </Link>
             <Link
               to="/tjanster"
-              className="text-white hover:text-gray-300 block px-3 py-2 rounded-md text-base font-medium"
+              className="hover:text-orange-500 block px-3 py-2 rounded-md text-base font-medium"
             >
               TJÄNSTER
             </Link>
             <Link
               to="/projekt"
-              className="text-white hover:text-gray-300 block px-3 py-2 rounded-md text-base font-medium"
+              className="hover:text-orange-500 block px-3 py-2 rounded-md text-base font-medium"
             >
               PROJEKT
             </Link>
             <a
               href="#contact"
-              className="text-white hover:text-gray-300 block px-3 py-2 rounded-md text-base font-medium"
+              className="hover:text-orange-500 block px-3 py-2 rounded-md text-base font-medium"
             >
               KONTAKT
             </a>
