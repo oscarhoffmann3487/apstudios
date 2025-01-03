@@ -67,7 +67,7 @@ const ProjectShowcase = () => {
   return (
     <section className="py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">ETT URVAL AV VÅRA UPPDRAG</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">ETT URVAL AV VÅRA UPPDRAG</h2>
         <div className="space-y-16">
           {projects.map((project, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -79,15 +79,15 @@ const ProjectShowcase = () => {
                 />
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-8">{project.title}</h3>
+                <h3 className="text-2xl font-bold mb-8 text-gray-900">{project.title}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                   <div>
-                    <h4 className="font-bold mb-2">SYFTE</h4>
-                    <p className="text-sm">{project.syfte}</p>
+                    <h4 className="font-bold mb-2 text-gray-900">SYFTE</h4>
+                    <p className="text-sm text-gray-700">{project.syfte}</p>
                   </div>
                   <div>
-                    <h4 className="font-bold mb-2">FAKTA</h4>
-                    <ul className="text-sm space-y-1">
+                    <h4 className="font-bold mb-2 text-gray-900">FAKTA</h4>
+                    <ul className="text-sm space-y-1 text-gray-700">
                       {Object.entries(project.fakta).map(([key, value]) => (
                         <li key={key}>
                           <span className="font-medium">{key}:</span> {value}
@@ -96,16 +96,16 @@ const ProjectShowcase = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-bold mb-2">LEVERANS</h4>
-                    <ul className="text-sm space-y-1">
+                    <h4 className="font-bold mb-2 text-gray-900">LEVERANS</h4>
+                    <ul className="text-sm space-y-1 text-gray-700">
                       {project.leverans.map((item, i) => (
                         <li key={i}>{item}</li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-bold mb-2">KUND</h4>
-                    <p className="text-sm">{project.kund}</p>
+                    <h4 className="font-bold mb-2 text-gray-900">KUND</h4>
+                    <p className="text-sm text-gray-700">{project.kund}</p>
                     <button 
                       className="mt-4 px-6 py-2 bg-accent text-accent-foreground rounded hover:bg-accent/90 transition-colors"
                     >

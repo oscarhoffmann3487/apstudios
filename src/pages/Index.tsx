@@ -4,6 +4,7 @@ import ServiceCards from "@/components/ServiceCards";
 import ModelShowcase from "@/components/ModelShowcase";
 import ProjectShowcase from "@/components/ProjectShowcase";
 import Testimonials from "@/components/Testimonials";
+import References from "@/components/References";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <ModelShowcase />
       <ProjectShowcase />
       <Testimonials />
+      <References />
       <Footer />
     </div>
   );
