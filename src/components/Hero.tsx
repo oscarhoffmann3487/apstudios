@@ -1,8 +1,5 @@
 import { Button } from "@/components/ui/button";
 import ContactForm from "./ContactForm";
-import ServiceCards from "./ServiceCards";
-import ModelShowcase from "./ModelShowcase";
-import ProjectShowcase from "./ProjectShowcase";
 
 const Hero = () => {
   const services = [
@@ -63,10 +60,6 @@ const Hero = () => {
           </div>
         </div>
       </section>
-
-      <ServiceCards />
-      <ModelShowcase />
-      <ProjectShowcase />
     </>
   );
 };

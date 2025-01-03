@@ -35,25 +35,25 @@ const Navbar = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 to="/"
-                className="hover:text-orange-500 px-3 py-2 rounded-md text-sm font-medium"
+                className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
               >
                 HEM
               </Link>
-              <Link
-                to="/tjanster"
-                className="hover:text-orange-500 px-3 py-2 rounded-md text-sm font-medium"
+              <a
+                href="#services"
+                className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
               >
                 TJÄNSTER
-              </Link>
+              </a>
               <Link
                 to="/projekt"
-                className="hover:text-orange-500 px-3 py-2 rounded-md text-sm font-medium"
+                className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
               >
                 PROJEKT
               </Link>
               <a
                 href="#contact"
-                className="hover:text-orange-500 px-3 py-2 rounded-md text-sm font-medium"
+                className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
               >
                 KONTAKT
               </a>
@@ -107,25 +107,25 @@ const Navbar = () => {
           }`}>
             <Link
               to="/"
-              className="hover:text-orange-500 block px-3 py-2 rounded-md text-base font-medium"
+              className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
             >
               HEM
             </Link>
-            <Link
-              to="/tjanster"
-              className="hover:text-orange-500 block px-3 py-2 rounded-md text-base font-medium"
+            <a
+              href="#services"
+              className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
             >
               TJÄNSTER
-            </Link>
+            </a>
             <Link
               to="/projekt"
-              className="hover:text-orange-500 block px-3 py-2 rounded-md text-base font-medium"
+              className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
             >
               PROJEKT
             </Link>
             <a
               href="#contact"
-              className="hover:text-orange-500 block px-3 py-2 rounded-md text-base font-medium"
+              className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
             >
               KONTAKT
             </a>
