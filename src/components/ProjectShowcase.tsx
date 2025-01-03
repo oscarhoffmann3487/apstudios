@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-
 const projects = [
   {
     title: "BLAIKENGRUVAN",
@@ -108,11 +106,11 @@ const ProjectShowcase = () => {
                   <div>
                     <h4 className="font-bold mb-2">KUND</h4>
                     <p className="text-sm">{project.kund}</p>
-                    <Button 
-                      className="mt-4 bg-accent hover:bg-accent/90 text-white"
+                    <button 
+                      className="mt-4 px-6 py-2 bg-accent text-accent-foreground rounded hover:bg-accent/90 transition-colors"
                     >
                       LÄS MER
-                    </Button>
+                    </button>
                   </div>
                 </div>
               </div>
