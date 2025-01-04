@@ -40,7 +40,7 @@ const Navbar = () => {
                 <img
                   src="/lovable-uploads/50c45d71-bc8c-431f-bb8f-77f2b8eb8cf1.png"
                   alt="APstudios"
-                  className="h-8"
+                  className="h-10 w-auto" // Increased from h-8
                 />
               </Link>
             </div>

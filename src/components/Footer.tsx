@@ -15,7 +15,7 @@ const Footer = () => {
           <img 
             src="/lovable-uploads/80657fb0-a28a-4802-96f9-f7cee84e4c7d.png" 
             alt="AP Studios Logo" 
-            className="h-12 mx-auto mb-4"
+            className="h-16 mx-auto mb-4" // Increased from h-12
           />
           <p className="text-sm text-gray-400">© 2015 APstudios - Org nr: 990203-6475</p>
         </div>
