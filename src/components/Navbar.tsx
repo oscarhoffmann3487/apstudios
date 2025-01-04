@@ -53,33 +53,27 @@ const Navbar = () => {
               >
                 HEM
               </Link>
-              <div className="relative">
+              <div className="relative group">
                 <button
                   className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium inline-flex items-center"
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
                 >
                   TJÄNSTER <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-                {isServicesOpen && (
-                  <div
-                    className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
-                  >
-                    <div className="py-1">
-                      {services.map((service) => (
-                        <Link
-                          key={service.path}
-                          to={service.path}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
+                <div
+                  className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                >
+                  <div className="py-1">
+                    {services.map((service) => (
+                      <Link
+                        key={service.path}
+                        to={service.path}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
                   </div>
-                )}
+                </div>
               </div>
               <Link
                 to="/projekt"

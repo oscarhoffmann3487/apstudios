@@ -18,12 +18,6 @@ const Footer = () => {
             className="h-12 mx-auto mb-4"
           />
           <p className="text-sm text-gray-400">© 2015 APstudios - Org nr: 990203-6475</p>
-          <p className="text-sm text-gray-400 mt-4">
-            Vi är anslutna till det rikstäckande nätverket för drönartjänster:{" "}
-            <a href="http://Platskoll.se" className="text-white hover:underline">
-              Platskoll.se
-            </a>
-          </p>
         </div>
 
         <div>
