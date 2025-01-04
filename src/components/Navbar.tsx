@@ -1,9 +1,23 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
+
+const services = [
+  { name: "FOTO", path: "/tjanster/foto" },
+  { name: "FILM", path: "/tjanster/film" },
+  { name: "360 BILDER", path: "/tjanster/360-bilder" },
+  { name: "YTMODELLER", path: "/tjanster/ytmodeller" },
+  { name: "3D MODELLER", path: "/tjanster/3d-modeller" },
+  { name: "ORTOFOTON", path: "/tjanster/ortofoton" },
+  { name: "VOLYMBERÄKNINGAR", path: "/tjanster/volymberakningar" },
+  { name: "INSPEKTIONER", path: "/tjanster/inspektioner" },
+  { name: "INMÄTNINGAR", path: "/tjanster/inmatningar" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +36,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link to="/">
+              <Link to="/#top">
                 <img
                   src="/lovable-uploads/ce2ca53e-a1e4-4c43-a1eb-32f662a7f450.png"
                   alt="APstudios"
@@ -34,17 +48,39 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
-                to="/"
+                to="/#top"
                 className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
               >
                 HEM
               </Link>
-              <a
-                href="#services"
-                className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
-              >
-                TJÄNSTER
-              </a>
+              <div className="relative">
+                <button
+                  className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium inline-flex items-center"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  TJÄNSTER <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                {isServicesOpen && (
+                  <div
+                    className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                    onMouseEnter={() => setIsServicesOpen(true)}
+                    onMouseLeave={() => setIsServicesOpen(false)}
+                  >
+                    <div className="py-1">
+                      {services.map((service) => (
+                        <Link
+                          key={service.path}
+                          to={service.path}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
               <Link
                 to="/projekt"
                 className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
@@ -106,26 +142,33 @@ const Navbar = () => {
             isScrolled ? "bg-white" : "bg-black"
           }`}>
             <Link
-              to="/"
+              to="/#top"
               className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => setIsOpen(false)}
             >
               HEM
             </Link>
-            <a
-              href="#services"
-              className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
-            >
-              TJÄNSTER
-            </a>
+            {services.map((service) => (
+              <Link
+                key={service.path}
+                to={service.path}
+                className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                {service.name}
+              </Link>
+            ))}
             <Link
               to="/projekt"
               className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => setIsOpen(false)}
             >
               PROJEKT
             </Link>
             <a
               href="#contact"
               className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => setIsOpen(false)}
             >
               KONTAKT
             </a>
