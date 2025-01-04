@@ -16,32 +16,41 @@ const Hero = () => {
 
   return (
     <>
-      <div className="relative h-screen w-full">
+      <div className="relative min-h-screen w-full">
         {/* Placeholder video background */}
         <div className="absolute inset-0 bg-black">
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30" />
         </div>
 
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-8 text-center">
-            Effektiva lösningar med drönare
-          </h1>
-          
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4 max-w-4xl mb-12">
-            {services.map((service, index) => (
-              <span
-                key={index}
-                className="text-sm md:text-base font-medium opacity-90"
-              >
-                {service}
-                {index < services.length - 1 && (
-                  <span className="mx-2 opacity-50">/</span>
-                )}
-              </span>
-            ))}
+        <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4 pt-20 pb-12">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h1 className="text-4xl md:text-6xl font-bold mb-8">
+              Effektiva lösningar med drönare
+            </h1>
+            
+            <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
+              {services.map((service, index) => (
+                <span
+                  key={index}
+                  className="text-sm md:text-base font-medium opacity-90"
+                >
+                  {service}
+                  {index < services.length - 1 && (
+                    <span className="mx-2 opacity-50">/</span>
+                  )}
+                </span>
+              ))}
+            </div>
+
+            <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
+              Vi erbjuder professionella drönartjänster för alla typer av projekt. 
+              Kontakta oss för en kostnadsfri konsultation.
+            </p>
           </div>
 
-          <ContactForm />
+          <div className="w-full max-w-md mx-auto">
+            <ContactForm />
+          </div>
         </div>
       </div>
 

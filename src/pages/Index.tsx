@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ServiceCards from "@/components/ServiceCards";
@@ -8,6 +9,10 @@ import References from "@/components/References";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
