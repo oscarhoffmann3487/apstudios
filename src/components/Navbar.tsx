@@ -38,7 +38,7 @@ const Navbar = () => {
             <div className="flex-shrink-0">
               <Link to="/#top">
                 <img
-                  src="/lovable-uploads/ce2ca53e-a1e4-4c43-a1eb-32f662a7f450.png"
+                  src="/lovable-uploads/50c45d71-bc8c-431f-bb8f-77f2b8eb8cf1.png"
                   alt="APstudios"
                   className="h-8"
                 />

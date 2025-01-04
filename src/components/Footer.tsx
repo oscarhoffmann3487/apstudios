@@ -13,7 +13,7 @@ const Footer = () => {
         
         <div className="text-center">
           <img 
-            src="/lovable-uploads/ce2ca53e-a1e4-4c43-a1eb-32f662a7f450.png" 
+            src="/lovable-uploads/80657fb0-a28a-4802-96f9-f7cee84e4c7d.png" 
             alt="AP Studios Logo" 
             className="h-12 mx-auto mb-4"
           />
