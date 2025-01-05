@@ -17,15 +17,15 @@ const Footer = () => {
             alt="AP Studios Logo" 
             className="h-20 mx-auto mb-4"
           />
+          <p className="text-sm text-gray-400 mb-4">© 2015 APstudios - Org nr: 990203-6475</p>
           <a 
             href="https://youtube.com/@apstudios1335?si=qW6bvDQydIKf7IIL" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="hover:text-accent transition-colors mb-4"
+            className="hover:text-accent transition-colors"
           >
             <Youtube size={24} />
           </a>
-          <p className="text-sm text-gray-400">© 2015 APstudios - Org nr: 990203-6475</p>
         </div>
 
         <div>

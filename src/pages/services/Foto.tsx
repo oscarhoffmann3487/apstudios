@@ -1,10 +1,77 @@
+import { Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import ServicePage from "@/components/ServicePage";
 
-const Foto = () => (
-  <ServicePage 
-    title="FOTO" 
-    description="Professionell fotografering med drönare för att fånga unika perspektiv och högkvalitativa bilder."
-  />
+const ServiceSection = ({ title, description, imageSrc }: { title: string; description: string; imageSrc: string }) => (
+  <div className="mb-16">
+    <div className="bg-black/80 p-8 rounded-lg">
+      <h3 className="text-2xl font-bold mb-4 text-white">{title}</h3>
+      <div className="grid md:grid-cols-2 gap-8 items-center">
+        <p className="text-gray-300">{description}</p>
+        <img src={imageSrc} alt={title} className="rounded-lg w-full h-64 object-cover" />
+      </div>
+    </div>
+  </div>
 );
+
+const Foto = () => {
+  const sections = [
+    {
+      title: "UTSIKTSFOTO",
+      description: "Visa utsikten i nyproduktion genom att låta drönaren flyga upp till den planerade balkongens höjd och ta bilder. Ett balkongräcke kan även monteras i bilden för en mer verklighetstrogen känsla. Bilderna kan tas i olika väderstreck.",
+      imageSrc: "/path-to-utsiktsfoto-image.jpg"
+    },
+    {
+      title: "FOTOMONTAGE",
+      description: "Fotomontage lämpar sig, precis som utsiktsfoton, vid planerad bebyggelse av olika slag. Det är ofta användbart att se hur ny bebyggelse kommer passa in i miljön redan i förväg. Fotomontage är ett bra alternativ till 3D-modeller då det är enklare och lämpar sig bättre för stora områden.",
+      imageSrc: "/path-to-fotomontage-image.jpg"
+    },
+    {
+      title: "FASTIGHETSFOTO",
+      description: "Vi fotograferar alla typer av kommersiella och privata fastigheter, både från drönare och från marken. Vi kan lyfta det ni tycker är viktiga nyckelpunkter för fastigheten såsom infrastruktur, kommunikationer och läge.",
+      imageSrc: "/path-to-fastighetsfoto-image.jpg"
+    },
+    {
+      title: "MÄKLARFOTO",
+      description: "Drönarbilder lämpar sig utmärkt för mäklare. Vi kan dokumentera en bostad både inifrån och utifrån med drönare och vanlig kamera. Vi kan även skapa digitala floorplans med 360 tours för att på ett interaktivt sätt kunna visa upp bostaden.",
+      imageSrc: "/path-to-maklarfoto-image.jpg"
+    },
+    {
+      title: "EVENEMANG",
+      description: "Vi kan hjälpa till med fotografering av ditt evenemang så att det förevigas. Vi kan både fotografera från marken och från drönare.",
+      imageSrc: "/path-to-evenemang-image.jpg"
+    },
+    {
+      title: "LANDSKAPSFOTO",
+      description: "Har du ett vackert motiv du vill fotografera? Vi fotar landskap och arkitektur på beställning.",
+      imageSrc: "/path-to-landskapsfoto-image.jpg"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-black">
+      <ServicePage 
+        title="FLYGFOTO" 
+        description="Med drönarbilder kan du skildra olika motiv från ett helt nytt perspektiv. Detta öppnar upp möjligheter i en mängd olika branscher. I fastighetsbranschen är drönarbilder väldigt relevant då man får ett helhetsintryck av både tomt och byggnad. Genom att ta utsiktsfoton kan man vid nyproduktion marknadsföra balkongutsikter från olika våningsplan. Vi kan även fota interiör från marken för att komplettera drönarbilderna, vilket passar perfekt för exempelvis mäklare."
+      />
+      
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        {sections.map((section, index) => (
+          <ServiceSection key={index} {...section} />
+        ))}
+        
+        <div className="text-center mt-16">
+          <h3 className="text-2xl font-bold text-white mb-8">Har du behov av våra tjänster eller en egen idé?</h3>
+          <a href="mailto:info@apstudios.se">
+            <Button className="bg-primary hover:bg-primary/90 text-white font-medium py-6 px-8">
+              <Mail className="mr-2" />
+              Kontakta oss
+            </Button>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Foto;
