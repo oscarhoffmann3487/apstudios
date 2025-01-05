@@ -53,14 +53,14 @@ const ServiceCards = () => {
                 alt={service.title}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/50 group-hover:bg-black/80 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-transparent group-hover:bg-black/80 transition-colors duration-300" />
             </div>
             
-            <div className="relative h-full flex flex-col justify-between p-6 text-white">
+            <div className="relative h-full flex flex-col justify-between p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <h3 className="text-2xl font-bold">{service.title}</h3>
               
-              <div className="transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <p className="mb-4 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div>
+                <p className="mb-4 text-sm leading-relaxed">
                   {service.description}
                 </p>
                 <Link to={service.path}>

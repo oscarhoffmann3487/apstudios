@@ -16,7 +16,8 @@ const References = () => {
     { src: "/lovable-uploads/11d83e45-618d-45bb-9dc2-511e20d01b16.png", alt: "Film Stockholm Festival" },
     { src: "/lovable-uploads/c435ff25-5517-49f0-8132-963c7d90e9e7.png", alt: "Ness, Risan & Partners" },
     { src: "/lovable-uploads/0444899f-32a5-4dda-8d77-f1753183c42e.png", alt: "Agtech 2030" },
-    { src: "/lovable-uploads/d4451a1c-fd1b-4da4-a8af-fb01ad3645d4.png", alt: "Future Aerial Innovations" }
+    { src: "/lovable-uploads/d4451a1c-fd1b-4da4-a8af-fb01ad3645d4.png", alt: "Future Aerial Innovations" },
+    { src: "/lovable-uploads/bc06426d-5aeb-4be2-bf00-6222c3fa98cd.png", alt: "Warpin" }
   ];
 
   return (

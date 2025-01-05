@@ -11,12 +11,20 @@ const Footer = () => {
           </p>
         </div>
         
-        <div className="text-center">
+        <div className="text-center flex flex-col items-center">
           <img 
             src="/lovable-uploads/80657fb0-a28a-4802-96f9-f7cee84e4c7d.png" 
             alt="AP Studios Logo" 
             className="h-20 mx-auto mb-4"
           />
+          <a 
+            href="https://youtube.com/@apstudios1335?si=qW6bvDQydIKf7IIL" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-accent transition-colors mb-4"
+          >
+            <Youtube size={24} />
+          </a>
           <p className="text-sm text-gray-400">© 2015 APstudios - Org nr: 990203-6475</p>
         </div>
 
@@ -29,9 +37,6 @@ const Footer = () => {
             <p>Tel: 072-544 88 60</p>
             <div className="flex items-center justify-between mt-4">
               <a href="/gdpr" className="hover:underline">GDPR</a>
-              <a href="https://youtube.com" className="hover:text-accent transition-colors">
-                <Youtube size={24} />
-              </a>
             </div>
           </div>
         </div>

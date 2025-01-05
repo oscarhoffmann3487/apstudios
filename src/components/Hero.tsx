@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import ContactForm from "./ContactForm";
+import { Mail } from "lucide-react";
 
 const Hero = () => {
   const services = [
@@ -17,7 +17,6 @@ const Hero = () => {
   return (
     <>
       <div className="relative min-h-screen w-full">
-        {/* Placeholder video background */}
         <div className="absolute inset-0 bg-black">
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30" />
         </div>
@@ -42,14 +41,17 @@ const Hero = () => {
               ))}
             </div>
 
-            <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-8">
               Vi erbjuder professionella drönartjänster för alla typer av projekt. 
               Kontakta oss för en kostnadsfri konsultation.
             </p>
-          </div>
 
-          <div className="w-full max-w-md mx-auto">
-            <ContactForm />
+            <a href="mailto:info@apstudios.se">
+              <Button className="bg-primary hover:bg-primary/90 text-white font-medium py-6 px-8">
+                <Mail className="mr-2" />
+                Kontakta oss
+              </Button>
+            </a>
           </div>
         </div>
       </div>
