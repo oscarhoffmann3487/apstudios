@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
 const services = [
@@ -17,7 +17,7 @@ const services = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +28,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/#top');
+    window.scrollTo(0, 0);
+  };
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled ? "bg-white text-black" : "bg-transparent text-white"
@@ -36,13 +42,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link to="/#top">
+              <a href="/#top" onClick={handleLogoClick}>
                 <img
                   src="/lovable-uploads/50c45d71-bc8c-431f-bb8f-77f2b8eb8cf1.png"
                   alt="APstudios"
-                  className="h-10 w-auto" // Increased from h-8
+                  className="h-12 w-auto"
                 />
-              </Link>
+              </a>
             </div>
           </div>
           <div className="hidden md:block">

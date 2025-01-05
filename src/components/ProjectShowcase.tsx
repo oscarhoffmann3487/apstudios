@@ -1,7 +1,7 @@
 const projects = [
   {
     title: "BLAIKENGRUVAN",
-    image: "/lovable-uploads/27ebd10e-4dee-45bf-99e1-b4267b6b7764.png",
+    image: "/lovable-uploads/c01f5521-3595-4db0-81df-f077b17c7643.png",
     syfte: "Syftet med uppdraget var att ta fram underlag för en pågående miljöåtgärd i Blaikengruvan i Sorsele kommun. Kunden ville bland annat göra beräkningar av olika slag samt simulera hur vattennivån i dagbrottet ändrade sig givet en viss vattenmängd.",
     fakta: {
       "Område": "Blaiken",
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     title: "ENSKEDE GÅRDS GYMNASIUM",
-    image: "/lovable-uploads/25c39bf7-0647-46ed-b016-87f9b1dc6a64.png",
+    image: "/lovable-uploads/6c8a31ee-ec6d-4bea-ac7e-168bf23d9d88.png",
     syfte: "Syftet med uppdraget var att samla in material över tak och fasader för att skapa ett punktmoln som kunde kombineras med LIDAR-data. Med hjälp av detta kunde kunden skapa en komplett 3D modell och använda för detaljinspektion av fastigheten.",
     fakta: {
       "Område": "Enskede",
@@ -43,7 +43,7 @@ const projects = [
   },
   {
     title: "GRÄNSÖ VÄSTERVIK",
-    image: "/lovable-uploads/508c6e20-88e8-4a10-bc07-83449675c045.png",
+    image: "/lovable-uploads/9845fc1b-8224-40ec-92e9-9222d770ffca.png",
     syfte: "Syftet med uppdraget var att ta fram en modell över en del av Gränsö i Västervik. Modellen skulle användas som en testbädd i olika forskningsprojekt för att kunna testa simuleringar.",
     fakta: {
       "Område": "Västervik",
