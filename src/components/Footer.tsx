@@ -15,7 +15,7 @@ const Footer = () => {
           <img 
             src="/lovable-uploads/80657fb0-a28a-4802-96f9-f7cee84e4c7d.png" 
             alt="AP Studios Logo" 
-            className="h-16 mx-auto mb-4" // Increased from h-12
+            className="h-20 mx-auto mb-4"
           />
           <p className="text-sm text-gray-400">© 2015 APstudios - Org nr: 990203-6475</p>
         </div>
@@ -25,7 +25,7 @@ const Footer = () => {
           <div className="space-y-2 text-sm text-gray-300">
             <p>Adress: Kunskapslänken 94</p>
             <p>Postadress: 583 28 Linköping</p>
-            <p>Email: info@apstudios.se</p>
+            <p>Email: <a href="mailto:info@apstudios.se" className="hover:underline">info@apstudios.se</a></p>
             <p>Tel: 072-544 88 60</p>
             <div className="flex items-center justify-between mt-4">
               <a href="/gdpr" className="hover:underline">GDPR</a>
