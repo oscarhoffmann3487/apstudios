@@ -1,27 +1,4 @@
-import { Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import ServicePage from "@/components/ServicePage";
-
-const ServiceSection = ({ title, description, imageSrc }: { title: string; description: string; imageSrc: string }) => (
-  <div className="mb-16">
-    <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-      <h3 className="text-2xl font-bold mb-4 text-black">{title}</h3>
-      <div className="grid md:grid-cols-2 gap-8 items-center">
-        <p className="text-gray-700">{description}</p>
-        <div className="aspect-square w-full overflow-hidden rounded-lg">
-          <img src={imageSrc} alt={title} className="w-full h-full object-cover" />
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-const slideImages = [
-  "/lovable-uploads/14c55413-16d4-41fa-9b29-4fe1e1aae90a.png",
-  "/lovable-uploads/f84651d6-c6ac-40ba-b19d-44d0e6800832.png",
-  "/lovable-uploads/b6a00063-356f-4af0-98b6-bf641c7def8d.png",
-  "/lovable-uploads/7da84fa7-af98-4786-b8ae-0486a9d49c10.png"
-];
 
 const sections = [
   {
@@ -59,24 +36,33 @@ const sections = [
 const Foto = () => {
   return (
     <ServicePage 
-      title="FLYGFOTO" 
+      title="FOTO" 
       description="Med drönarbilder kan du skildra olika motiv från ett helt nytt perspektiv. Detta öppnar upp möjligheter i en mängd olika branscher. I fastighetsbranschen är drönarbilder väldigt relevant då man får ett helhetsintryck av både tomt och byggnad. Genom att ta utsiktsfoton kan man vid nyproduktion marknadsföra balkongutsikter från olika våningsplan. Vi kan även fota interiör från marken för att komplettera drönarbilderna, vilket passar perfekt för exempelvis mäklare."
-      images={slideImages}
+      images={[
+        "/lovable-uploads/14c55413-16d4-41fa-9b29-4fe1e1aae90a.png",
+        "/lovable-uploads/f84651d6-c6ac-40ba-b19d-44d0e6800832.png",
+        "/lovable-uploads/b6a00063-356f-4af0-98b6-bf641c7def8d.png",
+        "/lovable-uploads/7da84fa7-af98-4786-b8ae-0486a9d49c10.png"
+      ]}
     >
-      <div className="space-y-16 bg-white text-black p-8">
+      <div className="space-y-12 bg-white text-black p-8">
         {sections.map((section, index) => (
-          <ServiceSection key={index} {...section} />
+          <div key={index} className="border-b border-gray-200 pb-12 last:border-b-0">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl font-bold mb-4">{section.title}</h3>
+                <p className="text-gray-700">{section.description}</p>
+              </div>
+              <div className="aspect-[3/4] w-full max-w-md mx-auto overflow-hidden rounded-lg">
+                <img 
+                  src={section.imageSrc} 
+                  alt={section.title} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
         ))}
-        
-        <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-black mb-8">Har du behov av våra tjänster eller en egen idé?</h3>
-          <a href="mailto:info@apstudios.se">
-            <Button className="bg-primary hover:bg-primary/90 text-white font-medium py-6 px-8">
-              <Mail className="mr-2" />
-              Kontakta oss
-            </Button>
-          </a>
-        </div>
       </div>
     </ServicePage>
   );
