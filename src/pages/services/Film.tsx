@@ -1,5 +1,17 @@
 import ServicePage from "@/components/ServicePage";
 
+const videos = [
+  "Fv0v4tLW1P8",
+  "T_EyDPrXtI0",
+  "yrbiW0VQkmY",
+  "NUzeYX3o8zo",
+  "Wy2UeGV86Ls",
+  "NVjkYpaXQb8",
+  "03VGquYAuf0",
+  "RzyE5kg0hCY",
+  "Ve3x7bd2nfw"
+];
+
 const Film = () => {
   return (
     <ServicePage 
@@ -9,10 +21,19 @@ const Film = () => {
       <div className="bg-white text-black p-8">
         <h2 className="text-2xl font-bold mb-8">Våra Produktioner</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Video gallery placeholders - will be replaced with actual YouTube embeds */}
-          {[1, 2, 3, 4, 5, 6].map((index) => (
-            <div key={index} className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-              <p className="text-gray-500">Video {index}</p>
+          {videos.map((videoId, index) => (
+            <div key={index} className="aspect-video w-full">
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${videoId}`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="rounded-lg shadow-lg"
+              />
             </div>
           ))}
         </div>

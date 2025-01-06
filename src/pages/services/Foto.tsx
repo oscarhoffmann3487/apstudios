@@ -53,7 +53,7 @@ const Foto = () => {
                 <h3 className="text-2xl font-bold mb-4">{section.title}</h3>
                 <p className="text-gray-700">{section.description}</p>
               </div>
-              <div className="aspect-[3/4] w-full max-w-md mx-auto overflow-hidden rounded-lg">
+              <div className="aspect-[4/3] w-full max-w-2xl mx-auto overflow-hidden rounded-lg">
                 <img 
                   src={section.imageSrc} 
                   alt={section.title} 
