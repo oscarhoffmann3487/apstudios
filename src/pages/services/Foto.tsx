@@ -15,6 +15,13 @@ const ServiceSection = ({ title, description, imageSrc }: { title: string; descr
 );
 
 const Foto = () => {
+  const slideImages = [
+    "/lovable-uploads/14c55413-16d4-41fa-9b29-4fe1e1aae90a.png",
+    "/lovable-uploads/f84651d6-c6ac-40ba-b19d-44d0e6800832.png",
+    "/lovable-uploads/b6a00063-356f-4af0-98b6-bf641c7def8d.png",
+    "/lovable-uploads/7da84fa7-af98-4786-b8ae-0486a9d49c10.png"
+  ];
+
   const sections = [
     {
       title: "UTSIKTSFOTO",
@@ -49,13 +56,12 @@ const Foto = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black">
-      <ServicePage 
-        title="FLYGFOTO" 
-        description="Med drönarbilder kan du skildra olika motiv från ett helt nytt perspektiv. Detta öppnar upp möjligheter i en mängd olika branscher. I fastighetsbranschen är drönarbilder väldigt relevant då man får ett helhetsintryck av både tomt och byggnad. Genom att ta utsiktsfoton kan man vid nyproduktion marknadsföra balkongutsikter från olika våningsplan. Vi kan även fota interiör från marken för att komplettera drönarbilderna, vilket passar perfekt för exempelvis mäklare."
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 py-16">
+    <ServicePage 
+      title="FLYGFOTO" 
+      description="Med drönarbilder kan du skildra olika motiv från ett helt nytt perspektiv. Detta öppnar upp möjligheter i en mängd olika branscher. I fastighetsbranschen är drönarbilder väldigt relevant då man får ett helhetsintryck av både tomt och byggnad. Genom att ta utsiktsfoton kan man vid nyproduktion marknadsföra balkongutsikter från olika våningsplan. Vi kan även fota interiör från marken för att komplettera drönarbilderna, vilket passar perfekt för exempelvis mäklare."
+      images={slideImages}
+    >
+      <div className="space-y-16">
         {sections.map((section, index) => (
           <ServiceSection key={index} {...section} />
         ))}
@@ -70,7 +76,7 @@ const Foto = () => {
           </a>
         </div>
       </div>
-    </div>
+    </ServicePage>
   );
 };
 
