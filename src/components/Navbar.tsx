@@ -36,12 +36,11 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   };
 
+  const bgColor = isHome ? (isScrolled ? "bg-white" : "bg-transparent") : "bg-white";
   const textColor = isHome ? (isScrolled ? "text-black" : "text-white") : "text-black";
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? "bg-white" : "bg-transparent"
-    } ${textColor}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${bgColor} ${textColor}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
