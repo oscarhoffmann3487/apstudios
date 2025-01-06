@@ -13,7 +13,7 @@ const ServicePage = ({ title, description, images, children }: ServicePageProps)
   return (
     <div className="min-h-screen flex flex-col bg-black">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow pt-16">
         {images && images.length > 0 && (
           <div className="w-full h-[60vh] relative mb-8">
             <Carousel className="w-full h-full">

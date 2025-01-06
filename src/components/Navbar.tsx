@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
 const services = [
@@ -18,6 +18,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,10 +36,12 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   };
 
+  const textColor = isHome ? (isScrolled ? "text-black" : "text-white") : "text-black";
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? "bg-white text-black" : "bg-transparent text-white"
-    }`}>
+      isScrolled ? "bg-white" : "bg-transparent"
+    } ${textColor}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
