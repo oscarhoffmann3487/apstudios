@@ -7,6 +7,7 @@ import Ytmodeller from "./pages/services/Ytmodeller";
 import Modeller3D from "./pages/services/Modeller3D";
 import Volymberakningar from "./pages/services/Volymberakningar";
 import Inspektioner from "./pages/services/Inspektioner";
+import Projects from "./pages/Projects";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/tjanster/3d-modeller" element={<Modeller3D />} />
         <Route path="/tjanster/volymberakningar" element={<Volymberakningar />} />
         <Route path="/tjanster/inspektioner" element={<Inspektioner />} />
+        <Route path="/projekt" element={<Projects />} />
       </Routes>
     </Router>
   );
