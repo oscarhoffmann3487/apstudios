@@ -3,15 +3,12 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
 const services = [
-  { name: "FOTO", path: "/tjanster/foto" },
-  { name: "FILM", path: "/tjanster/film" },
-  { name: "360 BILDER", path: "/tjanster/360-bilder" },
+  { name: "FLYGFOTO", path: "/tjanster/foto" },
+  { name: "VIDEOPRODUKTION", path: "/tjanster/film" },
   { name: "YTMODELLER", path: "/tjanster/ytmodeller" },
   { name: "3D MODELLER", path: "/tjanster/3d-modeller" },
-  { name: "ORTOFOTON", path: "/tjanster/ortofoton" },
   { name: "VOLYMBERÄKNINGAR", path: "/tjanster/volymberakningar" },
   { name: "INSPEKTIONER", path: "/tjanster/inspektioner" },
-  { name: "INMÄTNINGAR", path: "/tjanster/inmatningar" },
 ];
 
 const Navbar = () => {
@@ -183,3 +180,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
