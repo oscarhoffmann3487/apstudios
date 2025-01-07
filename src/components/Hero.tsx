@@ -17,10 +17,23 @@ const Hero = () => {
   return (
     <>
       <div className="relative min-h-screen w-full">
-        <div className="absolute inset-0 bg-black">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30" />
-        </div>
+        {/* Background video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/public/lovable-uploads/showreel.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        ></video>
 
+        {/* Black overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30"></div>
+
+        {/* Content */}
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4 pt-20 pb-12">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold mb-8">
