@@ -43,10 +43,10 @@ const services = [
 
 const ServiceCards = () => {
   return (
-    <section id="services" className="py-16 px-4">
+    <section id="services" className="py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
-          <Card key={index} className="group relative overflow-hidden h-[400px] transition-all duration-300">
+          <Card key={index} className="group relative overflow-hidden h-[400px] transition-all duration-300 shadow-lg border-none">
             <div className="absolute inset-0">
               <img
                 src={service.image}
@@ -56,9 +56,13 @@ const ServiceCards = () => {
               <div className="absolute inset-0 bg-transparent group-hover:bg-black/80 transition-colors duration-300" />
             </div>
             
-            <div className="relative h-full flex flex-col justify-between p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h3 className="text-2xl font-bold">{service.title}</h3>
-              
+            {/* Service title (always visible) */}
+            <div className="absolute inset-0 flex items-center justify-center z-10">
+              <h3 className="text-3xl font-bold text-white text-center px-4">{service.title}</h3>
+            </div>
+            
+            {/* Description and button (visible on hover) */}
+            <div className="relative h-full flex flex-col justify-end p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div>
                 <p className="mb-4 text-sm leading-relaxed">
                   {service.description}
