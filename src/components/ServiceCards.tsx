@@ -53,16 +53,17 @@ const ServiceCards = () => {
                 alt={service.title}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-transparent group-hover:bg-black/80 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/80 transition-colors duration-300" />
             </div>
             
-            {/* Service title (always visible) */}
-            <div className="absolute inset-0 flex items-center justify-center z-10">
-              <h3 className="text-3xl font-bold text-white text-center px-4">{service.title}</h3>
+            {/* Service title (always visible with dark overlay) */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <h3 className="text-3xl font-bold text-white text-center px-4 drop-shadow-lg">{service.title}</h3>
             </div>
             
             {/* Description and button (visible on hover) */}
-            <div className="relative h-full flex flex-col justify-end p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute inset-0 flex flex-col justify-between p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 className="text-2xl font-bold">{service.title}</h3>
               <div>
                 <p className="mb-4 text-sm leading-relaxed">
                   {service.description}

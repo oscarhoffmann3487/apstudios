@@ -31,15 +31,15 @@ const Testimonials = () => {
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Vad våra kunder säger</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-white">
-              <CardContent className="p-6 relative">
+            <Card key={index} className="bg-white h-full">
+              <CardContent className="p-8 relative h-full flex flex-col justify-center">
                 <Quote className="absolute top-6 left-6 text-primary/10 w-12 h-12" />
                 <div className="pl-12">
-                  <p className="text-gray-700 mb-4 italic">"{testimonial.quote}"</p>
+                  <p className="text-gray-700 mb-6 italic text-lg leading-relaxed">"{testimonial.quote}"</p>
                   <div className="flex items-center">
                     <div>
                       <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                      <p className="text-sm text-gray-500">{testimonial.title}</p>
+                      <p className="text-sm text-gray-500 capitalize">{testimonial.title}</p>
                     </div>
                   </div>
                 </div>

@@ -17,7 +17,6 @@ const Hero = () => {
   return (
     <>
       <div className="relative min-h-screen w-full">
-        {/* Background video */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
           src="/lovable-uploads/showreel.mp4"
@@ -27,34 +26,31 @@ const Hero = () => {
           playsInline
         ></video>
 
-        {/* Black overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
 
-        {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/20"></div>
 
-        {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-8">
+            <h1 className="text-4xl md:text-6xl font-bold mb-12">
               Effektiva lösningar med drönare
             </h1>
             
-            <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
               {services.map((service, index) => (
                 <span
                   key={index}
-                  className="text-sm md:text-base font-medium opacity-90"
+                  className="text-base md:text-lg font-medium opacity-90"
                 >
                   {service}
                   {index < services.length - 1 && (
-                    <span className="mx-2 opacity-50">/</span>
+                    <span className="mx-3 opacity-50">/</span>
                   )}
                 </span>
               ))}
             </div>
 
-            <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-8">
+            <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-12">
               Vi erbjuder professionella drönartjänster för alla typer av projekt. 
               Kontakta oss för en kostnadsfri konsultation.
             </p>
