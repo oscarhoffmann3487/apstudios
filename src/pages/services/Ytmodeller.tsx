@@ -5,17 +5,17 @@ const sections = [
   {
     title: "ORTOFOTO",
     content: "Vi tar fram ortofoton över allt ifrån små tomter till statsdelar på flera hundra hektar. Ortofotot är högupplöst och georeffererad i erat föredragna koordinatsystem. Med ortofoton kan man exempelvis följa utveckligen på en byggarbetsplats över tid för att säkerhetställa att allt fortlöper enligt plan.",
-    imagePlaceholder: "ortofoto-placeholder.jpg"
+    image: "/lovable-uploads/4e712ef7-a6f2-4da9-aec3-dc83e1e0940b.png"
   },
   {
     title: "DTM",
     content: "En digitala terrängmodell (DTM) fungerar som ett ortofoto men är färgkodat baserat på höjd. Detta gör det lättare att få perspektiv i bilden där man uppfattar djup. Det underlättar även när mätdata ska tas som exempelvis volymberäkningar.",
-    imagePlaceholder: "DTM.jpg"
+    image: "/lovable-uploads/09a0c538-0292-4c48-857a-37c7ad74f50c.png"
   },
   {
     title: "DSM",
     content: "En Digital Ytmodell (DSM) är liksom ett ortofoto och en DTM koordinatsatt. Skillanden är att den visar markytan utan träd, växter, hus eller infrastruktur. Detta är användbart om man planerar att avverka skog och vill kunna beräkna fyllandsmassor på marken under.",
-    imagePlaceholder: "dsm_edited.jpg"
+    image: "/lovable-uploads/eb04d2bc-326a-4099-be2e-aa341247b64a.png"
   },
   {
     title: "KONTURLINJER",
@@ -25,7 +25,7 @@ const sections = [
   {
     title: "INMÄTNING",
     content: "När en 3D modell skapas med drönare krävs det att man mäter in flygstöd för att uppnå hög noggrannhet. Vi kan utföra detta som extern tjänst där vi placerar ut markörer och mäter in i exempelvis SWEREF. Med vår RTK-utrustning vi även mäta in andra objekt såsom tomtgränser vägbanor och höjder.",
-    imagePlaceholder: "inmatning-placeholder.jpg"
+    image: "/lovable-uploads/cda9a75e-9bd6-4b80-9c56-7350fd00c073.png"
   }
 ];
 
@@ -70,9 +70,9 @@ const Ytmodeller = () => {
             </div>
             <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-800">
               <img
-                src={placeholderImages[0]}
+                src={section.image || placeholderImages[0]}
                 alt={section.title}
-                className="w-full h-full object-cover opacity-50"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>

@@ -35,7 +35,9 @@ const Navbar = () => {
 
   const bgColor = isHome ? (isScrolled ? "bg-white" : "bg-transparent") : "bg-white";
   const textColor = isHome ? (isScrolled ? "text-black" : "text-white") : "text-black";
+  const logoSrc = isHome && !isScrolled ? "/lovable-uploads/4ffbab3c-ddab-45a5-b7d8-6faf73292d58.png" : "/lovable-uploads/50c45d71-bc8c-431f-bb8f-77f2b8eb8cf1.png";
 
+  // ... keep existing code (rest of the component remains the same, just update the logo src)
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${bgColor} ${textColor}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +46,7 @@ const Navbar = () => {
             <div className="flex-shrink-0">
               <a href="/#top" onClick={handleLogoClick}>
                 <img
-                  src="/lovable-uploads/50c45d71-bc8c-431f-bb8f-77f2b8eb8cf1.png"
+                  src={logoSrc}
                   alt="APstudios"
                   className="h-12 w-auto"
                 />
@@ -180,4 +182,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
