@@ -15,7 +15,7 @@ const ModelShowcase = () => {
                 onClick={() => setIsLoaded(true)}
                 variant="outline"
                 size="lg"
-                className="gap-2 text-white hover:text-white hover:bg-gray-800"
+                className="gap-2 bg-white text-gray-900 hover:bg-gray-100 hover:text-gray-900 border-white"
               >
                 <Play className="w-6 h-6" />
                 Load 3D Model
