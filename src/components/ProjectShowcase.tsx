@@ -85,25 +85,27 @@ const ProjectShowcase = () => {
                     <h4 className="font-bold mb-2 text-gray-900">SYFTE</h4>
                     <p className="text-sm text-gray-700">{project.syfte}</p>
                   </div>
-                  <div>
-                    <h4 className="font-bold mb-2 text-gray-900">FAKTA</h4>
-                    <ul className="text-sm space-y-1 text-gray-700">
-                      {Object.entries(project.fakta).map(([key, value]) => (
-                        <li key={key}>
-                          <span className="font-medium">{key}:</span> {value}
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="grid grid-cols-2 md:grid-cols-1 gap-8 md:gap-0">
+                    <div>
+                      <h4 className="font-bold mb-2 text-gray-900">FAKTA</h4>
+                      <ul className="text-sm space-y-1 text-gray-700">
+                        {Object.entries(project.fakta).map(([key, value]) => (
+                          <li key={key}>
+                            <span className="font-medium">{key}:</span> {value}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-bold mb-2 text-gray-900">LEVERANS</h4>
+                      <ul className="text-sm space-y-1 text-gray-700">
+                        {project.leverans.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold mb-2 text-gray-900">LEVERANS</h4>
-                    <ul className="text-sm space-y-1 text-gray-700">
-                      {project.leverans.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
+                  <div className="col-span-1">
                     <h4 className="font-bold mb-2 text-gray-900">KUND</h4>
                     <p className="text-sm text-gray-700">{project.kund}</p>
                     <button 
