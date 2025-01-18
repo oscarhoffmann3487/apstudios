@@ -23,18 +23,34 @@ const Volymberakningar = () => (
     Tekniken är särskilt användbar för företag som behöver regelbunden inventering av stora materiallager."
     images={images}
   >
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
-      <div>
-        <h2 className="text-2xl font-bold mb-4">NOGGRANNA MÄTNINGAR</h2>
-        <p className="text-gray-300">
-          Våra drönare samlar in tusentals mätpunkter som bearbetas i specialiserad programvara. Detta ger mycket noggranna resultat som kan användas för att beräkna volymer, skapa höjdkurvor och analysera massbalanser.
-        </p>
+    <div className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
+        <div>
+          <h2 className="text-2xl font-bold mb-4">NOGGRANNA MÄTNINGAR</h2>
+          <p className="text-gray-300">
+            Våra drönare samlar in tusentals mätpunkter som bearbetas i specialiserad programvara. Detta ger mycket noggranna resultat som kan användas för att beräkna volymer, skapa höjdkurvor och analysera massbalanser.
+          </p>
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold mb-4">EFFEKTIV PROCESS</h2>
+          <p className="text-gray-300">
+            Genom att använda drönare kan vi snabbt täcka stora områden och leverera resultat inom kort tid. Detta gör metoden både kostnadseffektiv och tidsbesparande jämfört med traditionella mätmetoder.
+          </p>
+        </div>
       </div>
-      <div>
-        <h2 className="text-2xl font-bold mb-4">EFFEKTIV PROCESS</h2>
-        <p className="text-gray-300">
-          Genom att använda drönare kan vi snabbt täcka stora områden och leverera resultat inom kort tid. Detta gör metoden både kostnadseffektiv och tidsbesparande jämfört med traditionella mätmetoder.
-        </p>
+
+      <div className="aspect-video w-full max-w-4xl mx-auto">
+        <iframe 
+          width="100%" 
+          height="100%" 
+          src="https://www.youtube.com/embed/5Qy6KDVEvtc?si=Bqjf0Nn79dRy83Ay" 
+          title="YouTube video player" 
+          frameBorder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerPolicy="strict-origin-when-cross-origin" 
+          allowFullScreen
+          className="rounded-lg"
+        />
       </div>
     </div>
   </ServicePage>
