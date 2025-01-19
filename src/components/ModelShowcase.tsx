@@ -10,8 +10,7 @@ const ModelShowcase = () => {
     <section className="bg-[#222324] py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-white mb-4">3D Visualisering</h2>
-          <p className="text-gray-300 mb-4">Utforska våra detaljerade 3D-modeller</p>
+          <h2 className="text-3xl font-bold text-white mb-4">3D modeller direkt i webbläsaren</h2>
         </div>
         <div className="aspect-video w-full bg-gray-900 rounded-lg overflow-hidden relative mb-8">
           {!isLoaded ? (

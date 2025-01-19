@@ -13,6 +13,8 @@ const Hero = () => {
     "VOLYMBERÄKNINGAR",
     "INSPEKTIONER",
     "INMÄTNINGAR",
+    "VISUALISERING",
+    "DIGITALA TVILLINGAR",
   ];
 
   return (
