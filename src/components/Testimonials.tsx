@@ -32,9 +32,9 @@ const Testimonials = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-white h-full">
-              <CardContent className="p-8 relative h-full">
-                <Quote className="absolute top-6 left-6 md:relative md:top-0 md:left-0 text-primary/10 w-12 h-12" />
-                <div className="md:pl-12">
+              <CardContent className="p-8 relative h-full flex flex-col justify-center">
+                <Quote className="absolute top-6 left-6 text-primary/10 w-12 h-12" />
+                <div className="pl-12">
                   <p className="text-gray-700 mb-6 italic text-lg leading-relaxed">"{testimonial.quote}"</p>
                   <div className="flex items-center">
                     <div>
