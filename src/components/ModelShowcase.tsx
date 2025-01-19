@@ -39,7 +39,11 @@ const ModelShowcase = () => {
         </div>
         <div className="text-center">
           <Link to="/services/Modeller3D">
-            <Button variant="outline" size="lg" className="gap-2 text-white border-white hover:bg-white hover:text-[#222324]">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="gap-2 bg-white text-black hover:bg-gray-100 hover:text-black border-white"
+            >
               <ExternalLink className="w-4 h-4" />
               Se fler 3D-modeller
             </Button>

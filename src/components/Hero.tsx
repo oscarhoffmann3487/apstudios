@@ -14,7 +14,6 @@ const Hero = () => {
     "INSPEKTIONER",
     "INMÄTNINGAR",
     "VISUALISERING",
-    "DIGITALA TVILLINGAR",
   ];
 
   return (
