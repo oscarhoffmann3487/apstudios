@@ -27,8 +27,8 @@ const Hero = () => {
           playsInline
         ></video>
 
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/20"></div>
+        <div className="absolute inset-0 bg-[#222324]/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#222324]/40 to-[#222324]/20"></div>
 
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -67,10 +67,10 @@ const Hero = () => {
 
       <LogoCarousel />
 
-      <section className="bg-black text-white py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            Aerial Picture studios - Effektiva lösningar med drönare!
+      <section className="bg-[#222324] text-white py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-8">
+            Aerial Picture studios
           </h2>
           <div className="space-y-6 text-lg leading-relaxed">
             <p>

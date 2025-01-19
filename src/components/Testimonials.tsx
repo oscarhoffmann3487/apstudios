@@ -6,7 +6,7 @@ const Testimonials = () => {
     {
       quote: "Den levererade 3D modellen har möjliggjort för oss att visualisera planerad bebyggelse på ett effektivt och smidigt sätt. Vi är mycket nöjda med materialet och utförandet. Kan varmt rekommendera APstudios när det kommer till 3D modellering och visualisering.",
       author: "Torbjörn Nilsson",
-      title: "Terra Development"
+      title: "VD, Terra Development"
     },
     {
       quote: "Great experience overall. I emailed all the drone photography agencies in Stockholm I could find. APstudios came back very quick with the most competative price. After I had paid there was one more edit I wanted to the pictures, this was quickly and professionally taken care off as well. Excellent after sales service. Would warmly recommend APstudios for drone photography.",
@@ -21,7 +21,7 @@ const Testimonials = () => {
     {
       quote: "Stort tack, du är så proffsigt! Du impade på Lars och Spotscale också och vi vill jobba mer med dig framöver.",
       author: "Jesper Tordenlid",
-      title: "Combitech"
+      title: "Project Manager WASP WARA-PS, Combitech AB"
     }
   ];
 

@@ -1,14 +1,19 @@
 import { useState } from "react";
-import { Play } from "lucide-react";
+import { Play, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const ModelShowcase = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <section className="bg-black py-16">
+    <section className="bg-[#222324] py-16">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="aspect-video w-full bg-gray-900 rounded-lg overflow-hidden relative">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-white mb-4">3D Visualisering</h2>
+          <p className="text-gray-300 mb-4">Utforska våra detaljerade 3D-modeller</p>
+        </div>
+        <div className="aspect-video w-full bg-gray-900 rounded-lg overflow-hidden relative mb-8">
           {!isLoaded ? (
             <div className="absolute inset-0 flex items-center justify-center bg-gray-900">
               <Button
@@ -32,6 +37,14 @@ const ModelShowcase = () => {
               scrolling="no"
             />
           )}
+        </div>
+        <div className="text-center">
+          <Link to="/services/Modeller3D">
+            <Button variant="outline" size="lg" className="gap-2 text-white border-white hover:bg-white hover:text-[#222324]">
+              <ExternalLink className="w-4 h-4" />
+              Se fler 3D-modeller
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
