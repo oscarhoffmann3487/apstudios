@@ -18,7 +18,9 @@ const References = () => {
     { src: "/lovable-uploads/0444899f-32a5-4dda-8d77-f1753183c42e.png", alt: "Agtech 2030", url: "https://agtechsweden.com" },
     { src: "/lovable-uploads/d4451a1c-fd1b-4da4-a8af-fb01ad3645d4.png", alt: "Future Aerial Innovations", url: "https://futureaerial.com" },
     { src: "/lovable-uploads/bc06426d-5aeb-4be2-bf00-6222c3fa98cd.png", alt: "Warpin", url: "https://warpinreality.com" },
-    { src: "/lovable-uploads/8f25afab-74bf-4f76-b3a1-0df02045c1d0.png", alt: "Spotscale", url: "https://www.spotscale.com" }
+    { src: "/lovable-uploads/8f25afab-74bf-4f76-b3a1-0df02045c1d0.png", alt: "Spotscale", url: "https://www.spotscale.com" },
+    { src: "/lovable-uploads/ae200406-26ca-43c5-8600-512e7bd95cce.png", alt: "Linköpings Universitet", url: "https://www.liu.se" },
+    { src: "/lovable-uploads/1616a5ea-7734-4519-9057-922de5267457.png", alt: "Villamarken", url: "" }
   ];
 
   return (

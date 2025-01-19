@@ -4,11 +4,6 @@ import { Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "Vi är mycket nöjda med fotona och hemsidan är i stort sett färdig. Tack för ett bra jobb.",
-      author: "Darrell Aycock",
-      title: "privatkund"
-    },
-    {
       quote: "Den levererade 3D modellen har möjliggjort för oss att visualisera planerad bebyggelse på ett effektivt och smidigt sätt. Vi är mycket nöjda med materialet och utförandet. Kan varmt rekommendera APstudios när det kommer till 3D modellering och visualisering.",
       author: "Torbjörn Nilsson",
       title: "Terra Development"
@@ -16,6 +11,11 @@ const Testimonials = () => {
     {
       quote: "Great experience overall. I emailed all the drone photography agencies in Stockholm I could find. APstudios came back very quick with the most competative price. After I had paid there was one more edit I wanted to the pictures, this was quickly and professionally taken care off as well. Excellent after sales service. Would warmly recommend APstudios for drone photography.",
       author: "Pieter van der Meijden",
+      title: "privatkund"
+    },
+    {
+      quote: "Vi är mycket nöjda med fotona och hemsidan är i stort sett färdig. Tack för ett bra jobb.",
+      author: "Darrell Aycock",
       title: "privatkund"
     },
     {

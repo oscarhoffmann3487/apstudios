@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
+import LogoCarousel from "./LogoCarousel";
 
 const Hero = () => {
   const services = [
@@ -27,7 +28,6 @@ const Hero = () => {
         ></video>
 
         <div className="absolute inset-0 bg-black/40"></div>
-
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/20"></div>
 
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white px-4">
@@ -64,6 +64,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      <LogoCarousel />
 
       <section className="bg-black text-white py-16 px-4">
         <div className="max-w-4xl mx-auto">
