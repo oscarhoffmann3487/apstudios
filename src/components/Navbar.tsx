@@ -4,12 +4,6 @@ import { ChevronDown, Globe } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 import { Button } from "./ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
 
 const services = [
   { name: "FLYGFOTO", path: "/tjanster/foto" },
@@ -65,7 +59,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-center space-x-4">
               <Link
                 to="/#top"
                 className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
@@ -106,26 +100,32 @@ const Navbar = () => {
               >
                 {t.nav.contact}
               </a>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="flex items-center gap-2"
-                  >
-                    <Globe className="h-4 w-4" />
-                    <span>{language.toUpperCase()}</span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  <DropdownMenuItem onClick={() => setLanguage('sv')}>
-                    Svenska
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => setLanguage('en')}>
-                    English
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <div className="group relative inline-block">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="flex items-center gap-2 px-3 py-2 h-auto"
+                >
+                  <Globe className="h-4 w-4" />
+                  <span>{language.toUpperCase()}</span>
+                </Button>
+                <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="py-1">
+                    <button
+                      onClick={() => setLanguage('sv')}
+                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Svenska
+                    </button>
+                    <button
+                      onClick={() => setLanguage('en')}
+                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      English
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="md:hidden">
@@ -205,25 +205,31 @@ const Navbar = () => {
             >
               {t.nav.contact}
             </a>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  className="w-full justify-start"
-                >
-                  <Globe className="h-4 w-4 mr-2" />
-                  {language.toUpperCase()}
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem onClick={() => setLanguage('sv')}>
-                  Svenska
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage('en')}>
-                  English
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <div className="group relative inline-block">
+              <Button
+                variant="ghost"
+                className="w-full justify-start"
+              >
+                <Globe className="h-4 w-4 mr-2" />
+                {language.toUpperCase()}
+              </Button>
+              <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="py-1">
+                  <button
+                    onClick={() => setLanguage('sv')}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Svenska
+                  </button>
+                  <button
+                    onClick={() => setLanguage('en')}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    English
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}
