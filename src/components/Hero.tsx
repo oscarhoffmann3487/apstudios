@@ -58,19 +58,6 @@ const Hero = () => {
             <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-12">
               {t.hero.description}
             </p>
-
-            <form name="contact" netlify>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
-
             <a href="mailto:info@apstudios.se">
               <Button className="bg-primary hover:bg-primary/90 text-white font-medium py-6 px-8">
                 <Mail className="mr-2" />
