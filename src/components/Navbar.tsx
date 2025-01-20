@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { ChevronDown, Languages } from "lucide-react";
+import { ChevronDown, Flag } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 import { Button } from "./ui/button";
@@ -106,12 +106,12 @@ const Navbar = () => {
               </a>
               <Button
                 variant="ghost"
-                size="icon"
+                size="default"
                 onClick={toggleLanguage}
-                className="ml-4"
+                className="ml-4 min-w-[100px] flex items-center justify-center gap-2"
               >
-                <Languages className="h-5 w-5" />
-                <span className="ml-2">{language.toUpperCase()}</span>
+                <Flag className="h-4 w-4" />
+                <span>{language.toUpperCase()}</span>
               </Button>
             </div>
           </div>
@@ -197,7 +197,7 @@ const Navbar = () => {
               onClick={toggleLanguage}
               className="w-full justify-start"
             >
-              <Languages className="h-5 w-5 mr-2" />
+              <Flag className="h-4 w-4 mr-2" />
               {language.toUpperCase()}
             </Button>
           </div>
