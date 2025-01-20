@@ -7,6 +7,7 @@ import ProjectShowcase from "@/components/ProjectShowcase";
 import Testimonials from "@/components/Testimonials";
 import References from "@/components/References";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 
 const Index = () => {
   useEffect(() => {
@@ -23,6 +24,7 @@ const Index = () => {
       <Testimonials />
       <References />
       <Footer />
+      <CookieBanner />
     </div>
   );
 };

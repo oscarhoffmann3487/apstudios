@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { ChevronDown, Flag } from "lucide-react";
+import { ChevronDown, Globe } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 import { Button } from "./ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 
 const services = [
   { name: "FLYGFOTO", path: "/tjanster/foto" },
@@ -35,10 +41,6 @@ const Navbar = () => {
     e.preventDefault();
     navigate('/#top');
     window.scrollTo(0, 0);
-  };
-
-  const toggleLanguage = () => {
-    setLanguage(language === 'sv' ? 'en' : 'sv');
   };
 
   const bgColor = isHome ? (isScrolled ? "bg-white" : "bg-transparent") : "bg-white";
@@ -104,15 +106,26 @@ const Navbar = () => {
               >
                 {t.nav.contact}
               </a>
-              <Button
-                variant="ghost"
-                size="default"
-                onClick={toggleLanguage}
-                className="ml-4 min-w-[100px] flex items-center justify-center gap-2"
-              >
-                <Flag className="h-4 w-4" />
-                <span>{language.toUpperCase()}</span>
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="flex items-center gap-2"
+                  >
+                    <Globe className="h-4 w-4" />
+                    <span>{language.toUpperCase()}</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem onClick={() => setLanguage('sv')}>
+                    Svenska
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setLanguage('en')}>
+                    English
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
           <div className="md:hidden">
@@ -192,14 +205,25 @@ const Navbar = () => {
             >
               {t.nav.contact}
             </a>
-            <Button
-              variant="ghost"
-              onClick={toggleLanguage}
-              className="w-full justify-start"
-            >
-              <Flag className="h-4 w-4 mr-2" />
-              {language.toUpperCase()}
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start"
+                >
+                  <Globe className="h-4 w-4 mr-2" />
+                  {language.toUpperCase()}
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem onClick={() => setLanguage('sv')}>
+                  Svenska
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('en')}>
+                  English
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       )}
