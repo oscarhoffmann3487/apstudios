@@ -1,18 +1,13 @@
 import { Youtube } from "lucide-react";
-import { useLanguage } from "../contexts/LanguageContext";
-import { translations } from "../translations";
 
 const Footer = () => {
-  const { language } = useLanguage();
-  const t = translations[language];
-
   return (
     <footer className="bg-[#222324] text-white py-16">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
-          <h3 className="text-xl font-bold mb-6 border-b border-white/20 pb-2">{t.footer.about.title}</h3>
+          <h3 className="text-xl font-bold mb-6 border-b border-white/20 pb-2">OM OSS</h3>
           <p className="text-sm text-gray-300">
-            {t.footer.about.description}
+            Vi är specialister på drönartjänster och har många års erfarenhet av att identifiera användningsområden och ta fram lösningar till kunder. Vi innehar alla nödvändiga tillstånd och försäkringar som krävs för att flyga drönare och tar alltid hänsyn till regler och risker.
           </p>
         </div>
         
@@ -34,12 +29,12 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-xl font-bold mb-6 border-b border-white/20 pb-2">{t.footer.info.title}</h3>
+          <h3 className="text-xl font-bold mb-6 border-b border-white/20 pb-2">INFO</h3>
           <div className="space-y-2 text-sm text-gray-300">
-            <p>{t.footer.info.address}: Kunskapslänken 94</p>
-            <p>{t.footer.info.postAddress}: 583 28 Linköping</p>
-            <p>{t.footer.info.email}: <a href="mailto:info@apstudios.se" className="hover:underline">info@apstudios.se</a></p>
-            <p>{t.footer.info.phone}: 072-544 88 60</p>
+            <p>Adress: Kunskapslänken 94</p>
+            <p>Postadress: 583 28 Linköping</p>
+            <p>Email: <a href="mailto:info@apstudios.se" className="hover:underline">info@apstudios.se</a></p>
+            <p>Tel: 072-544 88 60</p>
             <div className="flex items-center justify-between mt-4">
               <a href="/gdpr" className="hover:underline">GDPR</a>
             </div>
