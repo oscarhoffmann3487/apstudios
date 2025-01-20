@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Languages } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
+import { translations } from "../translations";
+import { Button } from "./ui/button";
 
 const services = [
   { name: "FLYGFOTO", path: "/tjanster/foto" },
@@ -17,6 +20,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,11 +37,16 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   };
 
+  const toggleLanguage = () => {
+    setLanguage(language === 'sv' ? 'en' : 'sv');
+  };
+
   const bgColor = isHome ? (isScrolled ? "bg-white" : "bg-transparent") : "bg-white";
   const textColor = isHome ? (isScrolled ? "text-black" : "text-white") : "text-black";
   const logoSrc = isHome && !isScrolled ? "/lovable-uploads/4ffbab3c-ddab-45a5-b7d8-6faf73292d58.png" : "/lovable-uploads/50c45d71-bc8c-431f-bb8f-77f2b8eb8cf1.png";
 
-  // ... keep existing code (rest of the component remains the same, just update the logo src)
+  const t = translations[language];
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${bgColor} ${textColor}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,13 +68,13 @@ const Navbar = () => {
                 to="/#top"
                 className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
               >
-                HEM
+                {t.nav.home}
               </Link>
               <div className="relative group">
                 <button
                   className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium inline-flex items-center"
                 >
-                  TJÄNSTER <ChevronDown className="ml-1 h-4 w-4" />
+                  {t.nav.services} <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
                 <div
                   className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
@@ -87,14 +96,23 @@ const Navbar = () => {
                 to="/projekt"
                 className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
               >
-                PROJEKT
+                {t.nav.projects}
               </Link>
               <a
                 href="#contact"
                 className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
               >
-                KONTAKT
+                {t.nav.contact}
               </a>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleLanguage}
+                className="ml-4"
+              >
+                <Languages className="h-5 w-5" />
+                <span className="ml-2">{language.toUpperCase()}</span>
+              </Button>
             </div>
           </div>
           <div className="md:hidden">
@@ -148,7 +166,7 @@ const Navbar = () => {
               className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
               onClick={() => setIsOpen(false)}
             >
-              HEM
+              {t.nav.home}
             </Link>
             {services.map((service) => (
               <Link
@@ -165,15 +183,23 @@ const Navbar = () => {
               className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
               onClick={() => setIsOpen(false)}
             >
-              PROJEKT
+              {t.nav.projects}
             </Link>
             <a
               href="#contact"
               className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
               onClick={() => setIsOpen(false)}
             >
-              KONTAKT
+              {t.nav.contact}
             </a>
+            <Button
+              variant="ghost"
+              onClick={toggleLanguage}
+              className="w-full justify-start"
+            >
+              <Languages className="h-5 w-5 mr-2" />
+              {language.toUpperCase()}
+            </Button>
           </div>
         </div>
       )}

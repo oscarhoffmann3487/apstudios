@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { LanguageProvider } from "./contexts/LanguageContext";
 import Index from "./pages/Index";
 import GDPRPolicy from "./pages/GDPRPolicy";
 import Foto from "./pages/services/Foto";
@@ -12,19 +13,21 @@ import Projects from "./pages/Projects";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/gdpr" element={<GDPRPolicy />} />
-        <Route path="/tjanster/foto" element={<Foto />} />
-        <Route path="/tjanster/film" element={<Film />} />
-        <Route path="/tjanster/ytmodeller" element={<Ytmodeller />} />
-        <Route path="/tjanster/3d-modeller" element={<Modeller3D />} />
-        <Route path="/tjanster/volymberakningar" element={<Volymberakningar />} />
-        <Route path="/tjanster/inspektioner" element={<Inspektioner />} />
-        <Route path="/projekt" element={<Projects />} />
-      </Routes>
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/gdpr" element={<GDPRPolicy />} />
+          <Route path="/tjanster/foto" element={<Foto />} />
+          <Route path="/tjanster/film" element={<Film />} />
+          <Route path="/tjanster/ytmodeller" element={<Ytmodeller />} />
+          <Route path="/tjanster/3d-modeller" element={<Modeller3D />} />
+          <Route path="/tjanster/volymberakningar" element={<Volymberakningar />} />
+          <Route path="/tjanster/inspektioner" element={<Inspektioner />} />
+          <Route path="/projekt" element={<Projects />} />
+        </Routes>
+      </Router>
+    </LanguageProvider>
   );
 }
 
