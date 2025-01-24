@@ -45,24 +45,28 @@ const Foto = () => {
         "/lovable-uploads/7da84fa7-af98-4786-b8ae-0486a9d49c10.png"
       ]}
     >
-      <div className="space-y-12 bg-white text-black p-8">
-        {sections.map((section, index) => (
-          <div key={index} className="border-b border-gray-200 pb-12 last:border-b-0">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold mb-4">{section.title}</h3>
-                <p className="text-gray-700">{section.description}</p>
+      <div className="bg-white w-screen relative left-1/2 right-1/2 -mx-[50vw] py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid gap-12">
+            {sections.map((section, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-8">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4">{section.title}</h3>
+                    <p className="text-gray-700">{section.description}</p>
+                  </div>
+                  <div className="aspect-[4/3] w-full max-w-md mx-auto overflow-hidden rounded-lg">
+                    <img 
+                      src={section.imageSrc} 
+                      alt={section.title} 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="aspect-[4/3] w-full max-w-xl mx-auto overflow-hidden rounded-lg">
-                <img 
-                  src={section.imageSrc} 
-                  alt={section.title} 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </ServicePage>
   );

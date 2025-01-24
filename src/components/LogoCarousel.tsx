@@ -47,8 +47,8 @@ const LogoCarousel = () => {
   }, []);
 
   return (
-    <div className="bg-white py-8">
-      <div className="max-w-7xl mx-auto overflow-hidden">
+    <div className="bg-white w-screen relative left-1/2 right-1/2 -mx-[50vw] py-8">
+      <div className="overflow-hidden">
         <div 
           ref={scrollRef}
           className="flex gap-16 items-center whitespace-nowrap overflow-hidden"

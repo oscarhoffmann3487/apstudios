@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -10,13 +11,29 @@ interface ServicePageProps {
 }
 
 const ServicePage = ({ title, description, images, children }: ServicePageProps) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    if (!images?.length) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [images]);
+
   return (
-    <div className="min-h-screen flex flex-col bg-black">
+    <div className="min-h-screen flex flex-col bg-[#222324]">
       <Navbar />
       <main className="flex-grow pt-16">
         {images && images.length > 0 && (
           <div className="w-full h-[60vh] relative mb-8">
-            <Carousel className="w-full h-full">
+            <Carousel 
+              className="w-full h-full"
+              selectedIndex={currentSlide}
+              setSelectedIndex={setCurrentSlide}
+            >
               <CarouselContent>
                 {images.map((image, index) => (
                   <CarouselItem key={index}>
