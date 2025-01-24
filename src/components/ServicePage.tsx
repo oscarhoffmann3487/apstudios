@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { type CarouselApi } from "@/components/ui/carousel";
 
 interface ServicePageProps {
   title: string;
@@ -11,17 +12,26 @@ interface ServicePageProps {
 }
 
 const ServicePage = ({ title, description, images, children }: ServicePageProps) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    if (!images?.length) return;
+    if (!api || !images?.length) return;
 
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % images.length);
+      api.scrollNext();
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [images]);
+  }, [api, images]);
+
+  useEffect(() => {
+    if (!api) return;
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   return (
     <div className="min-h-screen flex flex-col bg-[#222324]">
@@ -31,8 +41,10 @@ const ServicePage = ({ title, description, images, children }: ServicePageProps)
           <div className="w-full h-[60vh] relative mb-8">
             <Carousel 
               className="w-full h-full"
-              selectedIndex={currentSlide}
-              setSelectedIndex={setCurrentSlide}
+              setApi={setApi}
+              opts={{
+                loop: true,
+              }}
             >
               <CarouselContent>
                 {images.map((image, index) => (
