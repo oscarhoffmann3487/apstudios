@@ -10,7 +10,7 @@ const Hero = () => {
 
   const services = [
     t.services.photo,
-    t.services.film,
+    t.services.video,
     t.services.images360,
     t.services.surfaceModels,
     t.services.models3d,
