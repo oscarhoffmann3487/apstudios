@@ -64,7 +64,7 @@ export const translations = {
         title: "BLAIKENGRUVAN",
         purpose: "Syftet med uppdraget var att ta fram underlag för en pågående miljöåtgärd i Blaikengruvan i Sorsele kommun. Kunden ville bland annat göra beräkningar av olika slag samt simulera hur vattennivån i dagbrottet ändrade sig givet en viss vattenmängd.",
         facts: {
-          area: "Area: 460 hektar",
+          area: "Område: 460 hektar",
           resolution: "Upplösning: 3 cm/pixel",
           accuracy: "Noggrannhet: ca 4 cm",
           flightSupport: "Inmätta flygstöd: Ja",
@@ -76,6 +76,33 @@ export const translations = {
       title: "3D modeller direkt i webbläsaren",
       loadModel: "Ladda 3D-modell",
       viewMore: "Se fler 3D-modeller"
+    },
+    facts: {
+      area: "Område",
+      resolution: "Upplösning",
+      accuracy: "Noggrannhet",
+      flightSupport: "Inmätta flygstöd",
+      coordinates: "Koordinatsystem"
+    },
+    testimonials: {
+      title: "Vad våra kunder säger",
+      customer: "privatkund"
+    },
+    references: {
+      title: "Våra kunder"
+    },
+    footer: {
+      about: {
+        title: "OM OSS",
+        text: "Vi är specialister på drönartjänster och har många års erfarenhet av att identifiera användningsområden och ta fram lösningar till kunder. Vi innehar alla nödvändiga tillstånd och försäkringar som krävs för att flyga drönare och tar alltid hänsyn till regler och risker."
+      },
+      info: {
+        title: "INFO",
+        address: "Adress",
+        postAddress: "Postadress",
+        email: "Email",
+        phone: "Tel"
+      }
     }
   },
   en: {
@@ -155,6 +182,33 @@ export const translations = {
       title: "3D models directly in the browser",
       loadModel: "Load 3D Model",
       viewMore: "View More 3D Models"
+    },
+    facts: {
+      area: "Area",
+      resolution: "Resolution",
+      accuracy: "Accuracy",
+      flightSupport: "Measured Flight Support",
+      coordinates: "Coordinate System"
+    },
+    testimonials: {
+      title: "What Our Customers Say",
+      customer: "private customer"
+    },
+    references: {
+      title: "Our Customers"
+    },
+    footer: {
+      about: {
+        title: "ABOUT US",
+        text: "We are specialists in drone services with many years of experience in identifying applications and developing solutions for customers. We hold all necessary permits and insurance required to fly drones and always take regulations and risks into account."
+      },
+      info: {
+        title: "INFO",
+        address: "Address",
+        postAddress: "Postal Address",
+        email: "Email",
+        phone: "Phone"
+      }
     }
   }
 };

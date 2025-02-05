@@ -1,4 +1,10 @@
+import { useLanguage } from "../contexts/LanguageContext";
+import { translations } from "../translations";
+
 const References = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+  
   const customerLogos = [
     { src: "/lovable-uploads/logos/e39acb34-cdc5-44b6-bcf5-bbb23296f73a.png", alt: "Combitech", url: "https://www.combitech.com" },
     { src: "/lovable-uploads/logos/6a068d01-f71c-4ec1-8107-137e00357f57.png", alt: "Golder", url: "https://www.golder.com" },
@@ -26,7 +32,7 @@ const References = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Våra kunder</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">{t.references.title}</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
           {customerLogos.map((logo, index) => (
             <a 

@@ -101,7 +101,7 @@ const ProjectShowcase = () => {
                       {Object.entries(project.fakta).map(([key, value]) => (
                         <li key={key}>
                           <span className="font-medium">
-                            {language === 'sv' ? key : t.projects.blaiken.facts[key.toLowerCase()]}:
+                            {language === 'sv' ? key : t.facts[key.toLowerCase()]}: 
                           </span>{' '}
                           {value}
                         </li>
