@@ -1,3 +1,6 @@
+import { useLanguage } from "../contexts/LanguageContext";
+import { translations } from "../translations";
+
 const projects = [
   {
     title: "BLAIKENGRUVAN",
