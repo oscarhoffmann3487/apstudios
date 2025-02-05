@@ -70,144 +70,102 @@ export const translations = {
           flightSupport: "Inmätta flygstöd: Ja",
           coordinates: "Koordinatsystem: SWEREF 99TM"
         }
-      }
-    },
-    modelShowcase: {
-      title: "3D modeller direkt i webbläsaren",
-      loadModel: "Ladda 3D-modell",
-      viewMore: "Se fler 3D-modeller"
-    },
-    facts: {
-      area: "Område",
-      resolution: "Upplösning",
-      accuracy: "Noggrannhet",
-      flightSupport: "Inmätta flygstöd",
-      coordinates: "Koordinatsystem"
-    },
-    testimonials: {
-      title: "Vad våra kunder säger",
-      customer: "privatkund"
-    },
-    references: {
-      title: "Våra kunder"
-    },
-    footer: {
-      about: {
-        title: "OM OSS",
-        text: "Vi är specialister på drönartjänster och har många års erfarenhet av att identifiera användningsområden och ta fram lösningar till kunder. Vi innehar alla nödvändiga tillstånd och försäkringar som krävs för att flyga drönare och tar alltid hänsyn till regler och risker."
       },
-      info: {
-        title: "INFO",
-        address: "Adress",
-        postAddress: "Postadress",
-        email: "Email",
-        phone: "Tel"
-      }
-    }
-  },
-  en: {
-    nav: {
-      home: "HOME",
-      services: "SERVICES",
-      projects: "PROJECTS",
-      contact: "CONTACT",
-    },
-    services: {
-      photo: "AERIAL PHOTOGRAPHY",
-      video: "VIDEO PRODUCTION",
-      images360: "360 IMAGES",
-      surfaceModels: "SURFACE MODELS",
-      models3d: "3D MODELS",
-      orthophotos: "ORTHOPHOTOS",
-      volumeCalculations: "VOLUME CALCULATIONS",
-      inspections: "INSPECTIONS",
-      measurements: "MEASUREMENTS",
-      visualization: "VISUALIZATION",
-    },
-    hero: {
-      title: "Effective Drone Solutions",
-      description: "We offer professional drone services for all types of projects. Contact us for a free consultation.",
-      contactUs: "Contact Us",
-    },
-    about: {
-      title: "Aerial Picture Studios",
-      description1: "We are specialists in drone services with many years of experience in identifying applications and developing solutions for customers. We started in 2015 with the vision of being at the forefront when it comes to innovation, price, and quality. Our equipment is therefore modern and diversified to adapt to the customer's budget and needs.",
-      description2: "We hold all necessary permits and insurances required to fly drones and always take regulations and risks into account. We are based in Stockholm and Linköping but carry out assignments throughout the country. You are always welcome to contact us to discuss ideas!"
-    },
-    serviceCards: {
-      photo: {
-        title: "AERIAL PHOTOGRAPHY",
-        description: "Drone images give you a completely new perspective. Properties are an excellent subject to capture from above. Images from balcony heights to show the view before a building is constructed is a great use case. Or why not create a photomontage to show how planned development fits into the landscape?"
-      },
-      video: {
-        title: "VIDEO PRODUCTION",
-        description: "Need a promotional film for a property or brand? With video clips from both ground and air, the film gets an impressive feel. We can produce an entire film from start to finish with editing, music, and graphics. We can also deliver aerial footage to a larger production that wants a unique perspective."
-      },
-      inspections: {
-        title: "INSPECTIONS",
-        description: "High-altitude inspection is often expensive, difficult, and sometimes dangerous, but with drones, it becomes simple and efficient. Chimneys, masts, power lines, bridges, properties, and industries are examples of perfect objects for drone inspection. Delivery can be images, film, 3D models, or high-resolution and measurable orthophotos of facades and roofs."
-      },
-      surfaceModels: {
-        title: "SURFACE MODELS",
-        description: "We can deliver orthophotos, surface models, and contour lines with high accuracy. Drone orthophotos provide significantly higher detail than Lantmäteriet maps. When it comes to surface models, we can produce both DTM and DSM. Contour lines can be generated with desired height intervals and used in CAD programs."
-      },
-      models3d: {
-        title: "3D MODELS",
-        description: "We can deliver 3D models and point clouds. Point clouds can be classified with advanced algorithms to, for example, remove vegetation. 3D models can be used for solar studies and visualization in various contexts. A 3D model of a property can also be complemented with laser scanning of the interior to create a digital twin."
-      },
-      volumeCalculations: {
-        title: "VOLUME CALCULATIONS",
-        description: "Companies with large inventories can benefit from being able to easily make accurate volume calculations. Whether it's wood chips, log piles, or quarries, we have smart solutions. We can deliver a measured point cloud where the customer gets access directly via the web and can take measurements."
-      }
-    },
-    projects: {
-      readMore: "READ MORE",
-      purpose: "PURPOSE",
-      facts: "FACTS",
-      delivery: "DELIVERY",
-      client: "CLIENT",
-      blaiken: {
-        title: "BLAIKEN MINE",
-        purpose: "The purpose of the assignment was to provide documentation for an ongoing environmental measure at the Blaiken mine in Sorsele municipality. The client wanted to make various calculations and simulate how the water level in the open pit changed given a certain amount of water.",
+      enskede: {
+        title: "ENSKEDE GÅRDS GYMNASIUM",
+        purpose: "Syftet med uppdraget var att samla in material över tak och fasader för att skapa ett punktmoln som kunde kombineras med LIDAR-data. Med hjälp av detta kunde kunden skapa en komplett 3D modell och använda för detaljinspektion av fastigheten.",
         facts: {
-          area: "Area: 460 hectares",
-          resolution: "Resolution: 3 cm/pixel",
-          accuracy: "Accuracy: approx. 4 cm",
-          flightSupport: "Measured flight support: Yes",
-          coordinates: "Coordinate system: SWEREF 99TM"
+          area: "Område: Enskede",
+          resolution: "Upplösning: 1 cm/pixel",
+          accuracy: "Noggrannhet: ca 1 cm",
+          flightSupport: "Inmätta flygstöd: Ja",
+          coordinates: "Koordinatsystem: Lokalt"
         }
       }
     },
-    modelShowcase: {
-      title: "3D models directly in the browser",
-      loadModel: "Load 3D Model",
-      viewMore: "View More 3D Models"
-    },
-    facts: {
-      area: "Area",
-      resolution: "Resolution",
-      accuracy: "Accuracy",
-      flightSupport: "Measured Flight Support",
-      coordinates: "Coordinate System"
-    },
-    testimonials: {
-      title: "What Our Customers Say",
-      customer: "private customer"
-    },
-    references: {
-      title: "Our Customers"
-    },
-    footer: {
-      about: {
-        title: "ABOUT US",
-        text: "We are specialists in drone services with many years of experience in identifying applications and developing solutions for customers. We hold all necessary permits and insurance required to fly drones and always take regulations and risks into account."
+    en: {
+      nav: {
+        home: "HOME",
+        services: "SERVICES",
+        projects: "PROJECTS",
+        contact: "CONTACT",
       },
-      info: {
-        title: "INFO",
-        address: "Address",
-        postAddress: "Postal Address",
-        email: "Email",
-        phone: "Phone"
+      services: {
+        photo: "AERIAL PHOTOGRAPHY",
+        video: "VIDEO PRODUCTION",
+        images360: "360 IMAGES",
+        surfaceModels: "SURFACE MODELS",
+        models3d: "3D MODELS",
+        orthophotos: "ORTHOPHOTOS",
+        volumeCalculations: "VOLUME CALCULATIONS",
+        inspections: "INSPECTIONS",
+        measurements: "MEASUREMENTS",
+        visualization: "VISUALIZATION",
+      },
+      hero: {
+        title: "Effective Drone Solutions",
+        description: "We offer professional drone services for all types of projects. Contact us for a free consultation.",
+        contactUs: "Contact Us",
+      },
+      about: {
+        title: "Aerial Picture Studios",
+        description1: "We are specialists in drone services with many years of experience in identifying applications and developing solutions for customers. We started in 2015 with the vision of being at the forefront when it comes to innovation, price, and quality. Our equipment is therefore modern and diversified to adapt to the customer's budget and needs.",
+        description2: "We hold all necessary permits and insurances required to fly drones and always take regulations and risks into account. We are based in Stockholm and Linköping but carry out assignments throughout the country. You are always welcome to contact us to discuss ideas!"
+      },
+      serviceCards: {
+        photo: {
+          title: "AERIAL PHOTOGRAPHY",
+          description: "Drone images give you a completely new perspective. Properties are an excellent subject to capture from above. Images from balcony heights to show the view before a building is constructed is a great use case. Or why not create a photomontage to show how planned development fits into the landscape?"
+        },
+        video: {
+          title: "VIDEO PRODUCTION",
+          description: "Need a promotional film for a property or brand? With video clips from both ground and air, the film gets an impressive feel. We can produce an entire film from start to finish with editing, music, and graphics. We can also deliver aerial footage to a larger production that wants a unique perspective."
+        },
+        inspections: {
+          title: "INSPECTIONS",
+          description: "High-altitude inspection is often expensive, difficult, and sometimes dangerous, but with drones, it becomes simple and efficient. Chimneys, masts, power lines, bridges, properties, and industries are examples of perfect objects for drone inspection. Delivery can be images, film, 3D models, or high-resolution and measurable orthophotos of facades and roofs."
+        },
+        surfaceModels: {
+          title: "SURFACE MODELS",
+          description: "We can deliver orthophotos, surface models, and contour lines with high accuracy. Drone orthophotos provide significantly higher detail than Lantmäteriet maps. When it comes to surface models, we can produce both DTM and DSM. Contour lines can be generated with desired height intervals and used in CAD programs."
+        },
+        models3d: {
+          title: "3D MODELS",
+          description: "We can deliver 3D models and point clouds. Point clouds can be classified with advanced algorithms to, for example, remove vegetation. 3D models can be used for solar studies and visualization in various contexts. A 3D model of a property can also be complemented with laser scanning of the interior to create a digital twin."
+        },
+        volumeCalculations: {
+          title: "VOLUME CALCULATIONS",
+          description: "Companies with large inventories can benefit from being able to easily make accurate volume calculations. Whether it's wood chips, log piles, or quarries, we have smart solutions. We can deliver a measured point cloud where the customer gets access directly via the web and can take measurements."
+        }
+      },
+      projects: {
+        readMore: "READ MORE",
+        purpose: "PURPOSE",
+        facts: "FACTS",
+        delivery: "DELIVERY",
+        client: "CLIENT",
+        blaiken: {
+          title: "BLAIKEN MINE",
+          purpose: "The purpose of the assignment was to provide documentation for an ongoing environmental measure at the Blaiken mine in Sorsele municipality. The client wanted to make various calculations and simulate how the water level in the open pit changed given a certain amount of water.",
+          facts: {
+            area: "Area: 460 hectares",
+            resolution: "Resolution: 3 cm/pixel",
+            accuracy: "Accuracy: approx. 4 cm",
+            flightSupport: "Measured flight support: Yes",
+            coordinates: "Coordinate system: SWEREF 99TM"
+          }
+        },
+        enskede: {
+          title: "ENSKEDE GÅRDS GYMNASIUM",
+          purpose: "The purpose of the assignment was to collect material of roofs and facades to create a point cloud that could be combined with LIDAR data. With this, the client could create a complete 3D model and use it for detailed property inspection.",
+          facts: {
+            area: "Area: Enskede",
+            resolution: "Resolution: 1 cm/pixel",
+            accuracy: "Accuracy: approx. 1 cm",
+            flightSupport: "Measured flight support: Yes",
+            coordinates: "Coordinate system: Local"
+          }
+        }
       }
     }
   }
