@@ -83,14 +83,28 @@ export const translations = {
         }
       }
     },
-    en: {
-      nav: {
+    footer: {
+      about: {
+        title: "Om oss",
+        text: "Vi är specialister på drönartjänster och har många års erfarenhet av att identifiera applikationer och ta fram lösningar till kunder."
+      },
+      info: {
+        title: "Kontaktinformation",
+        address: "Adress",
+        postAddress: "Postadress",
+        email: "E-post",
+        phone: "Telefon"
+      }
+    }
+  },
+  en: {
+    nav: {
         home: "HOME",
         services: "SERVICES",
         projects: "PROJECTS",
         contact: "CONTACT",
-      },
-      services: {
+    },
+    services: {
         photo: "AERIAL PHOTOGRAPHY",
         video: "VIDEO PRODUCTION",
         images360: "360 IMAGES",
@@ -101,18 +115,18 @@ export const translations = {
         inspections: "INSPECTIONS",
         measurements: "MEASUREMENTS",
         visualization: "VISUALIZATION",
-      },
-      hero: {
+    },
+    hero: {
         title: "Effective Drone Solutions",
         description: "We offer professional drone services for all types of projects. Contact us for a free consultation.",
         contactUs: "Contact Us",
-      },
-      about: {
+    },
+    about: {
         title: "Aerial Picture Studios",
         description1: "We are specialists in drone services with many years of experience in identifying applications and developing solutions for customers. We started in 2015 with the vision of being at the forefront when it comes to innovation, price, and quality. Our equipment is therefore modern and diversified to adapt to the customer's budget and needs.",
         description2: "We hold all necessary permits and insurances required to fly drones and always take regulations and risks into account. We are based in Stockholm and Linköping but carry out assignments throughout the country. You are always welcome to contact us to discuss ideas!"
-      },
-      serviceCards: {
+    },
+    serviceCards: {
         photo: {
           title: "AERIAL PHOTOGRAPHY",
           description: "Drone images give you a completely new perspective. Properties are an excellent subject to capture from above. Images from balcony heights to show the view before a building is constructed is a great use case. Or why not create a photomontage to show how planned development fits into the landscape?"
@@ -137,8 +151,8 @@ export const translations = {
           title: "VOLUME CALCULATIONS",
           description: "Companies with large inventories can benefit from being able to easily make accurate volume calculations. Whether it's wood chips, log piles, or quarries, we have smart solutions. We can deliver a measured point cloud where the customer gets access directly via the web and can take measurements."
         }
-      },
-      projects: {
+    },
+    projects: {
         readMore: "READ MORE",
         purpose: "PURPOSE",
         facts: "FACTS",
@@ -166,6 +180,18 @@ export const translations = {
             coordinates: "Coordinate system: Local"
           }
         }
+    },
+    footer: {
+      about: {
+        title: "About Us",
+        text: "We are specialists in drone services with many years of experience in identifying applications and developing solutions for customers."
+      },
+      info: {
+        title: "Contact Information",
+        address: "Address",
+        postAddress: "Postal Address",
+        email: "Email",
+        phone: "Phone"
       }
     }
   }
