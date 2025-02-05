@@ -7,8 +7,8 @@ export const translations = {
       contact: "KONTAKT",
     },
     services: {
-      photo: "FOTO",
-      film: "FILM",
+      photo: "FLYGFOTO",
+      video: "VIDEOPRODUKTION",
       images360: "360 BILDER",
       surfaceModels: "YTMODELLER",
       models3d: "3D MODELLER",
@@ -113,8 +113,8 @@ export const translations = {
       contact: "CONTACT",
     },
     services: {
-      photo: "PHOTO",
-      film: "FILM",
+      photo: "AERIAL PHOTOGRAPHY",
+      video: "VIDEO PRODUCTION",
       images360: "360 IMAGES",
       surfaceModels: "SURFACE MODELS",
       models3d: "3D MODELS",

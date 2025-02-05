@@ -6,12 +6,12 @@ import { translations } from "../translations";
 import { Button } from "./ui/button";
 
 const services = [
-  { name: "FLYGFOTO", path: "/tjanster/foto" },
-  { name: "VIDEOPRODUKTION", path: "/tjanster/film" },
-  { name: "YTMODELLER", path: "/tjanster/ytmodeller" },
-  { name: "3D MODELLER", path: "/tjanster/3d-modeller" },
-  { name: "VOLYMBERÄKNINGAR", path: "/tjanster/volymberakningar" },
-  { name: "INSPEKTIONER", path: "/tjanster/inspektioner" },
+  { name: "FLYGFOTO", path: "/tjanster/foto", translationKey: "photo" },
+  { name: "VIDEOPRODUKTION", path: "/tjanster/film", translationKey: "video" },
+  { name: "YTMODELLER", path: "/tjanster/ytmodeller", translationKey: "surfaceModels" },
+  { name: "3D MODELLER", path: "/tjanster/3d-modeller", translationKey: "models3d" },
+  { name: "VOLYMBERÄKNINGAR", path: "/tjanster/volymberakningar", translationKey: "volumeCalculations" },
+  { name: "INSPEKTIONER", path: "/tjanster/inspektioner", translationKey: "inspections" },
 ];
 
 const Navbar = () => {
@@ -82,7 +82,7 @@ const Navbar = () => {
                         to={service.path}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
-                        {service.name}
+                        {t.services[service.translationKey]}
                       </Link>
                     ))}
                   </div>
@@ -188,7 +188,7 @@ const Navbar = () => {
                 className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
-                {service.name}
+                {t.services[service.translationKey]}
               </Link>
             ))}
             <Link
