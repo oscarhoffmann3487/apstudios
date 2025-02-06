@@ -23,27 +23,41 @@ export const translations = {
       description: "Vi erbjuder professionella drönartjänster för alla typer av projekt. Kontakta oss för en kostnadsfri konsultation.",
       contactUs: "Kontakta oss",
     },
+    about: {
+      title: "Om oss",
+      description1: "Vi är specialister på drönartjänster och har många års erfarenhet av att identifiera användningsområden och ta fram lösningar till kunder.",
+      description2: "Vi innehar alla nödvändiga tillstånd och försäkringar som krävs för att flyga drönare och tar alltid hänsyn till regler och risker."
+    },
+    serviceCards: {
+      photo: {
+        title: "Flygfoto",
+        description: "Högkvalitativa flygfoton för olika ändamål"
+      },
+      video: {
+        title: "Film",
+        description: "Professionell videoproduktion med drönare"
+      },
+      inspections: {
+        title: "Inspektioner",
+        description: "Detaljerade inspektioner av svåråtkomliga platser"
+      },
+      surfaceModels: {
+        title: "Ytmodeller",
+        description: "Precisa ytmodeller för analys och planering"
+      },
+      models3d: {
+        title: "3D Modeller",
+        description: "Detaljerade 3D-modeller för visualisering"
+      },
+      volumeCalculations: {
+        title: "Volymberäkningar",
+        description: "Noggranna volymberäkningar för olika material"
+      }
+    },
     modelShowcase: {
       title: "3D modeller direkt i webbläsaren",
       loadModel: "Ladda 3D-modell",
       viewMore: "Se fler 3D-modeller"
-    },
-    projects: {
-      readMore: "LÄS MER",
-      purpose: "SYFTE",
-      facts: "FAKTA",
-      delivery: "LEVERANS",
-      client: "KUND",
-      blaiken: {
-        purpose: "Syftet med uppdraget var att ta fram underlag för en pågående miljöåtgärd i Blaikengruvan i Sorsele kommun. Kunden ville bland annat göra beräkningar av olika slag samt simulera hur vattennivån i dagbrottet ändrade sig givet en viss vattenmängd."
-      }
-    },
-    facts: {
-      area: "Område",
-      resolution: "Upplösning",
-      accuracy: "Noggrannhet",
-      flightSupport: "Inmätta flygstöd",
-      coordinates: "Koordinatsystem"
     },
     testimonials: {
       title: "Vad våra kunder säger",
@@ -90,27 +104,41 @@ export const translations = {
       description: "We offer professional drone services for all types of projects. Contact us for a free consultation.",
       contactUs: "Contact Us",
     },
+    about: {
+      title: "About Us",
+      description1: "We are specialists in drone services with many years of experience in identifying applications and developing solutions for customers.",
+      description2: "We hold all necessary permits and insurance required to fly drones and always take regulations and risks into account."
+    },
+    serviceCards: {
+      photo: {
+        title: "Aerial Photography",
+        description: "High-quality aerial photos for various purposes"
+      },
+      video: {
+        title: "Video",
+        description: "Professional drone video production"
+      },
+      inspections: {
+        title: "Inspections",
+        description: "Detailed inspections of hard-to-reach places"
+      },
+      surfaceModels: {
+        title: "Surface Models",
+        description: "Precise surface models for analysis and planning"
+      },
+      models3d: {
+        title: "3D Models",
+        description: "Detailed 3D models for visualization"
+      },
+      volumeCalculations: {
+        title: "Volume Calculations",
+        description: "Accurate volume calculations for various materials"
+      }
+    },
     modelShowcase: {
       title: "3D models directly in the browser",
       loadModel: "Load 3D Model",
       viewMore: "View More 3D Models"
-    },
-    projects: {
-      readMore: "READ MORE",
-      purpose: "PURPOSE",
-      facts: "FACTS",
-      delivery: "DELIVERY",
-      client: "CLIENT",
-      blaiken: {
-        purpose: "The purpose of the assignment was to provide documentation for an ongoing environmental measure at the Blaiken mine in Sorsele municipality. The client wanted to make various calculations and simulate how the water level in the open pit changed given a certain amount of water."
-      }
-    },
-    facts: {
-      area: "Area",
-      resolution: "Resolution",
-      accuracy: "Accuracy",
-      flightSupport: "Measured Flight Support",
-      coordinates: "Coordinate System"
     },
     testimonials: {
       title: "What Our Customers Say",
