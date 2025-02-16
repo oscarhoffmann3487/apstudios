@@ -2,25 +2,8 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/translations";
 import { cn } from "@/lib/utils";
-import { ChevronDown } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { ProjectDialog } from "@/components/ProjectDialog";
 import {
   Select,
   SelectContent,
@@ -36,25 +19,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-
-type MediaType = "image" | "video" | "iframe" | "3d";
-
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  longDescription?: string;
-  category: string;
-  mediaType: MediaType;
-  mediaSrc: string;
-  thumbnailSrc: string;
-  additionalMedia?: { type: MediaType; src: string }[];
-  client: string;
-  date: string;
-  tags: string[];
-  location?: string;
-  deliverables?: string[];
-}
+import { Project } from "@/types/project";
 
 const ITEMS_PER_PAGE = 9;
 
@@ -109,9 +74,8 @@ const projects: Project[] = [
   }
 ];
 
-const Projects = () => {
+export default function Projects() {
   const { language } = useLanguage();
-  const t = translations[language];
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -129,171 +93,6 @@ const Projects = () => {
     setSelectedCategory(value);
     setCurrentPage(1);
   };
-
-  const ProjectDialog = ({ project }: { project: Project }) => (
-    <Dialog>
-      <DialogTrigger className="w-full">
-        <Card className="group overflow-hidden hover:shadow-lg transition-shadow h-[440px] relative">
-          <div className="aspect-video relative overflow-hidden">
-            {project.mediaType === "image" && (
-              <img
-                src={project.thumbnailSrc}
-                alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            )}
-            {project.mediaType === "video" && (
-              <video
-                src={project.mediaSrc}
-                className="w-full h-full object-cover"
-                controls
-              />
-            )}
-            {project.mediaType === "iframe" && (
-              <iframe
-                src={project.mediaSrc}
-                className="w-full h-full"
-                allowFullScreen
-              />
-            )}
-          </div>
-          <CardHeader>
-            <div className="space-y-2">
-              <div className="flex justify-between items-center gap-2">
-                <CardTitle className="text-xl font-bold truncate">
-                  {project.title}
-                </CardTitle>
-                <span className="text-sm text-gray-500 whitespace-nowrap">
-                  {project.date}
-                </span>
-              </div>
-              <p className="text-sm text-gray-600">
-                <span className="font-semibold">
-                  {language === 'sv' ? 'Kund: ' : 'Client: '}
-                </span>
-                {project.client}
-              </p>
-              <CardDescription className="line-clamp-2">
-                {project.description}
-              </CardDescription>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag, index) => (
-                <Badge key={index} variant="secondary">
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-          </CardContent>
-          <div className="absolute bottom-4 right-4 text-gray-400 group-hover:text-gray-600 transition-colors">
-            <ChevronDown className="w-5 h-5" />
-          </div>
-        </Card>
-      </DialogTrigger>
-      <DialogContent className="max-w-4xl h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-2xl font-bold mb-2">{project.title}</DialogTitle>
-          <DialogDescription>{project.longDescription || project.description}</DialogDescription>
-        </DialogHeader>
-        <div className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="col-span-full">
-              {project.mediaType === "image" && (
-                <img
-                  src={project.mediaSrc}
-                  alt={project.title}
-                  className="w-full rounded-lg object-cover"
-                />
-              )}
-              {project.mediaType === "video" && (
-                <video
-                  src={project.mediaSrc}
-                  controls
-                  className="w-full rounded-lg"
-                />
-              )}
-              {project.mediaType === "iframe" && (
-                <iframe
-                  src={project.mediaSrc}
-                  className="w-full h-[400px] rounded-lg"
-                  allowFullScreen
-                />
-              )}
-            </div>
-            
-            {project.additionalMedia?.map((media, index) => (
-              <div key={index} className="aspect-video">
-                {media.type === "image" && (
-                  <img
-                    src={media.src}
-                    alt={`${project.title} - ${index + 1}`}
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                )}
-                {media.type === "video" && (
-                  <video
-                    src={media.src}
-                    controls
-                    className="w-full h-full rounded-lg"
-                  />
-                )}
-                {media.type === "iframe" && (
-                  <iframe
-                    src={media.src}
-                    className="w-full h-full rounded-lg"
-                    allowFullScreen
-                  />
-                )}
-              </div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold mb-2">
-                {language === 'sv' ? 'Projektinformation' : 'Project Information'}
-              </h3>
-              <dl className="space-y-2">
-                <div>
-                  <dt className="font-medium text-gray-600">
-                    {language === 'sv' ? 'Kund' : 'Client'}
-                  </dt>
-                  <dd>{project.client}</dd>
-                </div>
-                <div>
-                  <dt className="font-medium text-gray-600">
-                    {language === 'sv' ? 'Plats' : 'Location'}
-                  </dt>
-                  <dd>{project.location}</dd>
-                </div>
-                <div>
-                  <dt className="font-medium text-gray-600">
-                    {language === 'sv' ? 'Datum' : 'Date'}
-                  </dt>
-                  <dd>{project.date}</dd>
-                </div>
-              </dl>
-            </div>
-            
-            {project.deliverables && (
-              <div>
-                <h3 className="font-semibold mb-2">
-                  {language === 'sv' ? 'Leverabler' : 'Deliverables'}
-                </h3>
-                <ul className="list-disc list-inside space-y-1">
-                  {project.deliverables.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        </div>
-      </DialogContent>
-    </Dialog>
-  );
 
   return (
     <div className="min-h-screen bg-white">
@@ -369,6 +168,4 @@ const Projects = () => {
       <Footer />
     </div>
   );
-};
-
-export default Projects;
+}
