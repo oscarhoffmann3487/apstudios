@@ -1,3 +1,4 @@
+
 export const translations = {
   sv: {
     nav: {
@@ -54,6 +55,11 @@ export const translations = {
         description: "Företag med stora inventarier kan dra nytta av att enkelt kunna göra noggranna volymberäkningar. Oavsett om det handlar om flis, stockhögar eller bergtäkter har vi smarta lösningar. Vi kan leverera ett inmätt punktmoln där kunden får tillgång direkt över webben och kan ta mått."
       }
     },
+    modelShowcase: {
+      title: "3D modeller direkt i webbläsaren",
+      loadModel: "Ladda 3D-modell",
+      viewMore: "Se fler 3D-modeller"
+    },
     projects: {
       readMore: "LÄS MER",
       purpose: "SYFTE",
@@ -71,11 +77,6 @@ export const translations = {
           coordinates: "Koordinatsystem: SWEREF 99TM"
         }
       }
-    },
-    modelShowcase: {
-      title: "3D modeller direkt i webbläsaren",
-      loadModel: "Ladda 3D-modell",
-      viewMore: "Se fler 3D-modeller"
     },
     facts: {
       area: "Område",
@@ -137,7 +138,7 @@ export const translations = {
     serviceCards: {
       photo: {
         title: "AERIAL PHOTOGRAPHY",
-        description: "Drone images give you a completely new perspective. Properties are an excellent subject to capture from above. Images from balcony heights to show the view before a building is constructed is a great use case. Or why not create a photomontage to show how planned development fits into the landscape?"
+        description: "With drone images you get a completely new perspective. Properties are an excellent subject to capture from above. Images from balcony heights to show the view before a building is constructed is a great use case. Or why not create a photomontage to show how planned development fits into the landscape?"
       },
       video: {
         title: "VIDEO PRODUCTION",
@@ -160,6 +161,11 @@ export const translations = {
         description: "Companies with large inventories can benefit from being able to easily make accurate volume calculations. Whether it's wood chips, log piles, or quarries, we have smart solutions. We can deliver a measured point cloud where the customer gets access directly via the web and can take measurements."
       }
     },
+    modelShowcase: {
+      title: "3D models directly in the browser",
+      loadModel: "Load 3D Model",
+      viewMore: "View More 3D Models"
+    },
     projects: {
       readMore: "READ MORE",
       purpose: "PURPOSE",
@@ -177,11 +183,6 @@ export const translations = {
           coordinates: "Coordinate system: SWEREF 99TM"
         }
       }
-    },
-    modelShowcase: {
-      title: "3D models directly in the browser",
-      loadModel: "Load 3D Model",
-      viewMore: "View More 3D Models"
     },
     facts: {
       area: "Area",
