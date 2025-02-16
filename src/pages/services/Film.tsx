@@ -21,7 +21,7 @@ const Film = () => {
           <div className="w-full h-[60vh] bg-gray-900 mb-16">
         <video
           className="w-full h-full object-cover"
-          src="/lovable-uploads/showreel_ap.mp4"
+          src="/lovable-uploads/showreel.mp4"
           autoPlay
           loop
           muted
