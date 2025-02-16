@@ -1,10 +1,17 @@
-
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 import { cn } from "@/lib/utils";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import {
   Card,
   CardContent,
@@ -20,6 +27,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
 type MediaType = "image" | "video" | "iframe" | "3d";
 
@@ -27,28 +42,49 @@ interface Project {
   id: number;
   title: string;
   description: string;
+  longDescription?: string;
   category: string;
   mediaType: MediaType;
   mediaSrc: string;
   thumbnailSrc: string;
+  additionalMedia?: { type: MediaType; src: string }[];
   client: string;
   date: string;
   tags: string[];
+  location?: string;
+  deliverables?: string[];
 }
 
-// Example projects data
+const ITEMS_PER_PAGE = 9;
+
+const allServices = [
+  "Flygfoto",
+  "Videoproduktion",
+  "360 Bilder",
+  "Ytmodeller",
+  "3D-Modeller",
+  "Ortofoton",
+  "Volymberäkning",
+  "Inspektioner",
+  "Inmätningar",
+  "Visualisering"
+];
+
 const projects: Project[] = [
   {
     id: 1,
     title: "BLAIKENGRUVAN",
     description: "Miljöåtgärder och volymberäkningar i Sorsele kommun",
+    longDescription: "Ett omfattande projekt för miljöövervakning och volymberäkning vid Blaikengruvan. Projektet innefattade detaljerad kartläggning av området med hjälp av drönare för att möjliggöra precisa beräkningar och miljöanalyser.",
     category: "Volymberäkning",
     mediaType: "image",
     mediaSrc: "/lovable-uploads/c01f5521-3595-4db0-81df-f077b17c7643.png",
     thumbnailSrc: "/lovable-uploads/c01f5521-3595-4db0-81df-f077b17c7643.png",
     client: "Golder Associates AB",
     date: "2023",
-    tags: ["Volymberäkning", "Miljö", "3D-Modellering"]
+    tags: ["Volymberäkning", "Miljö", "3D-Modellering"],
+    location: "Sorsele, Sverige",
+    deliverables: ["3D-modell", "Volymberäkningar", "Miljörapport"]
   },
   {
     id: 2,
@@ -80,15 +116,176 @@ const Projects = () => {
   const { language } = useLanguage();
   const t = translations[language];
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const categories = ["all", ...new Set(projects.map(project => project.category))];
   const filteredProjects = selectedCategory === "all" 
     ? projects 
     : projects.filter(project => project.category === selectedCategory);
 
+  const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE);
+  const currentProjects = filteredProjects.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
   const handleCategoryChange = (value: string) => {
     setSelectedCategory(value);
+    setCurrentPage(1);
   };
+
+  const ProjectDialog = ({ project }: { project: Project }) => (
+    <Dialog>
+      <DialogTrigger className="w-full">
+        <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+          <div className="aspect-video relative overflow-hidden">
+            {project.mediaType === "image" && (
+              <img
+                src={project.thumbnailSrc}
+                alt={project.title}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            )}
+            {project.mediaType === "video" && (
+              <video
+                src={project.mediaSrc}
+                className="w-full h-full object-cover"
+                controls
+              />
+            )}
+            {project.mediaType === "iframe" && (
+              <iframe
+                src={project.mediaSrc}
+                className="w-full h-full"
+                allowFullScreen
+              />
+            )}
+          </div>
+          <CardHeader>
+            <div className="flex justify-between items-start">
+              <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
+              <span className="text-sm text-gray-500">{project.date}</span>
+            </div>
+            <CardDescription>{project.description}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.tags.map((tag, index) => (
+                <Badge key={index} variant="secondary">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+            <p className="text-sm text-gray-600">
+              <span className="font-semibold">
+                {language === 'sv' ? 'Kund: ' : 'Client: '}
+              </span>
+              {project.client}
+            </p>
+          </CardContent>
+        </Card>
+      </DialogTrigger>
+      <DialogContent className="max-w-4xl h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle className="text-2xl font-bold mb-2">{project.title}</DialogTitle>
+          <DialogDescription>{project.longDescription || project.description}</DialogDescription>
+        </DialogHeader>
+        <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="col-span-full">
+              {project.mediaType === "image" && (
+                <img
+                  src={project.mediaSrc}
+                  alt={project.title}
+                  className="w-full rounded-lg object-cover"
+                />
+              )}
+              {project.mediaType === "video" && (
+                <video
+                  src={project.mediaSrc}
+                  controls
+                  className="w-full rounded-lg"
+                />
+              )}
+              {project.mediaType === "iframe" && (
+                <iframe
+                  src={project.mediaSrc}
+                  className="w-full h-[400px] rounded-lg"
+                  allowFullScreen
+                />
+              )}
+            </div>
+            
+            {project.additionalMedia?.map((media, index) => (
+              <div key={index} className="aspect-video">
+                {media.type === "image" && (
+                  <img
+                    src={media.src}
+                    alt={`${project.title} - ${index + 1}`}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                )}
+                {media.type === "video" && (
+                  <video
+                    src={media.src}
+                    controls
+                    className="w-full h-full rounded-lg"
+                  />
+                )}
+                {media.type === "iframe" && (
+                  <iframe
+                    src={media.src}
+                    className="w-full h-full rounded-lg"
+                    allowFullScreen
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-semibold mb-2">
+                {language === 'sv' ? 'Projektinformation' : 'Project Information'}
+              </h3>
+              <dl className="space-y-2">
+                <div>
+                  <dt className="font-medium text-gray-600">
+                    {language === 'sv' ? 'Kund' : 'Client'}
+                  </dt>
+                  <dd>{project.client}</dd>
+                </div>
+                <div>
+                  <dt className="font-medium text-gray-600">
+                    {language === 'sv' ? 'Plats' : 'Location'}
+                  </dt>
+                  <dd>{project.location}</dd>
+                </div>
+                <div>
+                  <dt className="font-medium text-gray-600">
+                    {language === 'sv' ? 'Datum' : 'Date'}
+                  </dt>
+                  <dd>{project.date}</dd>
+                </div>
+              </dl>
+            </div>
+            
+            {project.deliverables && (
+              <div>
+                <h3 className="font-semibold mb-2">
+                  {language === 'sv' ? 'Leverabler' : 'Deliverables'}
+                </h3>
+                <ul className="list-disc list-inside space-y-1">
+                  {project.deliverables.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
 
   return (
     <div className="min-h-screen bg-white">
@@ -109,14 +306,15 @@ const Projects = () => {
             <div className="mt-4 md:mt-0">
               <Select value={selectedCategory} onValueChange={handleCategoryChange}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Select category" />
+                  <SelectValue placeholder={language === 'sv' ? 'Välj kategori' : 'Select category'} />
                 </SelectTrigger>
                 <SelectContent>
-                  {categories.map(category => (
-                    <SelectItem key={category} value={category}>
-                      {category === "all" 
-                        ? (language === 'sv' ? 'Alla kategorier' : 'All categories') 
-                        : category}
+                  <SelectItem value="all">
+                    {language === 'sv' ? 'Alla kategorier' : 'All categories'}
+                  </SelectItem>
+                  {allServices.map(service => (
+                    <SelectItem key={service} value={service}>
+                      {service}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -124,57 +322,40 @@ const Projects = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
-              <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-video relative overflow-hidden">
-                  {project.mediaType === "image" && (
-                    <img
-                      src={project.thumbnailSrc}
-                      alt={project.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  )}
-                  {project.mediaType === "video" && (
-                    <video
-                      src={project.mediaSrc}
-                      className="w-full h-full object-cover"
-                      controls
-                    />
-                  )}
-                  {project.mediaType === "iframe" && (
-                    <iframe
-                      src={project.mediaSrc}
-                      className="w-full h-full"
-                      allowFullScreen
-                    />
-                  )}
-                </div>
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
-                    <span className="text-sm text-gray-500">{project.date}</span>
-                  </div>
-                  <CardDescription>{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag, index) => (
-                      <Badge key={index} variant="secondary">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                  <p className="text-sm text-gray-600">
-                    <span className="font-semibold">
-                      {language === 'sv' ? 'Kund: ' : 'Client: '}
-                    </span>
-                    {project.client}
-                  </p>
-                </CardContent>
-              </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+            {currentProjects.map((project) => (
+              <ProjectDialog key={project.id} project={project} />
             ))}
           </div>
+
+          {totalPages > 1 && (
+            <Pagination className="mt-8">
+              <PaginationContent>
+                <PaginationItem>
+                  <PaginationPrevious 
+                    onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                    className={cn(currentPage === 1 && "pointer-events-none opacity-50")}
+                  />
+                </PaginationItem>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <PaginationItem key={page}>
+                    <PaginationLink
+                      onClick={() => setCurrentPage(page)}
+                      isActive={currentPage === page}
+                    >
+                      {page}
+                    </PaginationLink>
+                  </PaginationItem>
+                ))}
+                <PaginationItem>
+                  <PaginationNext
+                    onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                    className={cn(currentPage === totalPages && "pointer-events-none opacity-50")}
+                  />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
+          )}
         </div>
       </main>
       <Footer />
