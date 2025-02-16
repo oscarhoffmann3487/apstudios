@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 import { cn } from "@/lib/utils";
+import { ChevronDown } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -60,14 +61,10 @@ const ITEMS_PER_PAGE = 9;
 const allServices = [
   "Flygfoto",
   "Videoproduktion",
-  "360 Bilder",
   "Ytmodeller",
   "3D-Modeller",
-  "Ortofoton",
-  "Volymberäkning",
-  "Inspektioner",
-  "Inmätningar",
-  "Visualisering"
+  "Volymberäkningar",
+  "Inspektioner"
 ];
 
 const projects: Project[] = [
@@ -136,13 +133,13 @@ const Projects = () => {
   const ProjectDialog = ({ project }: { project: Project }) => (
     <Dialog>
       <DialogTrigger className="w-full">
-        <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+        <Card className="group overflow-hidden hover:shadow-lg transition-shadow h-[440px] relative">
           <div className="aspect-video relative overflow-hidden">
             {project.mediaType === "image" && (
               <img
                 src={project.thumbnailSrc}
                 alt={project.title}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             )}
             {project.mediaType === "video" && (
@@ -161,27 +158,38 @@ const Projects = () => {
             )}
           </div>
           <CardHeader>
-            <div className="flex justify-between items-start">
-              <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
-              <span className="text-sm text-gray-500">{project.date}</span>
+            <div className="space-y-2">
+              <div className="flex justify-between items-center gap-2">
+                <CardTitle className="text-xl font-bold truncate">
+                  {project.title}
+                </CardTitle>
+                <span className="text-sm text-gray-500 whitespace-nowrap">
+                  {project.date}
+                </span>
+              </div>
+              <p className="text-sm text-gray-600">
+                <span className="font-semibold">
+                  {language === 'sv' ? 'Kund: ' : 'Client: '}
+                </span>
+                {project.client}
+              </p>
+              <CardDescription className="line-clamp-2">
+                {project.description}
+              </CardDescription>
             </div>
-            <CardDescription>{project.description}</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap gap-2">
               {project.tags.map((tag, index) => (
                 <Badge key={index} variant="secondary">
                   {tag}
                 </Badge>
               ))}
             </div>
-            <p className="text-sm text-gray-600">
-              <span className="font-semibold">
-                {language === 'sv' ? 'Kund: ' : 'Client: '}
-              </span>
-              {project.client}
-            </p>
           </CardContent>
+          <div className="absolute bottom-4 right-4 text-gray-400 group-hover:text-gray-600 transition-colors">
+            <ChevronDown className="w-5 h-5" />
+          </div>
         </Card>
       </DialogTrigger>
       <DialogContent className="max-w-4xl h-[90vh] overflow-y-auto">
