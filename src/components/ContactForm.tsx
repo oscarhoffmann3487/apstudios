@@ -14,10 +14,10 @@ export default function ContactForm() {
     <section 
       className="py-16 min-h-[600px] relative bg-cover bg-center bg-fixed"
       style={{ 
-        backgroundImage: "url('/lovable-uploads/3189e5a2-010d-44cd-bfad-1307939eb75c.png')"
+        backgroundImage: "url('lovable-uploads/c01f5521-3595-4db0-81df-f077b17c7643.png')"
       }}
     >
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 "></div>
       <div className="max-w-4xl mx-auto px-4 relative z-10">
         <h2 className="text-3xl font-bold text-center mb-8 text-white">
           {language === 'sv' ? 'Kontakta oss' : 'Contact us'}
