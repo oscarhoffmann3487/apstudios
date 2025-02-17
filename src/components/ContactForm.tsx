@@ -29,7 +29,7 @@ export default function ContactForm() {
             : 'Have questions or want to discuss a project? Fill out the form below and we\'ll get back to you as soon as possible.'}
         </p>
         
-        <form className="space-y-6 max-w-xl mx-auto">
+        <form className="space-y-6">
           <div>
             <Label htmlFor="name" className="text-white">
               {language === 'sv' ? 'Namn' : 'Name'}
@@ -83,7 +83,7 @@ export default function ContactForm() {
           <div className="flex justify-center">
             <Button
               type="submit"
-              className="bg-white/20 hover:bg-white/30 text-white backdrop-blur-md px-8"
+              className="bg-accent hover:bg-accent/90 text-white backdrop-blur-md px-8"
             >
               {language === 'sv' ? 'Skicka meddelande' : 'Send message'}
             </Button>
