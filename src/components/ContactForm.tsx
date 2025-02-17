@@ -12,13 +12,12 @@ export default function ContactForm() {
 
   return (
     <section 
-      className="py-16 relative bg-cover bg-center bg-no-repeat"
+      className="py-16 min-h-[600px] relative bg-cover bg-center bg-fixed"
       style={{ 
-        backgroundImage: "url('/lovable-uploads/bd5f21a1-67a7-4f0d-87eb-6ec0631d4bf0.png')",
-        backgroundPosition: "center"
+        backgroundImage: "url('/lovable-uploads/3189e5a2-010d-44cd-bfad-1307939eb75c.png')"
       }}
     >
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
       <div className="max-w-4xl mx-auto px-4 relative z-10">
         <h2 className="text-3xl font-bold text-center mb-8 text-white">
           {language === 'sv' ? 'Kontakta oss' : 'Contact us'}
