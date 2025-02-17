@@ -28,66 +28,81 @@ export default function ContactForm() {
             : 'Have questions or want to discuss a project? Fill out the form below and we\'ll get back to you as soon as possible.'}
         </p>
         
-        <form className="space-y-6">
-          <div>
-            <Label htmlFor="name" className="text-white">
-              {language === 'sv' ? 'Namn' : 'Name'}
-            </Label>
-            <Input
-              id="name"
-              name="name"
-              type="text"
-              required
-              className="bg-white/10 border-white/20 text-white backdrop-blur-md"
-            />
-          </div>
-          
-          <div>
-            <Label htmlFor="email" className="text-white">
-              {language === 'sv' ? 'E-post' : 'Email'}
-            </Label>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              required
-              className="bg-white/10 border-white/20 text-white backdrop-blur-md"
-            />
-          </div>
-          
-          <div>
-            <Label htmlFor="phone" className="text-white">
-              {language === 'sv' ? 'Telefon (valfritt)' : 'Phone (optional)'}
-            </Label>
-            <Input
-              id="phone"
-              name="phone"
-              type="tel"
-              className="bg-white/10 border-white/20 text-white backdrop-blur-md"
-            />
-          </div>
-          
-          <div>
-            <Label htmlFor="message" className="text-white">
-              {language === 'sv' ? 'Meddelande' : 'Message'}
-            </Label>
-            <Textarea
-              id="message"
-              name="message"
-              required
-              className="bg-white/10 border-white/20 text-white min-h-[150px] backdrop-blur-md"
-            />
-          </div>
-          
-          <div className="flex justify-center">
-            <Button
-              type="submit"
-              className="bg-accent hover:bg-accent/90 text-white backdrop-blur-md px-8"
-            >
-              {language === 'sv' ? 'Skicka meddelande' : 'Send message'}
-            </Button>
-          </div>
-        </form>
+        <form
+  method="POST"
+  name="contact"
+  data-netlify="true"
+  className="space-y-6"
+>
+  {/* This hidden field is required for Netlify to process the submission */}
+  <input type="hidden" name="form-name" value="contact" />
+
+  {/* Optionally, add a honeypot field */}
+  <p className="hidden">
+    <label>
+      Don’t fill this out if you're human: <input name="bot-field" />
+    </label>
+  </p>
+
+  <div>
+    <Label htmlFor="name" className="text-white">
+      {language === 'sv' ? 'Namn' : 'Name'}
+    </Label>
+    <Input
+      id="name"
+      name="name"
+      type="text"
+      required
+      className="bg-white border-white text-black"
+    />
+  </div>
+  
+  <div>
+    <Label htmlFor="email" className="text-white">
+      {language === 'sv' ? 'E-post' : 'Email'}
+    </Label>
+    <Input
+      id="email"
+      name="email"
+      type="email"
+      required
+      className="bg-white border-white text-black"
+    />
+  </div>
+  
+  <div>
+    <Label htmlFor="phone" className="text-white">
+      {language === 'sv' ? 'Telefon (valfritt)' : 'Phone (optional)'}
+    </Label>
+    <Input
+      id="phone"
+      name="phone"
+      type="tel"
+      className="bg-white border-white text-black"
+    />
+  </div>
+  
+  <div>
+    <Label htmlFor="message" className="text-white">
+      {language === 'sv' ? 'Meddelande' : 'Message'}
+    </Label>
+    <Textarea
+      id="message"
+      name="message"
+      required
+      className="bg-white border-white text-black min-h-[150px]"
+    />
+  </div>
+  
+  <div className="flex justify-center">
+    <Button
+      type="submit"
+      className="bg-accent hover:bg-accent/90 text-white backdrop-blur-md px-8"
+    >
+      {language === 'sv' ? 'Skicka meddelande' : 'Send message'}
+    </Button>
+  </div>
+</form>
       </div>
     </section>
   );
