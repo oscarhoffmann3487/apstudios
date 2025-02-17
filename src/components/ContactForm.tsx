@@ -93,6 +93,9 @@ export default function ContactForm() {
       className="bg-white border-white text-black min-h-[150px]"
     />
   </div>
+
+  <input type="hidden" name="form-name" value="contact" />
+
   
   <div className="flex justify-center">
     <Button
