@@ -11,18 +11,25 @@ export default function ContactForm() {
   const t = translations[language];
 
   return (
-    <section className="py-16 bg-[#222324] text-white">
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">
+    <section 
+      className="py-16 relative bg-cover bg-center bg-no-repeat"
+      style={{ 
+        backgroundImage: "url('/lovable-uploads/bd5f21a1-67a7-4f0d-87eb-6ec0631d4bf0.png')",
+        backgroundPosition: "center"
+      }}
+    >
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+      <div className="max-w-4xl mx-auto px-4 relative z-10">
+        <h2 className="text-3xl font-bold text-center mb-8 text-white">
           {language === 'sv' ? 'Kontakta oss' : 'Contact us'}
         </h2>
-        <p className="text-center mb-12 text-gray-300">
+        <p className="text-center mb-12 text-gray-100">
           {language === 'sv' 
             ? 'Har du frågor eller vill diskutera ett projekt? Fyll i formuläret nedan så återkommer vi så snart som möjligt.'
             : 'Have questions or want to discuss a project? Fill out the form below and we\'ll get back to you as soon as possible.'}
         </p>
         
-        <form className="space-y-6">
+        <form className="space-y-6 max-w-xl mx-auto">
           <div>
             <Label htmlFor="name" className="text-white">
               {language === 'sv' ? 'Namn' : 'Name'}
@@ -32,7 +39,7 @@ export default function ContactForm() {
               name="name"
               type="text"
               required
-              className="bg-white/10 border-white/20 text-white"
+              className="bg-white/10 border-white/20 text-white backdrop-blur-md"
             />
           </div>
           
@@ -45,54 +52,20 @@ export default function ContactForm() {
               name="email"
               type="email"
               required
-              className="bg-white/10 border-white/20 text-white"
+              className="bg-white/10 border-white/20 text-white backdrop-blur-md"
             />
           </div>
           
           <div>
             <Label htmlFor="phone" className="text-white">
-              {language === 'sv' ? 'Telefon' : 'Phone'}
+              {language === 'sv' ? 'Telefon (valfritt)' : 'Phone (optional)'}
             </Label>
             <Input
               id="phone"
               name="phone"
               type="tel"
-              className="bg-white/10 border-white/20 text-white"
+              className="bg-white/10 border-white/20 text-white backdrop-blur-md"
             />
-          </div>
-          
-          <div>
-            <Label htmlFor="service" className="text-white">
-              {language === 'sv' ? 'Tjänst' : 'Service'}
-            </Label>
-            <select
-              id="service"
-              name="service"
-              className="w-full rounded-md p-2 bg-white/10 border border-white/20 text-white"
-              required
-            >
-              <option value="">
-                {language === 'sv' ? 'Välj tjänst' : 'Select service'}
-              </option>
-              <option value="Flygfoto">
-                {language === 'sv' ? 'Flygfoto' : 'Aerial Photography'}
-              </option>
-              <option value="Videoproduktion">
-                {language === 'sv' ? 'Videoproduktion' : 'Video Production'}
-              </option>
-              <option value="Ytmodeller">
-                {language === 'sv' ? 'Ytmodeller' : 'Surface Models'}
-              </option>
-              <option value="3D-Modeller">
-                {language === 'sv' ? '3D-Modeller' : '3D Models'}
-              </option>
-              <option value="Volymberäkningar">
-                {language === 'sv' ? 'Volymberäkningar' : 'Volume Calculations'}
-              </option>
-              <option value="Inspektioner">
-                {language === 'sv' ? 'Inspektioner' : 'Inspections'}
-              </option>
-            </select>
           </div>
           
           <div>
@@ -103,16 +76,18 @@ export default function ContactForm() {
               id="message"
               name="message"
               required
-              className="bg-white/10 border-white/20 text-white min-h-[150px]"
+              className="bg-white/10 border-white/20 text-white min-h-[150px] backdrop-blur-md"
             />
           </div>
           
-          <Button
-            type="submit"
-            className="w-full bg-primary hover:bg-primary/90"
-          >
-            {language === 'sv' ? 'Skicka meddelande' : 'Send message'}
-          </Button>
+          <div className="flex justify-center">
+            <Button
+              type="submit"
+              className="bg-white/20 hover:bg-white/30 text-white backdrop-blur-md px-8"
+            >
+              {language === 'sv' ? 'Skicka meddelande' : 'Send message'}
+            </Button>
+          </div>
         </form>
       </div>
     </section>

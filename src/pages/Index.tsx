@@ -24,8 +24,8 @@ const Index = () => {
       <ModelShowcase />
       <ProjectShowcase />
       <Testimonials />
-      <ContactForm />
       <References />
+      <ContactForm />
       <Footer />
       <CookieBanner />
     </div>
