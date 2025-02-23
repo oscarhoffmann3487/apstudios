@@ -1,12 +1,15 @@
+
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import LogoCarousel from "./LogoCarousel";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
+import { useState } from "react";
 
 const Hero = () => {
   const { language } = useLanguage();
   const t = translations[language];
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   const services = [
     t.services.photo,
@@ -21,17 +24,37 @@ const Hero = () => {
     t.services.visualization,
   ];
 
+  const handleVideoLoad = () => {
+    setIsVideoLoaded(true);
+  };
+
   return (
     <>
       <div className="relative min-h-screen w-full">
+        <div 
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: `url('/lovable-uploads/8c415486-6700-4338-bf9f-d997e847e563.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: isVideoLoaded ? 0 : 1,
+            transition: 'opacity 0.5s ease-in-out'
+          }}
+        />
+        
         <video
           className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            opacity: isVideoLoaded ? 1 : 0,
+            transition: 'opacity 0.5s ease-in-out'
+          }}
           src="/lovable-uploads/showreel.mp4"
           autoPlay
           loop
           muted
           playsInline
-        ></video>
+          onLoadedData={handleVideoLoad}
+        />
 
         <div className="absolute inset-0 bg-[#222324]/40"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#222324]/40 to-[#222324]/20"></div>
