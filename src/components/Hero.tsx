@@ -55,7 +55,7 @@ const Hero = () => {
           onLoadedData={handleVideoLoad}
         />
 
-        <div className="absolute inset-0 bg-[#222324]/40"></div>
+        <div className="absolute inset-0 bg-[#222324]/30"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#222324]/40 to-[#222324]/20"></div>
 
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white px-4">

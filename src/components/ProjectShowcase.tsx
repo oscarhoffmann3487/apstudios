@@ -4,7 +4,7 @@ import { translations } from "../translations";
 const projects = [
   {
     title: "BLAIKENGRUVAN",
-    image: "/lovable-uploads/c01f5521-3595-4db0-81df-f077b17c7643.png",
+    image: "/lovable-uploads/project-showcase/blaiken1.png",
     syfte: "Syftet med uppdraget var att ta fram underlag för en pågående miljöåtgärd i Blaikengruvan i Sorsele kommun. Kunden ville bland annat göra beräkningar av olika slag samt simulera hur vattennivån i dagbrottet ändrade sig givet en viss vattenmängd.",
     fakta: {
       "Område": "Blaiken",
