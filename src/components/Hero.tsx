@@ -4,20 +4,25 @@ import { Mail } from "lucide-react";
 import LogoCarousel from "./LogoCarousel";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Hero = () => {
   const { language } = useLanguage();
   const t = translations[language];
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  useEffect(() => {
-    // Preload the background image
-    const img = new Image();
-    img.src = '/lovable-uploads/8c415486-6700-4338-bf9f-d997e847e563.png';
-    img.onload = () => setIsImageLoaded(true);
-  }, []);
+  const services = [
+    t.services.photo,
+    t.services.video,
+    t.services.images360,
+    t.services.surfaceModels,
+    t.services.models3d,
+    t.services.orthophotos,
+    t.services.volumeCalculations,
+    t.services.inspections,
+    t.services.measurements,
+    t.services.visualization,
+  ];
 
   const handleVideoLoad = () => {
     setIsVideoLoaded(true);
@@ -25,14 +30,14 @@ const Hero = () => {
 
   return (
     <>
-      <div className="relative min-h-screen w-full bg-[#222324]">
+      <div className="relative min-h-screen w-full">
         <div 
           className="absolute inset-0 w-full h-full"
           style={{
             backgroundImage: `url('/lovable-uploads/8c415486-6700-4338-bf9f-d997e847e563.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            opacity: isVideoLoaded ? 0 : (isImageLoaded ? 1 : 0),
+            opacity: isVideoLoaded ? 0 : 1,
             transition: 'opacity 0.5s ease-in-out'
           }}
         />
@@ -104,4 +109,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
