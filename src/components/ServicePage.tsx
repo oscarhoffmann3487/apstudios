@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,9 +10,10 @@ interface ServicePageProps {
   description?: string;
   images?: string[];
   children?: React.ReactNode;
+  beforeContent?: React.ReactNode;
 }
 
-const ServicePage = ({ title, description, images, children }: ServicePageProps) => {
+const ServicePage = ({ title, description, images, children, beforeContent }: ServicePageProps) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -37,6 +39,7 @@ const ServicePage = ({ title, description, images, children }: ServicePageProps)
     <div className="min-h-screen flex flex-col bg-[#222324]">
       <Navbar />
       <main className="flex-grow pt-16">
+        {beforeContent}
         {images && images.length > 0 && (
           <div className="w-full h-[60vh] relative mb-8">
             <Carousel 
