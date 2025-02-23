@@ -25,8 +25,8 @@ export const translations = {
       contactUs: "Kontakta oss",
     },
     about: {
-      title: "Aerial Picture studios",
-      description1: "Vi är specialister på drönartjänster och har många års erfarenhet av att identifiera applikationer och ta fram lösningar till kunder. Vi startade 2015 med visionen att ligga i framkant när det kommer till innovation, pris och kvalitet. Vår utrustning är därför modern och diversifierad för att kunna anpassas till kundens budget och behov.",
+      title: "Aerial Picture Studios",
+      description1: "Vi är specialister på drönartjänster med över 10 års erfarenhet av att identifiera applikationer och leverera skräddarsydda lösningar till våra kunder. Sedan starten 2015 har vi haft en tydlig vision: att ligga i framkant när det gäller innovation, pris och kvalitet. Därför arbetar vi med modern, diversifierad utrustning som kan anpassas efter både budget och behov.",
       description2: "Vi innehar alla nödvändiga tillstånd och försäkringar som krävs för att flyga drönare och tar alltid hänsyn till regler och risker. Vi finns i Stockholm och Linköping men utför uppdrag över hela landet. Du är alltid välkommen att kontakta oss för att bolla idéer!"
     },
     serviceCards: {
@@ -95,7 +95,7 @@ export const translations = {
     footer: {
       about: {
         title: "OM OSS",
-        text: "Vi är specialister på drönartjänster och har många års erfarenhet av att identifiera användningsområden och ta fram lösningar till kunder. Vi innehar alla nödvändiga tillstånd och försäkringar som krävs för att flyga drönare och tar alltid hänsyn till regler och risker."
+        text: "Vi är specialister på drönartjänster och har över 10 års erfarenhet av att identifiera användningsområden och ta fram lösningar till kunder. Vi innehar alla nödvändiga tillstånd och försäkringar som krävs för att flyga drönare och tar alltid hänsyn till regler och risker."
       },
       info: {
         title: "INFO",

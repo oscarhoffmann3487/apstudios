@@ -47,7 +47,7 @@ const Hero = () => {
             opacity: isVideoLoaded ? 1 : 0,
             transition: 'opacity 0.5s ease-in-out'
           }}
-          src="/lovable-uploads/showreel.mp4"
+          src="/lovable-uploads/videos/showreel.mp4"
           autoPlay
           loop
           muted
