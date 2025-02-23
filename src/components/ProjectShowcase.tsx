@@ -1,4 +1,3 @@
-
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations";
 import { Button } from "./ui/button";
@@ -35,7 +34,11 @@ const projects = [
   },
   {
     title: "ENSKEDE GÅRDS GYMNASIUM",
-    images: ["/lovable-uploads/6c8a31ee-ec6d-4bea-ac7e-168bf23d9d88.png"],
+    images: [
+      "/lovable-uploads/6c8a31ee-ec6d-4bea-ac7e-168bf23d9d88.png",
+      "/lovable-uploads/50c45d71-bc8c-431f-bb8f-77f2b8eb8cf1.png",
+      "/lovable-uploads/9430c346-15cd-48f4-a510-1b182fed9149.png"
+    ],
     syfte: "Syftet med uppdraget var att samla in material över tak och fasader för att skapa ett punktmoln som kunde kombineras med LIDAR-data. Med hjälp av detta kunde kunden skapa en komplett 3D modell och använda för detaljinspektion av fastigheten.",
     fakta: {
       "Område": "Enskede",
@@ -55,7 +58,11 @@ const projects = [
   },
   {
     title: "GRÄNSÖ VÄSTERVIK",
-    images: ["/lovable-uploads/9845fc1b-8224-40ec-92e9-9222d770ffca.png"],
+    images: [
+      "/lovable-uploads/9845fc1b-8224-40ec-92e9-9222d770ffca.png",
+      "/lovable-uploads/b2dff953-7322-495f-be44-8698e5748a17.png",
+      "/lovable-uploads/d1c31bcf-d6a7-4ed7-8e5d-bcc048891161.png"
+    ],
     syfte: "Syftet med uppdraget var att ta fram en modell över en del av Gränsö i Västervik. Modellen skulle användas som en testbädd i olika forskningsprojekt för att kunna testa simuleringar.",
     fakta: {
       "Område": "Västervik",

@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import LogoCarousel from "./LogoCarousel";
@@ -88,7 +89,7 @@ const Hero = () => {
             <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-12">
               {t.hero.description}
             </p>
-            <button onClick={handleContactClick} className="bg-primary hover:bg-primary/90 text-white font-medium py-6 px-8 rounded-md inline-flex items-center">
+            <button onClick={handleContactClick} className="bg-primary hover:bg-primary/90 text-white font-medium py-4 px-6 rounded-md inline-flex items-center">
               <Mail className="mr-2" />
               {t.hero.contactUs}
             </button>
@@ -114,3 +115,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
