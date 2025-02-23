@@ -22,7 +22,7 @@ const Film = () => {
         <div className="w-full h-[80vh] bg-gray-900">
           <video
             className="w-full h-full object-cover"
-            src="/lovable-uploads/showreel.mp4"
+            src="/lovable-uploads/videos/video_showreel.mp4"
             autoPlay
             loop
             muted
