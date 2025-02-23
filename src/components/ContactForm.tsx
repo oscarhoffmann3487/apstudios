@@ -35,6 +35,7 @@ export default function ContactForm() {
 
   return (
     <section
+      id="contact"
       className="py-16 min-h-[600px] relative bg-cover bg-center bg-fixed"
       style={{
         backgroundImage:

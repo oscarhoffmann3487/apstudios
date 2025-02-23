@@ -37,6 +37,14 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   };
 
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const bgColor = isHome ? (isScrolled ? "bg-white" : "bg-transparent") : "bg-white";
   const textColor = isHome ? (isScrolled ? "text-black" : "text-white") : "text-black";
   const logoSrc = isHome && !isScrolled ? "/lovable-uploads/4ffbab3c-ddab-45a5-b7d8-6faf73292d58.png" : "/lovable-uploads/50c45d71-bc8c-431f-bb8f-77f2b8eb8cf1.png";
@@ -94,12 +102,12 @@ const Navbar = () => {
               >
                 {t.nav.projects}
               </Link>
-              <a
-                href="#contact"
+              <button
+                onClick={handleContactClick}
                 className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
               >
                 {t.nav.contact}
-              </a>
+              </button>
               <div className="group relative inline-block">
                 <Button
                   variant="ghost"

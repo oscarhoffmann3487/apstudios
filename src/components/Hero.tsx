@@ -27,6 +27,14 @@ const Hero = () => {
     setIsVideoLoaded(true);
   };
 
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <div className="relative min-h-screen w-full">
@@ -80,12 +88,10 @@ const Hero = () => {
             <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-12">
               {t.hero.description}
             </p>
-            <a href="mailto:info@apstudios.se">
-              <Button className="bg-primary hover:bg-primary/90 text-white font-medium py-6 px-8">
-                <Mail className="mr-2" />
-                {t.hero.contactUs}
-              </Button>
-            </a>
+            <button onClick={handleContactClick} className="bg-primary hover:bg-primary/90 text-white font-medium py-6 px-8 rounded-md inline-flex items-center">
+              <Mail className="mr-2" />
+              {t.hero.contactUs}
+            </button>
           </div>
         </div>
       </div>
