@@ -173,7 +173,7 @@ export const translations = {
       delivery: "DELIVERY",
       client: "CLIENT",
       blaiken: {
-        title: "BLAIKEN MINE",
+        title: "BLAIKEN STORUMAN",
         purpose: "The purpose of the assignment was to provide documentation for an ongoing environmental measure at the Blaiken mine in Sorsele municipality. The client wanted to make various calculations and simulate how the water level in the open pit changed given a certain amount of water.",
         facts: {
           area: "Area: 460 hectares",

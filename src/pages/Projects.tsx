@@ -35,7 +35,7 @@ const allServices = [
 const projects: Project[] = [
   {
     id: 1,
-    title: "BLAIKENGRUVAN",
+    title: "BLAIKENGRUVAN STORUMAN",
     description: "Miljöåtgärder och volymberäkningar i Sorsele kommun",
     longDescription: "Ett omfattande projekt för miljöövervakning och volymberäkning vid Blaikengruvan. Projektet innefattade detaljerad kartläggning av området med hjälp av drönare för att möjliggöra precisa beräkningar och miljöanalyser.",
     category: "Volymberäkning",
