@@ -55,7 +55,7 @@ const ServicePage = ({ title, description, images, children, beforeContent }: Se
                     <div className="w-full h-[60vh] relative">
                       <img
                         src={image}
-                        alt={`Slide ${index + 1}`}
+                        alt={`${title} – bild ${index + 1}`}
                         className="w-full h-full object-cover"
                       />
                     </div>

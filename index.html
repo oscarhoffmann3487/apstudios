@@ -1,24 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aerial-Picture-Studios</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-    <meta property="og:image" content="/og-image.png" />
+    <title>Aerial Picture Studios — Professionella drönartjänster</title>
+    <meta name="description" content="APstudios erbjuder professionella drönartjänster: flygfoto, videoproduktion, 3D-modeller, ortofoton, volymberäkningar och inspektioner i hela Sverige." />
+    <link rel="canonical" href="https://apstudios.lovable.app/" />
     <link rel="icon" type="image/png" href="/lovable-uploads/79e99f21-ebcc-4011-a092-744812f57979.png" />
+
+    <meta property="og:title" content="Aerial Picture Studios — Professionella drönartjänster" />
+    <meta property="og:description" content="Professionella drönartjänster: flygfoto, film, 3D-modeller, ortofoton, volymberäkningar och inspektioner." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://apstudios.lovable.app/" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aerial Picture Studios — Professionella drönartjänster" />
+    <meta name="twitter:description" content="Professionella drönartjänster: flygfoto, film, 3D-modeller, ortofoton, volymberäkningar och inspektioner." />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Aerial Picture Studios",
+      "alternateName": "APstudios",
+      "url": "https://apstudios.lovable.app/",
+      "email": "info@apstudios.se",
+      "telephone": "+46-72-544-88-60",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kunskapslänken 94",
+        "postalCode": "583 28",
+        "addressLocality": "Linköping",
+        "addressCountry": "SE"
+      },
+      "areaServed": "SE",
+      "description": "Professionella drönartjänster: flygfoto, videoproduktion, 3D-modeller, ortofoton, volymberäkningar och inspektioner."
+    }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <textarea name="message"></textarea>
-  </form>
-  
 </html>
