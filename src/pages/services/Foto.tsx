@@ -32,7 +32,7 @@ const Foto = () => {
             {sections.map((section, index) => <div key={index} className="bg-white rounded-lg shadow-xl p-8 mx-[42px] px-[41px]">
                 <div className="grid md:grid-cols-2 gap-8 items-center my-0 py-0">
                   <div>
-                    <h3 className="text-2xl font-bold mb-4">{section.title}</h3>
+                    <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
                     <p className="text-gray-700">{section.description}</p>
                   </div>
                   <div className="aspect-[4/3] w-full max-w-md mx-auto overflow-hidden rounded-lg">

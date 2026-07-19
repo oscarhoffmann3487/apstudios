@@ -69,7 +69,7 @@ export const translations = {
       viewMore: "Se fler 3D-modeller",
     },
     projects: {
-      readMore: "LÄS MER",
+      readMore: "Se projektet",
       purpose: "SYFTE",
       facts: "FAKTA",
       delivery: "LEVERANS",
@@ -186,7 +186,7 @@ export const translations = {
       viewMore: "View More 3D Models",
     },
     projects: {
-      readMore: "READ MORE",
+      readMore: "View project details",
       purpose: "PURPOSE",
       facts: "FACTS",
       delivery: "DELIVERY",

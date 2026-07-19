@@ -49,7 +49,7 @@ const Ytmodeller = () => {
                 <div className="aspect-video w-full overflow-hidden rounded-lg">
                   <img
                     src={image}
-                    alt={`Slide ${index + 1}`}
+                    alt={`Ortofoton och ytmodeller – bild ${index + 1}`}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -65,7 +65,7 @@ const Ytmodeller = () => {
         {sections.map((section, index) => (
           <div key={index} className="grid md:grid-cols-2 gap-8 items-center">
             <div className="order-2 md:order-none">
-              <h3 className="text-2xl font-bold mb-4 text-white">{section.title}</h3>
+              <h2 className="text-2xl font-bold mb-4 text-white">{section.title}</h2>
               <p className="text-gray-300">{section.content}</p>
             </div>
             <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-800">
