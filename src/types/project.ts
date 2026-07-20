@@ -3,9 +3,7 @@ export type MediaType = "image" | "video" | "iframe" | "3d";
 
 export interface Project {
   id: number;
-  title: string;
-  description: string;
-  longDescription?: string;
+  translationKey: "blaiken" | "enskede" | "gransoe";
   category: string;
   mediaType: MediaType;
   mediaSrc: string;
@@ -13,7 +11,4 @@ export interface Project {
   additionalMedia?: { type: MediaType; src: string }[];
   client: string;
   date: string;
-  tags: string[];
-  location?: string;
-  deliverables?: string[];
 }
