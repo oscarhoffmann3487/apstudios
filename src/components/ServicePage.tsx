@@ -1,7 +1,8 @@
-
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { type CarouselApi } from "@/components/ui/carousel";
 
@@ -14,22 +15,21 @@ interface ServicePageProps {
 }
 
 const ServicePage = ({ title, description, images, children, beforeContent }: ServicePageProps) => {
+  const { language } = useLanguage();
+  const imageAlt = translations[language].servicePage.imageAlt;
   const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
+  const [, setCurrent] = useState(0);
 
   useEffect(() => {
     if (!api || !images?.length) return;
-
     const interval = setInterval(() => {
       api.scrollNext();
     }, 4000);
-
     return () => clearInterval(interval);
   }, [api, images]);
 
   useEffect(() => {
     if (!api) return;
-
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap());
     });
@@ -42,12 +42,10 @@ const ServicePage = ({ title, description, images, children, beforeContent }: Se
         {beforeContent}
         {images && images.length > 0 && (
           <div className="w-full h-[60vh] relative mb-8">
-            <Carousel 
+            <Carousel
               className="w-full h-full"
               setApi={setApi}
-              opts={{
-                loop: true,
-              }}
+              opts={{ loop: true }}
             >
               <CarouselContent>
                 {images.map((image, index) => (
@@ -55,7 +53,7 @@ const ServicePage = ({ title, description, images, children, beforeContent }: Se
                     <div className="w-full h-[60vh] relative">
                       <img
                         src={image}
-                        alt={`${title} – bild ${index + 1}`}
+                        alt={`${title} – ${imageAlt} ${index + 1}`}
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -69,7 +67,7 @@ const ServicePage = ({ title, description, images, children, beforeContent }: Se
         )}
         <div className="max-w-7xl mx-auto px-4 py-16">
           <h1 className="text-4xl font-bold text-white mb-8">{title}</h1>
-          {description && <p className="text-gray-300 mb-12">{description}</p>}
+          {description && <p className="text-gray-300 mb-12 whitespace-pre-line">{description}</p>}
           {children}
         </div>
       </main>
