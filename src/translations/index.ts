@@ -114,6 +114,246 @@ export const translations = {
         phone: "Tel",
       },
     },
+    servicePage: {
+      imageAlt: "bild",
+    },
+    servicePages: {
+      foto: {
+        title: "FOTO",
+        description:
+          "Med drönarbilder kan du skildra olika motiv från ett helt nytt perspektiv. Detta öppnar upp möjligheter i en mängd olika branscher. I fastighetsbranschen är drönarbilder väldigt relevant då man får ett helhetsintryck av både tomt och byggnad. Genom att ta utsiktsfoton kan man vid nyproduktion marknadsföra balkongutsikter från olika våningsplan. Vi kan även fota interiör från marken för att komplettera drönarbilderna, vilket passar perfekt för exempelvis mäklare.",
+        sections: {
+          utsiktsfoto: {
+            title: "UTSIKTSFOTO",
+            description:
+              "Visa utsikten i nyproduktion genom att låta drönaren flyga upp till den planerade balkongens höjd och ta bilder. Ett balkongräcke kan även monteras i bilden för en mer verklighetstrogen känsla. Bilderna kan tas i olika väderstreck.",
+          },
+          fotomontage: {
+            title: "FOTOMONTAGE",
+            description:
+              "Fotomontage lämpar sig, precis som utsiktsfoton, vid planerad bebyggelse av olika slag. Det är ofta användbart att se hur ny bebyggelse kommer passa in i miljön redan i förväg. Fotomontage är ett bra alternativ till 3D-modeller då det är enklare och lämpar sig bättre för stora områden.",
+          },
+          fastighetsfoto: {
+            title: "FASTIGHETSFOTO",
+            description:
+              "Vi fotograferar alla typer av kommersiella och privata fastigheter, både från drönare och från marken. Vi kan lyfta det ni tycker är viktiga nyckelpunkter för fastigheten såsom infrastruktur, kommunikationer och läge.",
+          },
+          maklarfoto: {
+            title: "MÄKLARFOTO",
+            description:
+              "Drönarbilder lämpar sig utmärkt för mäklare. Vi kan dokumentera en bostad både inifrån och utifrån med drönare och vanlig kamera. Vi kan även skapa digitala floorplans med 360 tours för att på ett interaktivt sätt kunna visa upp bostaden.",
+          },
+          evenemang: {
+            title: "EVENEMANG",
+            description:
+              "Vi kan hjälpa till med fotografering av ditt evenemang så att det förevigas. Vi kan både fotografera från marken och från drönare.",
+          },
+          landskapsfoto: {
+            title: "LANDSKAPSFOTO",
+            description: "Har du ett vackert motiv du vill fotografera? Vi fotar landskap och arkitektur på beställning.",
+          },
+        },
+      },
+      film: {
+        title: "VIDEOPRODUKTION",
+        description:
+          "Vi kan marknadsföra ert varumärke eller fastighet med uppseendeväckande flygfilmer. Vi kan ansvara för hela produktionen och lägga till musik, grafik och logotyper. Resultatet kan anpassas efter marknadsföringskanaler såsom sociala medier, webb och storbildsskärmar. Vi kan även vara ett steg i en större produktion och bidra med flygfilm. Materialet kan levereras direkt i RAW-kvalité. Flygfilm lämpar sig väl till de flesta sorters produktioner och kan ofta vara ett bra sätt att skapa omväxling för tittaren. Utöver flygfilm jobbar vi även med vanlig filmproduktion från marken och använder då gimbal-stabilisering för att uppnå ett bra resultat.",
+        productionsTitle: "Våra Produktioner",
+      },
+      ytmodeller: {
+        title: "ORTOFOTON OCH YTMODELLER",
+        description:
+          "Genom att flyga med drönare på hög höjd och fotografera i sekvenser med överlapp kan man kombinera bilder för att skapa ortofoton. Ett Ortofoto kan sedan omvandlas till en Digital Terrängmodell (DTM). Genom att använda AI system för bildigenkänning kan vegetation, byggnader och andra artificiella objekt klassificeras. Därefter kan dessa plockas bort och kvar blir då endast markytan. Detta är vad man kallar en Digital Ytmodell (DSM). För att underlätta visningen av en karta kan man göra om ortofoton till konturlinjer med höjdkurvor som kan integreras direkt med era ritningar i CAD-mjukvara. Det går även att lägga över CAD-ritningar så att man kan se att bygget uppförs enligt plan. Ortofoton kan även användas till inspektion av solcellsparker eller stora fasadtak där brister kan taggas med koordinater för att enkelt kunna lokaliseras och åtgärdas.",
+        sections: {
+          ortofoto: {
+            title: "ORTOFOTO",
+            content:
+              "Vi tar fram ortofoton över allt ifrån små tomter till statsdelar på flera hundra hektar. Ortofotot är högupplöst och georeffererad i erat föredragna koordinatsystem. Med ortofoton kan man exempelvis följa utveckligen på en byggarbetsplats över tid för att säkerhetställa att allt fortlöper enligt plan.",
+          },
+          dtm: {
+            title: "DTM",
+            content:
+              "En digitala terrängmodell (DTM) fungerar som ett ortofoto men är färgkodat baserat på höjd. Detta gör det lättare att få perspektiv i bilden där man uppfattar djup. Det underlättar även när mätdata ska tas som exempelvis volymberäkningar.",
+          },
+          dsm: {
+            title: "DSM",
+            content:
+              "En Digital Ytmodell (DSM) är liksom ett ortofoto och en DTM koordinatsatt. Skillanden är att den visar markytan utan träd, växter, hus eller infrastruktur. Detta är användbart om man planerar att avverka skog och vill kunna beräkna fyllandsmassor på marken under.",
+          },
+          konturlinjer: {
+            title: "KONTURLINJER",
+            content:
+              "Konturlinjer är en förenklad kartbild som är lätt att visa och förstå. De kan skapas baserat på ortofoton med olika intervall på höjdkurvorna enligt önskemål från kunden. De kan levereras i många olika format för att passa just erat kartprogram.",
+          },
+          inmatning: {
+            title: "INMÄTNING",
+            content:
+              "När en 3D modell skapas med drönare krävs det att man mäter in flygstöd för att uppnå hög noggrannhet. Vi kan utföra detta som extern tjänst där vi placerar ut markörer och mäter in i exempelvis SWEREF. Med vår RTK-utrustning vi även mäta in andra objekt såsom tomtgränser vägbanor och höjder.",
+          },
+        },
+      },
+      modeller3d: {
+        title: "3D MODELLER OCH PUNKTMOLN",
+        description:
+          "Vi skapar och levererar högkvalitativa punktmoln och 3D modeller över stora och små områden. Vare sig syfte är att visualisera, analysera eller använda för mätdata har vi lösningen. Vi kan skapa digitala tvillingar där vi skannar en byggnad både på in- och utsidan. Med gedigen utrustning och noga kontroller säkerhetställer vi att våra modeller håller hög kvalitet. Med moderna visualiseringsprogram kan vi ger er tillgång till modellerna direkt över webben eller leverera som fil om ni föredrar att arbeta i egna program.",
+        visualize: {
+          title: "VISUALISERA OCH ANALYSERA",
+          text: "Vi kan skapa 3D modeller där man kan montera planerad bebyggelse från exempelvis en sketch-up modell. Med \"Field of view\" kan man släppa en gubbe i modellen, likt google streetview, och ställa sig på en balkong exempelvis för att se hur utsikten kommer bli. Det går även att visualisera hus solen rör sig över huskroppar och vart skuggor hamnar under olika tider på dagen. Dessutom kan solpotential visualiseras vilket kan användas för att se vart solceller kan göra mest nytta på en fastighet. Ytterligare funktionalitet fås genom att modellera vatten i modellen och lägga in info-points.",
+        },
+        cards: {
+          fov: "FIELD OF VIEW",
+          solanalys: "SOLANALYS",
+          solpotential: "SOLPOTENTIAL",
+          vatten: "VATTENANALYS",
+          infoPoints: "INFO POINTS",
+        },
+        print: {
+          title: "3D UTSKRIFTER",
+          text: "Vi kan omvandla digitala 3D-modeller skapade med drönare till fysiska modeller med hjälp av vår 3D-skrivare. Vi erbjuder en maximal utskriftsvolym på 30x30x40cm och en utskriftsupplösningen på 0,06 mm vilket ger otroligt detaljerade modeller.",
+        },
+      },
+      volymberakningar: {
+        title: "VOLYMBERÄKNINGAR",
+        description:
+          "Med hjälp av drönare och avancerad mjukvara kan vi snabbt och effektivt beräkna volymer av olika material. Våra volymberäkningar är idealiska för bergtäkter, grustag, flishögar och andra typer av materialhögar. Genom att använda fotogrammetri skapar vi exakta 3D-modeller som ger noggranna mätresultat. Detta gör det möjligt att:\n\n    • Få snabb överblick över materialvolymer\n    • Spåra förändringar över tid\n    • Optimera lagerhantering\n    • Minska mätkostnader\n    • Få tillgång till mätdata direkt via webben\n    \n    Tekniken är särskilt användbar för företag som behöver regelbunden inventering av stora materiallager.",
+        accurate: {
+          title: "NOGGRANNA MÄTNINGAR",
+          text: "Våra drönare samlar in tusentals mätpunkter som bearbetas i specialiserad programvara. Detta ger mycket noggranna resultat som kan användas för att beräkna volymer, skapa höjdkurvor och analysera massbalanser.",
+        },
+        efficient: {
+          title: "EFFEKTIV PROCESS",
+          text: "Genom att använda drönare kan vi snabbt täcka stora områden och leverera resultat inom kort tid. Detta gör metoden både kostnadseffektiv och tidsbesparande jämfört med traditionella mätmetoder.",
+        },
+      },
+      inspektioner: {
+        title: "INSPEKTIONER",
+        description:
+          "Inspektion med drönare är ett smart alternativ till skylifts när det rör sig om höga och svårtillgängliga platser. I jämförelse med traditionella metoder är det mer tidseffektivt, billigare och framför allt säkrare att använda drönare. Dessutom kan inspektioner med drönare genomföras i tuffa väderförhållanden och man kan lättare komma åt svårtillgängliga platser.",
+        smart: {
+          title: "SMART TEKNOLOGI",
+          text: "Våra drönare är utrustade med smarta sensorer som hjälper drönaren undvika hinder automatiskt. Detta möjliggör för drönaren att flyga väldigt nära objektet som inspekteras utan att riskera att egendom kommer till skada.",
+        },
+        situations: {
+          title: "SITUATIONER",
+          text: "Skorstenar, master, kraftledningar, broar, fastigheter och industrier är exempel på perfekta objekt för drönarinspektion. Fotografering och video är vanligt att använda vid inspektion av infrastruktur. Genom att använda optisk zoom kan man få en extremt detaljerad bild av ett objekt utan att behöva vara särskilt nära. Ortofoton kan användas för att inspektera vägar, tak och fasader. Fel kan markeras i bilden och taggas med koordinater så att det lätt går att hitta när det ska åtgärdas. Leveransen kan vara bilder, film, 3D modeller eller högupplösta och mätbara ortofoton över fasader och tak.",
+        },
+        useCasesTitle: "ANVÄNDNINGSOMRÅDEN",
+        useCases: [
+          "Kraftledningar",
+          "Vindkraftverk",
+          "Solceller",
+          "Broar",
+          "Vägar",
+          "Samhällsanläggningar",
+          "Industrier",
+          "Fastigheter",
+          "Telemaster",
+        ],
+      },
+    },
+    contactForm: {
+      title: "Kontakta oss",
+      intro:
+        "Har du frågor eller vill diskutera ett projekt? Fyll i formuläret nedan så återkommer vi så snart som möjligt.",
+      name: "Namn",
+      email: "E-post",
+      subject: "Ämne",
+      phone: "Telefon (valfritt)",
+      message: "Meddelande",
+      send: "Skicka meddelande",
+      thanksTitle: "Tack!",
+      thanksText: "Ditt meddelande har skickats. Vi återkommer så snart vi kan.",
+    },
+    cookieBanner: {
+      text: "Vi använder cookies för att förbättra din upplevelse på vår webbplats. Genom att fortsätta använda webbplatsen godkänner du användningen av cookies.",
+      learnMore: "Läs mer",
+      accept: "Acceptera",
+    },
+    projectsPage: {
+      title: "Våra projekt",
+      intro:
+        "Ett urval av våra senaste projekt inom drönartjänster, från volymberäkningar till 3D-modellering.",
+      selectCategory: "Välj kategori",
+      allCategories: "Alla kategorier",
+      projectInfo: "Projektinformation",
+      client: "Kund",
+      location: "Plats",
+      date: "Datum",
+      deliverables: "Leverabler",
+      clientLabel: "Kund: ",
+      categories: {
+        Flygfoto: "Flygfoto",
+        Videoproduktion: "Videoproduktion",
+        Ytmodeller: "Ytmodeller",
+        "3D-Modeller": "3D-Modeller",
+        Volymberäkningar: "Volymberäkningar",
+        Inspektioner: "Inspektioner",
+      },
+      items: {
+        blaiken: {
+          title: "BLAIKENGRUVAN STORUMAN",
+          description: "Miljöåtgärder och volymberäkningar i Sorsele kommun",
+          longDescription:
+            "Ett omfattande projekt för miljöövervakning och volymberäkning vid Blaikengruvan. Projektet innefattade detaljerad kartläggning av området med hjälp av drönare för att möjliggöra precisa beräkningar och miljöanalyser.",
+          location: "Sorsele, Sverige",
+          tags: ["Volymberäkning", "Miljö", "3D-Modellering"],
+          deliverables: ["3D-modell", "Volymberäkningar", "Miljörapport"],
+        },
+        enskede: {
+          title: "ENSKEDE GÅRDS GYMNASIUM",
+          description: "3D-modellering och detaljinspektion av fastighet",
+          tags: ["3D-Modellering", "Inspektion", "Fastighet"],
+        },
+        gransoe: {
+          title: "GRÄNSÖ VÄSTERVIK",
+          description: "Testbädd för forskningsprojekt och simuleringar",
+          tags: ["3D-Modellering", "Forskning", "Simulering"],
+        },
+      },
+    },
+    gdpr: {
+      pageTitle: "APstudios Integritetspolicy",
+      section1Title: "Behandling av personuppgifter",
+      section1Text:
+        "Denna dag (2019-09-09) har följande policy upprättats för APstudios (org nr 990203-6475).",
+      purposeTitle: "Syfte",
+      purposeText:
+        "Vi värnar om din integritet. Du ska kunna känna dig trygg när du anförtror oss dina personuppgifter. Därför har vi upprättat den här policyn. Den utgår från gällande dataskyddslagstiftning och förtydligar hur vi jobbar för att ta tillvara dina rättigheter och din integritet. Syftet med den här policyn är att du ska få veta hur vi behandlar dina personuppgifter, vad vi använder dem till, vilka som får ta del av dem och under vilka förutsättningar samt hur du kan ta tillvara dina rättigheter.",
+      backgroundTitle: "Bakgrund",
+      backgroundText:
+        "Vi behandlar dina personuppgifter främst för att fullfölja våra förpliktelser mot dig. Vår utgångspunkt är att inte behandla fler personuppgifter än vad som behövs för ändamål, och vi strävar alltid efter att använda de minst integritetskänsliga uppgifterna. Vi behöver också dina personuppgifter för att ge dig bra service exempelvis vad gäller marknadsföring, uppföljning, fakturering och information.",
+      guidelinesTitle: "Riktlinjer",
+      whatDataTitle: "Vilka personuppgifter behandlar vi?",
+      whatDataText:
+        "Vi behandlar endast personuppgifter när vi har laglig grund. Vi behandlar inte personuppgifter i annat fall än när de behövs för att fullgöra förpliktelser enligt avtal och lag.",
+      whatDataListIntro: "Här följer exempel på personuppgifterna vi behandlar:",
+      whatDataList: ["Namn", "Adress", "E-postadress", "Telefonnummer"],
+      whatDataList2: [
+        "Uppgifter som du registrerade självmant och frivilligt uppger",
+        "Innehåll som du själv publicerar, s.k. användargenererat innehåll",
+      ],
+      howAccessTitle: "Hur får vi tillgång till dina personuppgifter?",
+      howAccess1: "Vid beställning av uppdrag hos oss samtycker ni att vi behandlar era personuppgifter.",
+      howAccess2:
+        "Du har när som helst rätt att återkalla ditt samtycke. Vi kommer då inte längre att behandla dina personuppgifter eller inhämta nya, under förutsättning att det inte behövs för att fullgöra våra skyldigheter enligt avtal eller lag. Tänk på att återkallelse av samtycke kan innebära att vi inte kan fullgöra de skyldigheter vi har i förhållande till dig.",
+      howAccess3: "Vi får också tillgång till dina personuppgifter på följande sätt:",
+      howAccessList: [
+        "Uppgifter som du tillhandahåller oss direkt",
+        "Uppgifter som vi får när du anlitar en av våra medarbetare",
+      ],
+      infoToYouTitle: "Vilken information ger vi till dig?",
+      infoToYouText:
+        "När vi samlar in dina personuppgifter lagras detta i vårt faktureringssystem. Ansvarig för personuppgiftsbehandlingen är Oscar Hoffmann och du kan alltid kontakta oss om du har frågor eller behöver lämna en begäran eller förfrågan som avser dina personuppgifter och/eller rättigheter. Ring 072-5448860 eller maila till ",
+      secureTitle: "Behandlas dina personuppgifter på ett betryggande sätt?",
+      secureText:
+        "Vi har rutiner och arbetssätt för att dina personuppgifter ska hanteras på ett säkert sätt. Utgångspunkten är att endast arbetstagare och andra personer inom organisationen som behöver personuppgifterna för att utföra sina arbetsuppgifter ska ha tillgång till dem. Vi överför inte personuppgifter i andra fall än de som uttryckligen anges i denna policy.",
+      shareTitle: "När lämnar vi ut dina personuppgifter?",
+      shareText:
+        "Vår utgångspunkt är att inte lämna ut dina personuppgifter till tredje part om du inte har samtyckt till det eller om det inte är nödvändigt för att uppfylla våra förpliktelser enligt avtal eller lag.",
+      responsibilityTitle: "Ansvar",
+      responsibilityText:
+        "APstudios är personuppgiftsansvarig, vilket innebär att vi är ansvariga för hur dina personuppgifter behandlas och att dina rättigheter tas tillvara.",
+    },
   },
 
   en: {
@@ -230,6 +470,245 @@ export const translations = {
         email: "Email",
         phone: "Phone",
       },
+    },
+    servicePage: {
+      imageAlt: "image",
+    },
+    servicePages: {
+      foto: {
+        title: "PHOTOGRAPHY",
+        description:
+          "With drone images you can capture subjects from a whole new perspective. This opens opportunities in many industries. In real estate, drone images are highly relevant as they give an overall impression of both the plot and the building. Balcony-view images from new developments can be used to market views from different floor levels before construction. We also shoot interiors from the ground to complement the aerial images — perfect for real estate agents.",
+        sections: {
+          utsiktsfoto: {
+            title: "VIEW PHOTOGRAPHY",
+            description:
+              "Show the view of a new development by letting the drone fly up to the planned balcony height and capture images. A balcony railing can be composited into the image for a more realistic feel. Images can be taken in different directions.",
+          },
+          fotomontage: {
+            title: "PHOTOMONTAGE",
+            description:
+              "Photomontages are, like view photography, well suited for planned buildings of various kinds. It is often useful to see in advance how a new building will fit into the environment. Photomontages are a good alternative to 3D models as they are simpler and better suited for large areas.",
+          },
+          fastighetsfoto: {
+            title: "PROPERTY PHOTOGRAPHY",
+            description:
+              "We photograph all kinds of commercial and private properties, both from drone and from the ground. We can highlight key points you consider important such as infrastructure, transport links and location.",
+          },
+          maklarfoto: {
+            title: "REAL ESTATE PHOTOGRAPHY",
+            description:
+              "Drone images are excellent for real estate agents. We can document a home both inside and outside using drone and regular camera. We can also create digital floor plans with 360° tours to showcase the property interactively.",
+          },
+          evenemang: {
+            title: "EVENTS",
+            description:
+              "We can help photograph your event so it is preserved for the future. We shoot both from the ground and from the drone.",
+          },
+          landskapsfoto: {
+            title: "LANDSCAPE PHOTOGRAPHY",
+            description: "Have a beautiful subject you want photographed? We shoot landscapes and architecture on request.",
+          },
+        },
+      },
+      film: {
+        title: "VIDEO PRODUCTION",
+        description:
+          "We can promote your brand or property with striking aerial films. We can be responsible for the entire production and add music, graphics and logos. The result can be adapted to marketing channels such as social media, web and large-screen displays. We can also contribute aerial footage as one step in a larger production. Material can be delivered directly in RAW quality. Aerial film suits most types of productions and is often a great way to add variety for the viewer. In addition to aerial film, we also do regular ground-based film production using gimbal stabilization for high-quality results.",
+        productionsTitle: "Our Productions",
+      },
+      ytmodeller: {
+        title: "ORTHOPHOTOS AND SURFACE MODELS",
+        description:
+          "By flying drones at high altitude and capturing images in overlapping sequences, images can be combined to create orthophotos. An orthophoto can then be converted into a Digital Terrain Model (DTM). Using AI-based image recognition, vegetation, buildings and other artificial objects can be classified and then removed, leaving only the ground surface — a Digital Surface Model (DSM). To simplify map display, orthophotos can be converted into contour lines integrated directly with your CAD drawings. CAD drawings can also be overlaid to verify that construction is proceeding as planned. Orthophotos can also be used for inspecting solar parks or large facade roofs where defects can be tagged with coordinates for easy location and repair.",
+        sections: {
+          ortofoto: {
+            title: "ORTHOPHOTO",
+            content:
+              "We produce orthophotos of everything from small lots to city districts covering hundreds of hectares. The orthophoto is high resolution and georeferenced in your preferred coordinate system. Orthophotos can, for example, be used to follow the progress of a construction site over time to ensure everything proceeds according to plan.",
+          },
+          dtm: {
+            title: "DTM",
+            content:
+              "A Digital Terrain Model (DTM) works like an orthophoto but is color coded by elevation. This makes it easier to perceive depth and perspective in the image. It also simplifies extracting measurement data such as volume calculations.",
+          },
+          dsm: {
+            title: "DSM",
+            content:
+              "A Digital Surface Model (DSM), like an orthophoto and a DTM, is coordinate referenced. The difference is that it shows the ground surface without trees, vegetation, houses or infrastructure. This is useful when planning to clear forest and calculating fill volumes on the ground below.",
+          },
+          konturlinjer: {
+            title: "CONTOUR LINES",
+            content:
+              "Contour lines are a simplified map view that is easy to display and understand. They can be created from orthophotos with various height intervals according to the customer's wishes and delivered in many formats to suit your mapping software.",
+          },
+          inmatning: {
+            title: "GROUND CONTROL",
+            content:
+              "When a 3D model is created with a drone, ground control points must be measured in to achieve high accuracy. We can perform this as an external service where we place markers and measure them in e.g. SWEREF. With our RTK equipment we can also measure other objects such as property boundaries, roadways and elevations.",
+          },
+        },
+      },
+      modeller3d: {
+        title: "3D MODELS AND POINT CLOUDS",
+        description:
+          "We create and deliver high-quality point clouds and 3D models over large and small areas. Whether the purpose is to visualize, analyze or use for measurement data, we have the solution. We can create digital twins where we scan a building both inside and outside. With solid equipment and thorough quality control we ensure our models are of high quality. With modern visualization software we can give you access to the models directly on the web or deliver as a file if you prefer to work in your own program.",
+        visualize: {
+          title: "VISUALIZE AND ANALYZE",
+          text: "We can create 3D models where planned buildings from e.g. a SketchUp model can be inserted. With \"Field of view\" you can place a person in the model, like Google Street View, and stand on a balcony to see what the view will look like. It is also possible to visualize how the sun moves across buildings and where shadows fall at different times of the day. Solar potential can be visualized to see where solar panels will be most useful on a property. Additional functionality is achieved by modeling water in the model and adding info points.",
+        },
+        cards: {
+          fov: "FIELD OF VIEW",
+          solanalys: "SOLAR ANALYSIS",
+          solpotential: "SOLAR POTENTIAL",
+          vatten: "WATER ANALYSIS",
+          infoPoints: "INFO POINTS",
+        },
+        print: {
+          title: "3D PRINTING",
+          text: "We can convert digital 3D models created with drones into physical models using our 3D printer. We offer a maximum print volume of 30x30x40cm and a print resolution of 0.06 mm which produces incredibly detailed models.",
+        },
+      },
+      volymberakningar: {
+        title: "VOLUME CALCULATIONS",
+        description:
+          "Using drones and advanced software we can quickly and efficiently calculate volumes of different materials. Our volume calculations are ideal for quarries, gravel pits, wood chip piles and other material stockpiles. Using photogrammetry we create accurate 3D models that provide precise measurement results. This makes it possible to:\n\n    • Get a quick overview of material volumes\n    • Track changes over time\n    • Optimize inventory management\n    • Reduce measurement costs\n    • Access measurement data directly via the web\n    \n    The technology is especially useful for companies that need regular inventory of large material stockpiles.",
+        accurate: {
+          title: "ACCURATE MEASUREMENTS",
+          text: "Our drones collect thousands of measurement points that are processed in specialized software. This gives highly accurate results that can be used to calculate volumes, create contour lines and analyze mass balances.",
+        },
+        efficient: {
+          title: "EFFICIENT PROCESS",
+          text: "By using drones we can quickly cover large areas and deliver results in a short time. This makes the method both cost-effective and time-saving compared to traditional measurement methods.",
+        },
+      },
+      inspektioner: {
+        title: "INSPECTIONS",
+        description:
+          "Drone inspection is a smart alternative to cherry pickers when dealing with tall and hard-to-reach places. Compared to traditional methods it is more time-efficient, cheaper and above all safer to use drones. Drone inspections can also be carried out in tough weather conditions and it is easier to access hard-to-reach locations.",
+        smart: {
+          title: "SMART TECHNOLOGY",
+          text: "Our drones are equipped with smart sensors that help the drone avoid obstacles automatically. This allows the drone to fly very close to the object being inspected without risking damage to property.",
+        },
+        situations: {
+          title: "SITUATIONS",
+          text: "Chimneys, masts, power lines, bridges, properties and industries are examples of perfect objects for drone inspection. Photography and video are commonly used when inspecting infrastructure. By using optical zoom, extremely detailed images of an object can be captured without being very close. Orthophotos can be used to inspect roads, roofs and facades. Defects can be marked in the image and tagged with coordinates for easy location and repair. Delivery can be images, film, 3D models or high-resolution measurable orthophotos of facades and roofs.",
+        },
+        useCasesTitle: "USE CASES",
+        useCases: [
+          "Power lines",
+          "Wind turbines",
+          "Solar panels",
+          "Bridges",
+          "Roads",
+          "Public infrastructure",
+          "Industries",
+          "Properties",
+          "Telecom masts",
+        ],
+      },
+    },
+    contactForm: {
+      title: "Contact us",
+      intro:
+        "Have questions or want to discuss a project? Fill out the form below and we'll get back to you as soon as possible.",
+      name: "Name",
+      email: "Email",
+      subject: "Subject",
+      phone: "Phone (optional)",
+      message: "Message",
+      send: "Send message",
+      thanksTitle: "Thank you!",
+      thanksText: "Your message has been received. We will get back to you soon.",
+    },
+    cookieBanner: {
+      text: "We use cookies to enhance your experience on our website. By continuing to use the website, you consent to the use of cookies.",
+      learnMore: "Learn more",
+      accept: "Accept",
+    },
+    projectsPage: {
+      title: "Our Projects",
+      intro: "A selection of our latest drone service projects, from volume calculations to 3D modeling.",
+      selectCategory: "Select category",
+      allCategories: "All categories",
+      projectInfo: "Project Information",
+      client: "Client",
+      location: "Location",
+      date: "Date",
+      deliverables: "Deliverables",
+      clientLabel: "Client: ",
+      categories: {
+        Flygfoto: "Aerial photography",
+        Videoproduktion: "Video production",
+        Ytmodeller: "Surface models",
+        "3D-Modeller": "3D models",
+        Volymberäkningar: "Volume calculations",
+        Inspektioner: "Inspections",
+      },
+      items: {
+        blaiken: {
+          title: "BLAIKEN MINE STORUMAN",
+          description: "Environmental measures and volume calculations in Sorsele municipality",
+          longDescription:
+            "A comprehensive project for environmental monitoring and volume calculation at the Blaiken mine. The project included detailed mapping of the area using drones to enable precise calculations and environmental analyses.",
+          location: "Sorsele, Sweden",
+          tags: ["Volume calculation", "Environment", "3D modeling"],
+          deliverables: ["3D model", "Volume calculations", "Environmental report"],
+        },
+        enskede: {
+          title: "ENSKEDE GÅRDS UPPER SECONDARY SCHOOL",
+          description: "3D modeling and detailed inspection of the property",
+          tags: ["3D modeling", "Inspection", "Property"],
+        },
+        gransoe: {
+          title: "GRÄNSÖ VÄSTERVIK",
+          description: "Testbed for research projects and simulations",
+          tags: ["3D modeling", "Research", "Simulation"],
+        },
+      },
+    },
+    gdpr: {
+      pageTitle: "APstudios Privacy Policy",
+      section1Title: "Processing of personal data",
+      section1Text:
+        "On this date (2019-09-09) the following policy has been established for APstudios (org. no. 990203-6475).",
+      purposeTitle: "Purpose",
+      purposeText:
+        "We value your privacy. You should feel safe when you entrust us with your personal data. Therefore we have established this policy. It is based on current data protection legislation and clarifies how we work to safeguard your rights and privacy. The purpose of this policy is to let you know how we process your personal data, what we use it for, who receives it and under what conditions, as well as how you can exercise your rights.",
+      backgroundTitle: "Background",
+      backgroundText:
+        "We process your personal data primarily to fulfill our obligations to you. Our starting point is not to process more personal data than is necessary for the purpose, and we always strive to use the least privacy-sensitive data. We also need your personal data to provide good service, for example regarding marketing, follow-up, invoicing and information.",
+      guidelinesTitle: "Guidelines",
+      whatDataTitle: "What personal data do we process?",
+      whatDataText:
+        "We only process personal data when we have a legal basis. We do not process personal data other than when needed to fulfill obligations under contract and law.",
+      whatDataListIntro: "Examples of the personal data we process:",
+      whatDataList: ["Name", "Address", "Email address", "Phone number"],
+      whatDataList2: [
+        "Data you register voluntarily",
+        "Content you publish yourself, so-called user-generated content",
+      ],
+      howAccessTitle: "How do we access your personal data?",
+      howAccess1: "When ordering an assignment from us, you consent to us processing your personal data.",
+      howAccess2:
+        "You have the right at any time to withdraw your consent. We will then no longer process your personal data or collect new data, provided this is not required to fulfill our obligations under contract or law. Note that withdrawing consent may mean that we cannot fulfill the obligations we have towards you.",
+      howAccess3: "We also access your personal data in the following ways:",
+      howAccessList: [
+        "Data you provide us directly",
+        "Data we receive when you hire one of our employees",
+      ],
+      infoToYouTitle: "What information do we give you?",
+      infoToYouText:
+        "When we collect your personal data, it is stored in our invoicing system. Responsible for personal data processing is Oscar Hoffmann and you can always contact us if you have questions or need to submit a request regarding your personal data and/or rights. Call 072-5448860 or email ",
+      secureTitle: "Is your personal data processed securely?",
+      secureText:
+        "We have routines and procedures to handle your personal data securely. The starting point is that only employees and other persons within the organization who need the personal data to perform their tasks have access to it. We do not transfer personal data in cases other than those expressly stated in this policy.",
+      shareTitle: "When do we share your personal data?",
+      shareText:
+        "Our starting point is not to share your personal data with third parties unless you have consented to it or it is necessary to fulfill our obligations under contract or law.",
+      responsibilityTitle: "Responsibility",
+      responsibilityText:
+        "APstudios is the data controller, which means that we are responsible for how your personal data is processed and that your rights are safeguarded.",
     },
   },
 };
