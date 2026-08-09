@@ -68,10 +68,12 @@ export function ProjectDialog({ project }: ProjectDialogProps) {
             <div>
               <h3 className="font-semibold mb-2">{t.projectInfo}</h3>
               <dl className="space-y-2">
-                <div>
-                  <dt className="font-medium text-gray-600">{t.client}</dt>
-                  <dd>{project.client}</dd>
-                </div>
+                {project.client && (
+                  <div>
+                    <dt className="font-medium text-gray-600">{t.client}</dt>
+                    <dd>{project.client}</dd>
+                  </div>
+                )}
                 {facts && Object.entries(facts).map(([label, value]) => (
                   <div key={label}>
                     <dt className="font-medium text-gray-600">{label}</dt>
@@ -84,10 +86,12 @@ export function ProjectDialog({ project }: ProjectDialogProps) {
                     <dd>{location}</dd>
                   </div>
                 )}
-                <div>
-                  <dt className="font-medium text-gray-600">{t.date}</dt>
-                  <dd>{project.date}</dd>
-                </div>
+                {project.date && (
+                  <div>
+                    <dt className="font-medium text-gray-600">{t.date}</dt>
+                    <dd>{project.date}</dd>
+                  </div>
+                )}
               </dl>
             </div>
 

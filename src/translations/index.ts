@@ -290,6 +290,24 @@ export const translations = {
         Inspektioner: "Inspektioner",
       },
       items: {
+        jungfruholmen: {
+          title: "JUNGFRUHOLMEN",
+          description: "Detaljerad 3D-modell och VR-upplevelse av en hel ö",
+          longDescription: "Syftet med uppdraget var att ta fram en så detaljerad 3D-modell som möjligt av ön. Detta för att kunna använda som visualiseringsunderlag för ombyggnation och renovering. Vi 3D-scannade ön, skapade modellen och gjorde en VR-upplevelse där kunden kunde hoppa in i modellen och gå runt.",
+          tags: ["3D-Modellering", "VR", "Visualisering"],
+        },
+        fyrisskolan: {
+          title: "FYRISSKOLAN",
+          description: "VR-baserad brandledningsplan för skolan",
+          longDescription: "Syftet med uppdraget var att ta fram en VR-baserad brandledningsplan för skolan som behövdes då skolans övervåning inte uppfyllde kraven för utrymningstillgänglighet. Vi gjorde därför en 3D-scanning utav skolan och skapade en modell som kunden sedan arbetade vidare med och skapade en VR-upplevelse baserat på.",
+          tags: ["3D-Modellering", "VR", "Säkerhet"],
+        },
+        rotenberg: {
+          title: "ROTENBERG SÄTERI",
+          description: "Digital tvilling med interaktiv information och sensordata",
+          longDescription: "I det här projektet tog vi fram en digital tvilling av Rotenberg Säteri. Kunden ville utvärdera möjligheten att använda modellen som en del i ett integrerat digitalt beslutssystem. Som en del i detta integrerade vi 360-bilder, info-points, videos och instruktioner i modellen. Kunden arbetade därefter vidare med att integrera data från utplacerade sensorer på gården.",
+          tags: ["Digital tvilling", "3D-Modellering", "Sensorer"],
+        },
         blaiken: {
           title: "BLAIKENGRUVAN STORUMAN",
           description: "Miljöåtgärder och volymberäkningar i Sorsele kommun",
@@ -300,6 +318,24 @@ export const translations = {
           tags: ["Volymberäkning", "Miljö", "3D-Modellering"],
           deliverables: ["Punktmoln (.las)", "3D modell/Mesh (.obj)", "Digital ytmodell (.tiff)", "Digital terrängmodell (.tiff)", "Ekvidistanskurvor (.shp)", "Projektrapport (.pdf)"],
         },
+        upplandsbro: {
+          title: "UPPLANDSBRO RANKHUS",
+          description: "Drönarbilder och fotomontage för ett kommande bostadsprojekt",
+          longDescription: "Syftet med uppdraget var att ta drönarbilder som skulle användas till fotomontage över ett kommande bostadsprojekt. Bilderna användes för att visualisera både under samråd i kommunen men även som marknadsföring.",
+          tags: ["Flygfoto", "Fotomontage", "Fastighet"],
+        },
+        katarina: {
+          title: "KATARINA BANGATA",
+          description: "Punktmoln och komplett 3D-modell för detaljinspektion",
+          longDescription: "Syftet med uppdraget var att samla in material över tak och fasader för att skapa ett punktmoln som slogs ihop med LIDAR-data inhämtat från marken. Därpå kunde en komplett 3D-modell skapas och användas för detaljinspektion av fastigheten.",
+          tags: ["3D-Modellering", "Punktmoln", "Inspektion"],
+        },
+        palmstruchs: {
+          title: "PALMSTRUCHS VÄG TÄBY",
+          description: "Säljande bostadsbilder med visualisering av närområdet",
+          longDescription: "I det här uppdraget blev vi anlitade av en privatkund som skulle sälja sin bostad. Kunden efterfrågade säljande bilder med visualisering av kommunikationer och området i närheten.",
+          tags: ["Flygfoto", "Fastighet", "Visualisering"],
+        },
         enskede: {
           title: "ENSKEDE GÅRDS GYMNASIUM",
           description: "3D-modellering och detaljinspektion av fastighet",
@@ -308,6 +344,12 @@ export const translations = {
           facts: { Area: "1 hektar", Upplösning: "1 cm/pixel", Noggrannhet: "ca 1 cm", "Inmätta flygstöd": "Ja", Koordinatsystem: "Lokalt" },
           tags: ["3D-Modellering", "Inspektion", "Fastighet"],
           deliverables: ["Punktmoln (.las)", "Videoanimering (.mp4)", "Insamlade bilder (.jpg)", "Projektrapport (.pdf)"],
+        },
+        atea: {
+          title: "ATEA VÄXJÖ",
+          description: "Dokumentation av fastighet från marken och luften",
+          longDescription: "Vi anlitades av Wilfast Fastighetsförvaltning för att dokumentera en av deras fastigheter i Växjö. Vi fotograferade både från marken och med drönare.",
+          tags: ["Flygfoto", "Fastighet", "Dokumentation"],
         },
         gransoe: {
           title: "GRÄNSÖ VÄSTERVIK",
@@ -318,6 +360,16 @@ export const translations = {
           tags: ["3D-Modellering", "Forskning", "Simulering"],
           deliverables: ["Punktmoln (.las)", "3D modell/Mesh (.obj)", "Insamlade bilder", "Projektrapport (.pdf)"],
         },
+        hisinge: { title: "HISINGE HUS", description: "Foto- och videodokumentation av fastighet i Göteborg", longDescription: "Vi anlitades för att dokumentera en fastighet i Göteborg. Vi levererade både en video och ett flertal bilder på exteriör och interiör.", tags: ["Videoproduktion", "Flygfoto", "Fastighet"] },
+        dava: { title: "DÅVA DEPONI", description: "3D-visualisering för mark- och miljödomstolen", longDescription: "Syftet med uppdraget var att samla in material till ett pågående fall i mark- och miljödomstolen där man ville kunna visualisera hur det skulle se ut att höja en sophög med 20 m. Materialet användes även av Domstolsverket i en presentation om hur ny teknik kan implementeras i domstolar.", tags: ["3D-Modellering", "Visualisering", "Miljö"] },
+        plantagen: { title: "PLANTAGEN HELSINGBORG", description: "Dokumentation av fastighet från marken och luften", longDescription: "Vi anlitades av Wilfast Fastighetsförvaltning för att dokumentera en av deras fastigheter i Helsingborg. Vi fotograferade både från marken och med drönare.", tags: ["Flygfoto", "Fastighet", "Dokumentation"] },
+        lidingoGolf: { title: "LIDINGÖ GOLFKLUBB", description: "Sveriges första digitala ban-tvilling", longDescription: "Syftet med uppdraget var att ta fram material för att skapa Sveriges första digitala ban-tvilling. Vi samarbetade med ett engelskt företag som baserat på 3D-modellen skapade en realistisk 3D-miljö. Klubbens medlemmar kunde sedan under vintern spela på banan inomhus i deras simulator.", tags: ["Digital tvilling", "3D-Modellering", "Golf"] },
+        onninen: { title: "ONNINEN FINLAND", description: "Fastighetsfotografering i Helsingfors", longDescription: "Vi anlitades av Wilfast Fastighetsförvaltning för att dokumentera en av deras fastigheter i Helsingfors i Finland. Vi fotograferade både från marken och med drönare.", tags: ["Flygfoto", "Fastighet", "Dokumentation"] },
+        svartvik: { title: "SVARTVIK STRAND", description: "Drönarbilder och fotomontage för kommande bostäder", longDescription: "Vi anlitades av Riksbyggen för att ta drönarbilder som skulle användas till fotomontage för att visa deras kommande bostadsprojekt. Bilderna hamnade även i lokaltidningen!", tags: ["Flygfoto", "Fotomontage", "Fastighet"] },
+        mekonomen: { title: "MEKONOMEN GÖTEBORG", description: "Foto- och videodokumentation av fastighet i Göteborg", longDescription: "Vi anlitades för att dokumentera en fastighet i Göteborg. Vi levererade både en video och ett flertal bilder på exteriör och interiör.", tags: ["Videoproduktion", "Flygfoto", "Fastighet"] },
+        bring: { title: "BRING GÖTEBORG", description: "Dokumentation av fastighet från marken och luften", longDescription: "Vi anlitades av Wilfast Fastighetsförvaltning för att dokumentera en av deras fastigheter i Göteborg. Vi fotograferade både från marken och med drönare.", tags: ["Flygfoto", "Fastighet", "Dokumentation"] },
+        norraStationsgatan: { title: "NORRA STATIONSGATAN", description: "Drönarbilder som visar utsikten från framtida våningsplan", longDescription: "Syftet med uppdraget var att ta drönarbilder som skulle visa utsikten från olika våningar i ett pågående bostadsprojekt. Man ville framför allt utreda om utsikten skulle sträcka sig över vissa närliggande byggnader från specifika våningsplan.", tags: ["Flygfoto", "Fastighet", "Visualisering"] },
+        rusta: { title: "RUSTA NORRKÖPING", description: "Foto- och videodokumentation av fastighet i Norrköping", longDescription: "Vi anlitades för att dokumentera en fastighet i Norrköping. Vi levererade både en video och ett flertal bilder på exteriör och interiör.", tags: ["Videoproduktion", "Flygfoto", "Fastighet"] },
       },
     },
     gdpr: {
@@ -655,6 +707,9 @@ export const translations = {
         Inspektioner: "Inspections",
       },
       items: {
+        jungfruholmen: { title: "JUNGFRUHOLMEN", description: "A detailed 3D model and VR experience of an entire island", longDescription: "The purpose of the assignment was to create as detailed a 3D model of the island as possible for use as visualization material during redevelopment and renovation. We 3D-scanned the island, created the model, and made a VR experience in which the client could enter and walk around the model.", tags: ["3D modeling", "VR", "Visualization"] },
+        fyrisskolan: { title: "FYRIS SCHOOL", description: "A VR-based fire response plan for the school", longDescription: "The assignment was to create a VR-based fire response plan because the school's upper floor did not meet evacuation-accessibility requirements. We 3D-scanned the school and created a model that the client developed into a VR experience.", tags: ["3D modeling", "VR", "Safety"] },
+        rotenberg: { title: "ROTENBERG MANOR", description: "A digital twin with interactive information and sensor data", longDescription: "In this project we created a digital twin of Rotenberg Manor. The client wanted to evaluate using the model in an integrated digital decision-support system. We integrated 360-degree imagery, information points, videos, and instructions into the model. The client then continued by integrating data from sensors installed around the farm.", tags: ["Digital twin", "3D modeling", "Sensors"] },
         blaiken: {
           title: "BLAIKEN MINE STORUMAN",
           description: "Environmental measures and volume calculations in Sorsele municipality",
@@ -665,6 +720,9 @@ export const translations = {
           tags: ["Volume calculation", "Environment", "3D modeling"],
           deliverables: ["Point cloud (.las)", "3D model / Mesh (.obj)", "Digital surface model (.tiff)", "Digital terrain model (.tiff)", "Contour lines (.shp)", "Project report (.pdf)"],
         },
+        upplandsbro: { title: "UPPLANDSBRO RANKHUS", description: "Drone imagery and photomontages for a planned housing development", longDescription: "The purpose of the assignment was to capture drone imagery for photomontages of a planned housing development. The images were used both for visualization during the municipality's consultation process and for marketing.", tags: ["Aerial photography", "Photomontage", "Property"] },
+        katarina: { title: "KATARINA BANGATA", description: "Point cloud and complete 3D model for detailed inspection", longDescription: "The assignment was to collect roof and facade data for a point cloud that was combined with ground-based LIDAR data. This made it possible to create a complete 3D model for detailed inspection of the property.", tags: ["3D modeling", "Point cloud", "Inspection"] },
+        palmstruchs: { title: "PALMSTRUCHS VÄG, TÄBY", description: "Property sales imagery visualizing the surrounding area", longDescription: "A private client commissioned us while preparing to sell their home. The client requested compelling sales imagery that visualized transport links and the surrounding neighborhood.", tags: ["Aerial photography", "Property", "Visualization"] },
         enskede: {
           title: "ENSKEDE GÅRDS UPPER SECONDARY SCHOOL",
           description: "3D modeling and detailed inspection of the property",
@@ -674,6 +732,7 @@ export const translations = {
           tags: ["3D modeling", "Inspection", "Property"],
           deliverables: ["Point cloud (.las)", "Video animation (.mp4)", "Collected images (.jpg)", "Project report (.pdf)"],
         },
+        atea: { title: "ATEA VÄXJÖ", description: "Property documentation from the ground and the air", longDescription: "Wilfast Fastighetsförvaltning commissioned us to document one of its properties in Växjö. We photographed it both from the ground and by drone.", tags: ["Aerial photography", "Property", "Documentation"] },
         gransoe: {
           title: "GRÄNSÖ VÄSTERVIK",
           description: "Testbed for research projects and simulations",
@@ -683,6 +742,16 @@ export const translations = {
           tags: ["3D modeling", "Research", "Simulation"],
           deliverables: ["Point cloud (.las)", "3D model / Mesh (.obj)", "Collected images", "Project report (.pdf)"],
         },
+        hisinge: { title: "HISINGE BUILDING", description: "Photo and video documentation of a Gothenburg property", longDescription: "We were commissioned to document a property in Gothenburg. We delivered a video and a selection of exterior and interior photographs.", tags: ["Video production", "Aerial photography", "Property"] },
+        dava: { title: "DÅVA LANDFILL", description: "3D visualization for the Land and Environment Court", longDescription: "The assignment was to collect material for an ongoing Land and Environment Court case in which the proposed appearance of a 20-metre increase to a waste pile needed to be visualized. The Swedish National Courts Administration also used the material in a presentation about implementing new technology in courts.", tags: ["3D modeling", "Visualization", "Environment"] },
+        plantagen: { title: "PLANTAGEN HELSINGBORG", description: "Property documentation from the ground and the air", longDescription: "Wilfast Fastighetsförvaltning commissioned us to document one of its properties in Helsingborg. We photographed it both from the ground and by drone.", tags: ["Aerial photography", "Property", "Documentation"] },
+        lidingoGolf: { title: "LIDINGÖ GOLF CLUB", description: "Sweden's first digital golf-course twin", longDescription: "The assignment was to collect material for Sweden's first digital golf-course twin. We partnered with an English company that used the 3D model to create a realistic 3D environment, allowing club members to play the course indoors in their simulator during winter.", tags: ["Digital twin", "3D modeling", "Golf"] },
+        onninen: { title: "ONNINEN FINLAND", description: "Property photography in Helsinki", longDescription: "Wilfast Fastighetsförvaltning commissioned us to document one of its properties in Helsinki, Finland. We photographed it both from the ground and by drone.", tags: ["Aerial photography", "Property", "Documentation"] },
+        svartvik: { title: "SVARTVIK STRAND", description: "Drone imagery and photomontages for a planned housing project", longDescription: "Riksbyggen commissioned us to capture drone imagery for photomontages of its planned housing project. The images were also published in the local newspaper.", tags: ["Aerial photography", "Photomontage", "Property"] },
+        mekonomen: { title: "MEKONOMEN GOTHENBURG", description: "Photo and video documentation of a Gothenburg property", longDescription: "We were commissioned to document a property in Gothenburg. We delivered a video and a selection of exterior and interior photographs.", tags: ["Video production", "Aerial photography", "Property"] },
+        bring: { title: "BRING GOTHENBURG", description: "Property documentation from the ground and the air", longDescription: "Wilfast Fastighetsförvaltning commissioned us to document one of its properties in Gothenburg. We photographed it both from the ground and by drone.", tags: ["Aerial photography", "Property", "Documentation"] },
+        norraStationsgatan: { title: "NORRA STATIONSGATAN", description: "Drone imagery showing views from future floors", longDescription: "The purpose of the assignment was to capture drone imagery showing the views from different floors of a housing development under construction. The client particularly wanted to determine whether views from specific floors would extend above nearby buildings.", tags: ["Aerial photography", "Property", "Visualization"] },
+        rusta: { title: "RUSTA NORRKÖPING", description: "Photo and video documentation of a Norrköping property", longDescription: "We were commissioned to document a property in Norrköping. We delivered a video and a selection of exterior and interior photographs.", tags: ["Video production", "Aerial photography", "Property"] },
       },
     },
     gdpr: {

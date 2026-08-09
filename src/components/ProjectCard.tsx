@@ -40,12 +40,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="space-y-2">
           <div className="flex justify-between items-center gap-2">
             <CardTitle className="text-xl font-bold truncate">{item.title}</CardTitle>
-            <span className="text-sm text-gray-500 whitespace-nowrap">{project.date}</span>
+            {project.date && <span className="text-sm text-gray-500 whitespace-nowrap">{project.date}</span>}
           </div>
-          <p className="text-sm text-gray-600">
-            <span className="font-semibold">{t.clientLabel}</span>
-            {project.client}
-          </p>
+          {project.client && (
+            <p className="text-sm text-gray-600">
+              <span className="font-semibold">{t.clientLabel}</span>
+              {project.client}
+            </p>
+          )}
           <CardDescription className="line-clamp-2">{item.description}</CardDescription>
         </div>
       </CardHeader>
