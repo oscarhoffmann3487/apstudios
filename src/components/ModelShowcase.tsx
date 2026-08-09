@@ -42,7 +42,7 @@ const ModelShowcase = () => {
           )}
         </div>
         <div className="text-center">
-          <Link to="/services/Modeller3D">
+          <Link to="/tjanster/3d-modeller">
             <Button 
               variant="outline" 
               size="lg" 
