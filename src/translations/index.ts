@@ -281,6 +281,7 @@ export const translations = {
       date: "Datum",
       deliverables: "Leverabler",
       clientLabel: "Kund: ",
+      mediaComingSoon: "Bildmaterial kommer snart",
       categories: {
         Flygfoto: "Flygfoto",
         Videoproduktion: "Videoproduktion",
@@ -698,6 +699,7 @@ export const translations = {
       date: "Date",
       deliverables: "Deliverables",
       clientLabel: "Client: ",
+      mediaComingSoon: "Project media coming soon",
       categories: {
         Flygfoto: "Aerial photography",
         Videoproduktion: "Video production",
