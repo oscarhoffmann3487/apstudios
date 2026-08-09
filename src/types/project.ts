@@ -11,8 +11,8 @@ export interface Project {
     | "bring" | "norraStationsgatan" | "rusta";
   category: string;
   mediaType: MediaType;
-  mediaSrc: string;
-  thumbnailSrc: string;
+  mediaSrc?: string;
+  thumbnailSrc?: string;
   additionalMedia?: { type: MediaType; src: string }[];
   client?: string;
   date?: string;

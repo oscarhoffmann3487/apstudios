@@ -5,6 +5,7 @@ import {
 } from "@/components/ui/dialog";
 import { ProjectCard } from "./ProjectCard";
 import { Project } from "@/types/project";
+import { Images } from "lucide-react";
 
 interface ProjectDialogProps {
   project: Project;
@@ -32,8 +33,15 @@ export function ProjectDialog({ project }: ProjectDialogProps) {
         <div className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="col-span-full">
-              {project.mediaType === "image" && (
+              {project.mediaType === "image" && project.mediaSrc && (
                 <img src={project.mediaSrc} alt={item.title} decoding="async" className="w-full rounded-lg object-cover" />
+              )}
+              {project.mediaType === "image" && !project.mediaSrc && (
+                <div className="flex aspect-video w-full flex-col items-center justify-center gap-3 rounded-lg bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 text-white">
+                  <Images className="h-12 w-12 text-white/70" aria-hidden="true" />
+                  <span className="text-xl font-semibold">{item.title}</span>
+                  <span className="text-sm text-white/70">{t.mediaComingSoon}</span>
+                </div>
               )}
               {project.mediaType === "video" && (
                 <video src={project.mediaSrc} controls className="w-full rounded-lg" />
