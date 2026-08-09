@@ -15,6 +15,12 @@ import { Project } from "@/types/project";
 
 const ITEMS_PER_PAGE = 9;
 
+const projectImage = (number: number) => `/projects/wix/${String(number).padStart(3, "0")}.webp`;
+const imageGallery = (numbers: number[]) => numbers.map((number) => ({
+  type: "image" as const,
+  src: projectImage(number),
+}));
+
 const allServices = [
   "Flygfoto",
   "Videoproduktion",
@@ -25,28 +31,37 @@ const allServices = [
 ];
 
 const projects: Project[] = [
+  { id: 1, translationKey: "jungfruholmen", category: "3D-Modeller", mediaType: "image" },
+  { id: 2, translationKey: "fyrisskolan", category: "3D-Modeller", mediaType: "image" },
+  { id: 3, translationKey: "rotenberg", category: "3D-Modeller", mediaType: "image", mediaSrc: projectImage(57), thumbnailSrc: projectImage(57), additionalMedia: imageGallery([58, 59, 60, 61, 62, 63, 64, 65, 66, 67]) },
   {
-    id: 1,
+    id: 4,
     translationKey: "blaiken",
     category: "Volymberäkningar",
     mediaType: "image",
-    mediaSrc: "/lovable-uploads/project-showcase/blaiken1.png",
-    thumbnailSrc: "/lovable-uploads/project-showcase/blaiken1.png",
+    mediaSrc: projectImage(1),
+    thumbnailSrc: projectImage(1),
+    additionalMedia: imageGallery([2, 3, 4, 5, 6, 7, 8]),
     client: "Golder Associates AB",
     date: "2023",
   },
+  { id: 5, translationKey: "upplandsbro", category: "Flygfoto", mediaType: "image", mediaSrc: projectImage(53), thumbnailSrc: projectImage(53), additionalMedia: imageGallery([54, 55, 56]) },
+  { id: 6, translationKey: "katarina", category: "3D-Modeller", mediaType: "image", mediaSrc: projectImage(73), thumbnailSrc: projectImage(73), additionalMedia: imageGallery([74, 75, 76]) },
+  { id: 7, translationKey: "palmstruchs", category: "Flygfoto", mediaType: "image", mediaSrc: projectImage(68), thumbnailSrc: projectImage(68), additionalMedia: imageGallery([69, 70, 71, 72]) },
   {
-    id: 2,
+    id: 8,
     translationKey: "enskede",
     category: "3D-Modeller",
     mediaType: "image",
-    mediaSrc: "/lovable-uploads/6c8a31ee-ec6d-4bea-ac7e-168bf23d9d88.png",
-    thumbnailSrc: "/lovable-uploads/6c8a31ee-ec6d-4bea-ac7e-168bf23d9d88.png",
+    mediaSrc: projectImage(46),
+    thumbnailSrc: projectImage(46),
+    additionalMedia: imageGallery([47, 48, 49, 50, 51, 52]),
     client: "Norconsult AB",
     date: "2023",
   },
+  { id: 9, translationKey: "atea", category: "Flygfoto", mediaType: "image", mediaSrc: projectImage(20), thumbnailSrc: projectImage(20), additionalMedia: imageGallery([21, 22, 23, 24, 25, 26, 27, 28]) },
   {
-    id: 3,
+    id: 10,
     translationKey: "gransoe",
     category: "3D-Modeller",
     mediaType: "image",
@@ -55,6 +70,16 @@ const projects: Project[] = [
     client: "Combitech",
     date: "2023",
   },
+  { id: 11, translationKey: "hisinge", category: "Videoproduktion", mediaType: "image" },
+  { id: 12, translationKey: "dava", category: "3D-Modeller", mediaType: "image", mediaSrc: projectImage(34), thumbnailSrc: projectImage(34), additionalMedia: imageGallery([35, 36, 37, 38]) },
+  { id: 13, translationKey: "plantagen", category: "Flygfoto", mediaType: "image", mediaSrc: projectImage(9), thumbnailSrc: projectImage(9), additionalMedia: imageGallery([10, 11, 12, 13, 14, 15]) },
+  { id: 14, translationKey: "lidingoGolf", category: "3D-Modeller", mediaType: "image", mediaSrc: projectImage(77), thumbnailSrc: projectImage(77), additionalMedia: imageGallery([78, 79, 80, 81]) },
+  { id: 15, translationKey: "onninen", category: "Flygfoto", mediaType: "image", mediaSrc: projectImage(39), thumbnailSrc: projectImage(39), additionalMedia: imageGallery([40, 41, 42, 43, 44, 45]) },
+  { id: 16, translationKey: "svartvik", category: "Flygfoto", mediaType: "image" },
+  { id: 17, translationKey: "mekonomen", category: "Videoproduktion", mediaType: "image" },
+  { id: 18, translationKey: "bring", category: "Flygfoto", mediaType: "image", mediaSrc: projectImage(29), thumbnailSrc: projectImage(29), additionalMedia: imageGallery([30, 31, 32, 33]) },
+  { id: 19, translationKey: "norraStationsgatan", category: "Flygfoto", mediaType: "image", mediaSrc: projectImage(16), thumbnailSrc: projectImage(16), additionalMedia: imageGallery([17, 18, 19]) },
+  { id: 20, translationKey: "rusta", category: "Videoproduktion", mediaType: "image" },
 ];
 
 export default function Projects() {
