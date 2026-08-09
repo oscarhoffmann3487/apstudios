@@ -24,11 +24,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <img
             src={project.thumbnailSrc}
             alt={item.title}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         )}
         {project.mediaType === "video" && (
-          <video src={project.mediaSrc} className="w-full h-full object-cover" controls />
+          <video src={project.mediaSrc} className="w-full h-full object-cover" controls preload="metadata" />
         )}
         {project.mediaType === "iframe" && (
           <iframe src={project.mediaSrc} className="w-full h-full" allowFullScreen />
@@ -38,12 +40,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="space-y-2">
           <div className="flex justify-between items-center gap-2">
             <CardTitle className="text-xl font-bold truncate">{item.title}</CardTitle>
-            <span className="text-sm text-gray-500 whitespace-nowrap">{project.date}</span>
+            {project.date && <span className="text-sm text-gray-500 whitespace-nowrap">{project.date}</span>}
           </div>
-          <p className="text-sm text-gray-600">
-            <span className="font-semibold">{t.clientLabel}</span>
-            {project.client}
-          </p>
+          {project.client && (
+            <p className="text-sm text-gray-600">
+              <span className="font-semibold">{t.clientLabel}</span>
+              {project.client}
+            </p>
+          )}
           <CardDescription className="line-clamp-2">{item.description}</CardDescription>
         </div>
       </CardHeader>
