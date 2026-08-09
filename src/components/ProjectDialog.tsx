@@ -17,6 +17,7 @@ export function ProjectDialog({ project }: ProjectDialogProps) {
   const longDescription = "longDescription" in item ? item.longDescription : undefined;
   const location = "location" in item ? item.location : undefined;
   const deliverables = "deliverables" in item ? item.deliverables : undefined;
+  const facts = "facts" in item ? item.facts : undefined;
 
   return (
     <Dialog>
@@ -32,7 +33,7 @@ export function ProjectDialog({ project }: ProjectDialogProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="col-span-full">
               {project.mediaType === "image" && (
-                <img src={project.mediaSrc} alt={item.title} className="w-full rounded-lg object-cover" />
+                <img src={project.mediaSrc} alt={item.title} decoding="async" className="w-full rounded-lg object-cover" />
               )}
               {project.mediaType === "video" && (
                 <video src={project.mediaSrc} controls className="w-full rounded-lg" />
@@ -45,7 +46,13 @@ export function ProjectDialog({ project }: ProjectDialogProps) {
             {project.additionalMedia?.map((media, index) => (
               <div key={index} className="aspect-video">
                 {media.type === "image" && (
-                  <img src={media.src} alt={`${item.title} - ${index + 1}`} className="w-full h-full object-cover rounded-lg" />
+                  <img
+                    src={media.src}
+                    alt={`${item.title} - ${index + 2}`}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 )}
                 {media.type === "video" && (
                   <video src={media.src} controls className="w-full h-full rounded-lg" />
@@ -65,6 +72,12 @@ export function ProjectDialog({ project }: ProjectDialogProps) {
                   <dt className="font-medium text-gray-600">{t.client}</dt>
                   <dd>{project.client}</dd>
                 </div>
+                {facts && Object.entries(facts).map(([label, value]) => (
+                  <div key={label}>
+                    <dt className="font-medium text-gray-600">{label}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                ))}
                 {location && (
                   <div>
                     <dt className="font-medium text-gray-600">{t.location}</dt>

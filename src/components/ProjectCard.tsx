@@ -24,11 +24,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <img
             src={project.thumbnailSrc}
             alt={item.title}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         )}
         {project.mediaType === "video" && (
-          <video src={project.mediaSrc} className="w-full h-full object-cover" controls />
+          <video src={project.mediaSrc} className="w-full h-full object-cover" controls preload="metadata" />
         )}
         {project.mediaType === "iframe" && (
           <iframe src={project.mediaSrc} className="w-full h-full" allowFullScreen />
