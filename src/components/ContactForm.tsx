@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 import { Button } from "./ui/button";
@@ -9,6 +10,8 @@ import { Label } from "./ui/label";
 export default function ContactForm() {
   const { language } = useLanguage();
   const t = translations[language].contactForm;
+  const location = useLocation();
+  const presetSubject = new URLSearchParams(location.search).get("subject") ?? "";
   const [showModal, setShowModal] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -37,7 +40,7 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="py-16 min-h-[600px] relative bg-cover bg-center bg-fixed"
+      className="py-16 min-h-[600px] relative scroll-mt-20 bg-cover bg-center bg-fixed"
       style={{
         backgroundImage:
           "url('lovable-uploads/c01f5521-3595-4db0-81df-f077b17c7643.png')",
@@ -74,7 +77,7 @@ export default function ContactForm() {
 
           <div>
             <Label htmlFor="subject" className="text-white">{t.subject}</Label>
-            <Input id="subject" name="subject" type="text" required className="bg-white border-white text-black" />
+            <Input id="subject" name="subject" type="text" required key={presetSubject} defaultValue={presetSubject} className="bg-white border-white text-black" />
           </div>
 
           <div>
@@ -87,11 +90,34 @@ export default function ContactForm() {
             <Textarea id="message" name="message" required className="bg-white border-white text-black min-h-[150px]" />
           </div>
 
+          <div className="flex items-start gap-3">
+            <input
+              id="consent"
+              name="consent"
+              type="checkbox"
+              required
+              value="ja"
+              className="mt-1 h-4 w-4"
+            />
+            <Label htmlFor="consent" className="text-white leading-snug">
+              {t.consent}{" "}
+              <Link to="/gdpr" className="underline">
+                {t.consentLink}
+              </Link>
+              .
+            </Label>
+          </div>
+
           <div className="flex justify-center">
             <Button type="submit" className="bg-accent hover:bg-accent/90 text-white backdrop-blur-md px-8">
               {t.send}
             </Button>
           </div>
+          <p className="text-center">
+            <a href="mailto:info@apstudios.se" className="text-white underline underline-offset-4">
+              {t.mailto}
+            </a>
+          </p>
         </form>
       </div>
       {showModal && (

@@ -7,7 +7,10 @@ APstudios är specialister på drönartjänster sedan 2015, baserade i Stockholm
 ## Pages
 
 - [Hem](/): Översikt över tjänster, projekt och kontakt.
-- [Flygfoto](/tjanster/foto): Utsiktsfoto, fotomontage, fastighets- och mäklarfoto.
+- [Flygfoto](/tjanster/foto): Utsiktsfoto, fotomontage, fastighets- och mäklarfoto samt 360-bilder.
+- [Utsiktsfoto](/tjanster/utsiktsfoto): Balkongutsikt vid nyproduktion. Pris via offert.
+- [Mäklarfoto](/tjanster/maklarfoto): Bostadsfoto för mäklare, inne och ute. Pris via offert.
+- [360-bilder](/tjanster/360): 360-tour och floorplans. Pris via offert.
 - [Videoproduktion](/tjanster/film): Flygfilm och markbaserad film med gimbal.
 - [Ortofoton & Ytmodeller](/tjanster/ytmodeller): Ortofoton, DTM, DSM och konturlinjer.
 - [3D-modeller](/tjanster/3d-modeller): Punktmoln, 3D-modeller och digitala tvillingar.

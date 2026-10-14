@@ -42,7 +42,7 @@ const Hero = () => {
         <div 
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: `url('/lovable-uploads/8c415486-6700-4338-bf9f-d997e847e563.png')`,
+            backgroundImage: `url('/services/hero-poster.webp')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             opacity: isVideoLoaded ? 0 : 1,

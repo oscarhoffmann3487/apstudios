@@ -15,7 +15,7 @@ const References = () => {
     { src: "/lovable-uploads/logos/c2480fda-f305-46c0-b63d-214c801dc9ab.png", alt: "Norconsult", url: "https://www.norconsult.se" },
     { src: "/lovable-uploads/logos/0b834c64-25c8-422f-89a1-d53cd7732f77.png", alt: "MA Living", url: "https://www.maliving.se" },
     { src: "/lovable-uploads/logos/35f40fa7-00ac-4883-ac3a-1dd40048cc27.png", alt: "SWE Scan", url: "https://www.swescan.se" },
-    { src: "/lovable-uploads/logos/de3f1110-32d3-4195-a7d7-25d5ef65c1d0.png", alt: "Platskoll", url: "" },
+    { src: "/lovable-uploads/logos/de3f1110-32d3-4195-a7d7-25d5ef65c1d0.png", alt: "Platskoll", url: "https://platskoll.se" },
     { src: "/lovable-uploads/logos/a495862a-e866-4cec-927e-4fbae4ad99aa.png", alt: "Ready Digital", url: "https://readydigital.se" },
     { src: "/lovable-uploads/logos/cbcf519c-1661-4399-a397-31ef96d267c9.png", alt: "Riksbyggen", url: "https://www.riksbyggen.se" },
     { src: "/lovable-uploads/logos/481a4a94-e979-4762-92d9-c0ee5b1191fa.png", alt: "NRP", url: "https://www.nrp.no" },
@@ -26,7 +26,7 @@ const References = () => {
     { src: "/lovable-uploads/logos/bc06426d-5aeb-4be2-bf00-6222c3fa98cd.png", alt: "Warpin", url: "https://warpinreality.com" },
     { src: "/lovable-uploads/logos/8f25afab-74bf-4f76-b3a1-0df02045c1d0.png", alt: "Spotscale", url: "https://www.spotscale.com" },
     { src: "/lovable-uploads/logos/ae200406-26ca-43c5-8600-512e7bd95cce.png", alt: "Linköpings Universitet", url: "https://www.liu.se" },
-    { src: "/lovable-uploads/logos/1616a5ea-7734-4519-9057-922de5267457.png", alt: "Villamarken", url: "" }
+    { src: "/lovable-uploads/logos/1616a5ea-7734-4519-9057-922de5267457.png", alt: "Villamarken Exploatering i Stockholm AB", url: "" }
   ];
 
   return (

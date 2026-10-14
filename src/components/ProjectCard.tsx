@@ -20,7 +20,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card className="group overflow-hidden hover:shadow-lg transition-shadow h-[440px] relative">
       <div className="aspect-video relative overflow-hidden">
-        {project.mediaType === "image" && project.thumbnailSrc && (
+        {project.thumbnailSrc && (project.mediaType === "image" || project.mediaType === "iframe") && (
           <img
             src={project.thumbnailSrc}
             alt={item.title}
@@ -39,8 +39,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
         {project.mediaType === "video" && (
           <video src={project.mediaSrc} className="w-full h-full object-cover" controls preload="metadata" />
         )}
-        {project.mediaType === "iframe" && (
-          <iframe src={project.mediaSrc} className="w-full h-full" allowFullScreen />
+        {project.mediaType === "iframe" && !project.thumbnailSrc && project.mediaSrc && (
+          <iframe src={project.mediaSrc} title={item.title} className="w-full h-full" allowFullScreen />
         )}
       </div>
       <CardHeader>

@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://apstudios.lovable.app/</loc></url>
-  <url><loc>https://apstudios.lovable.app/tjanster/foto</loc></url>
-  <url><loc>https://apstudios.lovable.app/tjanster/film</loc></url>
-  <url><loc>https://apstudios.lovable.app/tjanster/ytmodeller</loc></url>
-  <url><loc>https://apstudios.lovable.app/tjanster/3d-modeller</loc></url>
-  <url><loc>https://apstudios.lovable.app/tjanster/volymberakningar</loc></url>
-  <url><loc>https://apstudios.lovable.app/tjanster/inspektioner</loc></url>
-  <url><loc>https://apstudios.lovable.app/projekt</loc></url>
-  <url><loc>https://apstudios.lovable.app/gdpr</loc></url>
+  <url><loc>https://apstudios.se/</loc></url>
+  <url><loc>https://apstudios.se/tjanster/foto</loc></url>
+  <url><loc>https://apstudios.se/tjanster/utsiktsfoto</loc></url>
+  <url><loc>https://apstudios.se/tjanster/maklarfoto</loc></url>
+  <url><loc>https://apstudios.se/tjanster/360</loc></url>
+  <url><loc>https://apstudios.se/tjanster/film</loc></url>
+  <url><loc>https://apstudios.se/tjanster/ytmodeller</loc></url>
+  <url><loc>https://apstudios.se/tjanster/3d-modeller</loc></url>
+  <url><loc>https://apstudios.se/tjanster/volymberakningar</loc></url>
+  <url><loc>https://apstudios.se/tjanster/inspektioner</loc></url>
+  <url><loc>https://apstudios.se/projekt</loc></url>
+  <url><loc>https://apstudios.se/gdpr</loc></url>
 </urlset>

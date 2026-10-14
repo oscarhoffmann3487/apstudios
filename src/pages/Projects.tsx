@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import { Seo } from "@/components/Seo";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
@@ -70,21 +71,23 @@ const projects: Project[] = [
     client: "Combitech",
     date: "2023",
   },
-  { id: 11, translationKey: "hisinge", category: "Videoproduktion", mediaType: "image" },
+  { id: 11, translationKey: "hisinge", category: "Videoproduktion", mediaType: "iframe", mediaSrc: "https://www.youtube.com/embed/T_EyDPrXtI0", thumbnailSrc: "https://i.ytimg.com/vi/T_EyDPrXtI0/hqdefault.jpg" },
   { id: 12, translationKey: "dava", category: "3D-Modeller", mediaType: "image", mediaSrc: projectImage(34), thumbnailSrc: projectImage(34), additionalMedia: imageGallery([35, 36, 37, 38]) },
   { id: 13, translationKey: "plantagen", category: "Flygfoto", mediaType: "image", mediaSrc: projectImage(9), thumbnailSrc: projectImage(9), additionalMedia: imageGallery([10, 11, 12, 13, 14, 15]) },
   { id: 14, translationKey: "lidingoGolf", category: "3D-Modeller", mediaType: "image", mediaSrc: projectImage(77), thumbnailSrc: projectImage(77), additionalMedia: imageGallery([78, 79, 80, 81]) },
   { id: 15, translationKey: "onninen", category: "Flygfoto", mediaType: "image", mediaSrc: projectImage(39), thumbnailSrc: projectImage(39), additionalMedia: imageGallery([40, 41, 42, 43, 44, 45]) },
   { id: 16, translationKey: "svartvik", category: "Flygfoto", mediaType: "image" },
-  { id: 17, translationKey: "mekonomen", category: "Videoproduktion", mediaType: "image" },
+  { id: 17, translationKey: "mekonomen", category: "Videoproduktion", mediaType: "iframe", mediaSrc: "https://www.youtube.com/embed/NUzeYX3o8zo", thumbnailSrc: "https://i.ytimg.com/vi/NUzeYX3o8zo/hqdefault.jpg" },
   { id: 18, translationKey: "bring", category: "Flygfoto", mediaType: "image", mediaSrc: projectImage(29), thumbnailSrc: projectImage(29), additionalMedia: imageGallery([30, 31, 32, 33]) },
   { id: 19, translationKey: "norraStationsgatan", category: "Flygfoto", mediaType: "image", mediaSrc: projectImage(16), thumbnailSrc: projectImage(16), additionalMedia: imageGallery([17, 18, 19]) },
-  { id: 20, translationKey: "rusta", category: "Videoproduktion", mediaType: "image" },
+  { id: 20, translationKey: "rusta", category: "Videoproduktion", mediaType: "iframe", mediaSrc: "https://www.youtube.com/embed/03VGquYAuf0", thumbnailSrc: "https://i.ytimg.com/vi/03VGquYAuf0/hqdefault.jpg" },
 ];
 
 export default function Projects() {
   const { language } = useLanguage();
-  const t = translations[language].projectsPage;
+  const copy = translations[language];
+  const t = copy.projectsPage;
+  const seo = copy.seo.projekt;
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -105,6 +108,7 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo title={seo.title} description={seo.description} path="/projekt" />
       <Navbar />
       <main className="pt-16">
         <div className="max-w-7xl mx-auto px-4 py-16">

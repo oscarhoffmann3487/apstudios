@@ -1,22 +1,28 @@
 import ServicePage from "@/components/ServicePage";
+import { Seo } from "@/components/Seo";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 
 const images = [
-  "/lovable-uploads/9430c346-15cd-48f4-a510-1b182fed9149.png",
-  "/lovable-uploads/217f8396-485c-4653-97a9-04ca5b6aef91.png",
-  "/lovable-uploads/5ef66c5f-d816-428f-bfec-d20fb7f423f0.png",
-  "/lovable-uploads/05e3c69c-650f-4ef4-b9a3-20c354eb495c.png",
-  "/lovable-uploads/087d77b6-29bb-4628-934d-b5886466e49b.png",
-  "/lovable-uploads/3abf06cd-3c32-4ea6-ab84-4bac4da157d3.png",
+  { src: "/services/volym/volym-2.webp", alt: "Volymmätning av en materialhög i en 3D-modell" },
+  { src: "/services/volym/volym-1.webp", alt: "Volymberäkning i ett punktmoln" },
+  { src: "/services/volym/volym-3.webp", alt: "Volymberäkning av ett upplag" },
+  { src: "/services/volym/stracka.webp", alt: "Sträckmätning i en 3D-modell" },
+  { src: "/services/volym/volym-4.webp", alt: "Volymberäkning visad i ett punktmoln" },
+  { src: "/services/volym/volym-5.webp", alt: "Mätning av volym i en drönarmodell" },
+  { src: "/services/volym/volym-6.webp", alt: "Volymberäkning av massor i en 3D-vy" },
 ];
 
 const Volymberakningar = () => {
   const { language } = useLanguage();
-  const t = translations[language].servicePages.volymberakningar;
+  const copy = translations[language];
+  const t = copy.servicePages.volymberakningar;
+  const seo = copy.seo.volym;
 
   return (
-    <ServicePage title={t.title} description={t.description} images={images}>
+    <>
+    <Seo title={seo.title} description={seo.description} path="/tjanster/volymberakningar" />
+    <ServicePage title={t.title} description={`${t.lead}\n\n${t.description}`} images={images}>
       <div className="space-y-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
           <div>
@@ -29,20 +35,24 @@ const Volymberakningar = () => {
           </div>
         </div>
 
-        <div className="aspect-video w-full max-w-4xl mx-auto">
-          <iframe
-            width="100%" height="100%"
-            src="https://www.youtube.com/embed/5Qy6KDVEvtc?si=Bqjf0Nn79dRy83Ay"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-            className="rounded-lg"
-          />
+        <div className="w-full max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-white mb-4 text-center">{t.videoTitle}</h2>
+          <div className="aspect-video">
+            <iframe
+              width="100%" height="100%"
+              src="https://www.youtube.com/embed/5Qy6KDVEvtc"
+              title={language === "sv" ? "Instruktionsvideo 3D-modell" : "3D model instruction video"}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-lg"
+            />
+          </div>
         </div>
       </div>
     </ServicePage>
+    </>
   );
 };
 

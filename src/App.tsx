@@ -4,6 +4,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import Index from "./pages/Index";
 import GDPRPolicy from "./pages/GDPRPolicy";
 import Foto from "./pages/services/Foto";
+import { Maklarfoto, Tours360, Utsiktsfoto } from "./pages/services/PhotoFocus";
 import Film from "./pages/services/Film";
 import Ytmodeller from "./pages/services/Ytmodeller";
 import Modeller3D from "./pages/services/Modeller3D";
@@ -19,6 +20,9 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/gdpr" element={<GDPRPolicy />} />
           <Route path="/tjanster/foto" element={<Foto />} />
+          <Route path="/tjanster/utsiktsfoto" element={<Utsiktsfoto />} />
+          <Route path="/tjanster/maklarfoto" element={<Maklarfoto />} />
+          <Route path="/tjanster/360" element={<Tours360 />} />
           <Route path="/tjanster/film" element={<Film />} />
           <Route path="/tjanster/ytmodeller" element={<Ytmodeller />} />
           <Route path="/tjanster/3d-modeller" element={<Modeller3D />} />
