@@ -76,7 +76,7 @@ export const translations = {
       description1:
         "Vi är specialister på drönartjänster med över 10 års erfarenhet av att identifiera applikationer och leverera skräddarsydda lösningar till våra kunder. Sedan starten 2015 har vi haft en tydlig vision: att ligga i framkant när det gäller innovation, pris och kvalitet. Därför arbetar vi med modern, diversifierad utrustning som kan anpassas efter både budget och behov.",
       description2:
-        "Vi innehar alla nödvändiga tillstånd och försäkringar som krävs för att flyga drönare och tar alltid hänsyn till regler och risker. Vi finns i Stockholm och Linköping men utför uppdrag över hela landet. Du är alltid välkommen att kontakta oss för att bolla idéer!",
+        "Vi innehar alla nödvändiga tillstånd och försäkringar som krävs för att flyga drönare och tar alltid hänsyn till regler och risker. Vi finns i Stockholm men utför uppdrag över hela landet. Du är alltid välkommen att kontakta oss för att bolla idéer!",
     },
     serviceCards: {
       photo: {
@@ -552,7 +552,7 @@ export const translations = {
       description1:
         "We are specialists in drone services with many years of experience in identifying applications and developing solutions for customers. We started in 2015 with the vision of being at the forefront when it comes to innovation, price, and quality. Our equipment is therefore modern and diversified to adapt to the customer's budget and needs.",
       description2:
-        "We hold all necessary permits and insurances required to fly drones and always take regulations and risks into account. We are based in Stockholm and Linköping but carry out assignments throughout the country. You are always welcome to contact us to discuss ideas!",
+        "We hold all necessary permits and insurances required to fly drones and always take regulations and risks into account. We are based in Stockholm but carry out assignments throughout the country. You are always welcome to contact us to discuss ideas!",
     },
     serviceCards: {
       photo: {
