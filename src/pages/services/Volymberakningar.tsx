@@ -4,13 +4,13 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 
 const images = [
-  { src: "/services/volym/volym-2.webp", alt: "Volymmätning av en materialhög i en 3D-modell" },
-  { src: "/services/volym/volym-1.webp", alt: "Volymberäkning i ett punktmoln" },
-  { src: "/services/volym/volym-3.webp", alt: "Volymberäkning av ett upplag" },
-  { src: "/services/volym/stracka.webp", alt: "Sträckmätning i en 3D-modell" },
-  { src: "/services/volym/volym-4.webp", alt: "Volymberäkning visad i ett punktmoln" },
-  { src: "/services/volym/volym-5.webp", alt: "Mätning av volym i en drönarmodell" },
-  { src: "/services/volym/volym-6.webp", alt: "Volymberäkning av massor i en 3D-vy" },
+  "/lovable-uploads/9430c346-15cd-48f4-a510-1b182fed9149.png",
+  "/lovable-uploads/217f8396-485c-4653-97a9-04ca5b6aef91.png",
+  "/lovable-uploads/5ef66c5f-d816-428f-bfec-d20fb7f423f0.png",
+  "/lovable-uploads/05e3c69c-650f-4ef4-b9a3-20c354eb495c.png",
+  "/lovable-uploads/087d77b6-29bb-4628-934d-b5886466e49b.png",
+  "/lovable-uploads/3abf06cd-3c32-4ea6-ab84-4bac4da157d3.png",
+  { src: "/services/volym/volym-matning.webp", alt: "Uppmätt volym i en täkt, 60 298 m³" },
 ];
 
 const Volymberakningar = () => {

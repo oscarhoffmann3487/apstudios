@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 import { Button } from "./ui/button";
@@ -10,8 +10,6 @@ import { Label } from "./ui/label";
 export default function ContactForm() {
   const { language } = useLanguage();
   const t = translations[language].contactForm;
-  const location = useLocation();
-  const presetSubject = new URLSearchParams(location.search).get("subject") ?? "";
   const [showModal, setShowModal] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -77,7 +75,7 @@ export default function ContactForm() {
 
           <div>
             <Label htmlFor="subject" className="text-white">{t.subject}</Label>
-            <Input id="subject" name="subject" type="text" required key={presetSubject} defaultValue={presetSubject} className="bg-white border-white text-black" />
+            <Input id="subject" name="subject" type="text" required className="bg-white border-white text-black" />
           </div>
 
           <div>
@@ -113,11 +111,6 @@ export default function ContactForm() {
               {t.send}
             </Button>
           </div>
-          <p className="text-center">
-            <a href="mailto:info@apstudios.se" className="text-white underline underline-offset-4">
-              {t.mailto}
-            </a>
-          </p>
         </form>
       </div>
       {showModal && (

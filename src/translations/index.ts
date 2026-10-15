@@ -52,34 +52,9 @@ export const translations = {
         description:
           "Integritetspolicy för APstudios. Så behandlar vi personuppgifter när du kontaktar oss eller beställer ett uppdrag.",
       },
-      utsiktsfoto: {
-        title: "Utsiktsfoto från balkonghöjd | APstudios",
-        description:
-          "Visa utsikten i nyproduktion genom att låta drönaren flyga upp till den planerade balkongens höjd och ta bilder. Ett balkongräcke kan även monteras i bilden för en mer verklighetstrogen känsla. Bilderna kan tas i olika väderstreck.",
-      },
-      maklarfoto: {
-        title: "Mäklarfoto | Drönarbilder för mäklare | APstudios",
-        description:
-          "Drönarbilder lämpar sig utmärkt för mäklare. Vi kan dokumentera en bostad både inifrån och utifrån med drönare och vanlig kamera. Vi kan även skapa digitala floorplans med 360 tours för att på ett interaktivt sätt kunna visa upp bostaden.",
-      },
-      bilder360: {
-        title: "360-bilder och 360-tour | APstudios",
-        description:
-          "Vi kan skapa en 360 tour där användaren kan navigera runt i 360 bilder på egen hand över webben. Detta kan användas för att på ett modernt sätt visa upp en fastighet eller miljö. Vi kan också skapa floorplans där användaren får se husets interiör i en 3D-miljö.",
-      },
-    },
-    inquiry: {
-      title: "Priser",
-      text: "Har du behov av våra tjänster eller en egen idé?",
-      priceLabel: "Pris",
-      priceValue: "Offert",
-      priceNote: "Prislista saknas. Inga priser är publicerade.",
-      button: "Begär offert",
     },
     services: {
       photo: "FLYGFOTO",
-      viewPhoto: "UTSIKTSFOTO",
-      agentPhoto: "MÄKLARFOTO",
       video: "VIDEOPRODUKTION",
       images360: "360 BILDER",
       surfaceModels: "YTMODELLER",
@@ -346,7 +321,6 @@ export const translations = {
       thanksText: "Ditt meddelande har skickats. Vi återkommer så snart vi kan.",
       consent: "Jag godkänner att mina uppgifter samlas in och sparas i enlighet med vår",
       consentLink: "integritetspolicy",
-      mailto: "Eller mejla info@apstudios.se",
     },
     cookieBanner: {
       text: "Vi använder cookies för att förbättra din upplevelse på vår webbplats. Genom att fortsätta använda webbplatsen godkänner du användningen av cookies.",
@@ -554,34 +528,9 @@ export const translations = {
         title: "GDPR | APstudios",
         description: "Privacy policy for APstudios. How we process personal data when you contact us or commission an assignment.",
       },
-      utsiktsfoto: {
-        title: "Balcony-height view photography | APstudios",
-        description:
-          "Show the view of a new development by letting the drone fly up to the planned balcony height and capture images. A balcony railing can be composited into the image for a more realistic feel. Images can be taken in different directions.",
-      },
-      maklarfoto: {
-        title: "Real-estate photography | APstudios",
-        description:
-          "Drone images are excellent for real estate agents. We can document a home both inside and outside using a drone and a regular camera. We can also create digital floor plans with 360 tours to showcase the property interactively.",
-      },
-      bilder360: {
-        title: "360 images and 360 tours | APstudios",
-        description:
-          "We can create a 360 tour that the viewer navigates on the web. It is a modern way to present a property or an environment. We can also create floor plans that show the interior in a 3D environment.",
-      },
-    },
-    inquiry: {
-      title: "Prices",
-      text: "Do you need our services, or do you have an idea of your own?",
-      priceLabel: "Price",
-      priceValue: "Quote",
-      priceNote: "No price list is published.",
-      button: "Request a quote",
     },
     services: {
       photo: "AERIAL PHOTOGRAPHY",
-      viewPhoto: "VIEW PHOTOGRAPHY",
-      agentPhoto: "AGENT PHOTOGRAPHY",
       video: "VIDEO PRODUCTION",
       images360: "360 IMAGES",
       surfaceModels: "SURFACE MODELS",
@@ -848,7 +797,6 @@ export const translations = {
       thanksText: "Your message has been received. We will get back to you soon.",
       consent: "I agree that my details are collected and stored in accordance with our",
       consentLink: "privacy policy",
-      mailto: "Or email info@apstudios.se",
     },
     cookieBanner: {
       text: "We use cookies to enhance your experience on our website. By continuing to use the website, you consent to the use of cookies.",

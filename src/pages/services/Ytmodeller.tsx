@@ -5,20 +5,18 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 
 const sectionMeta = [
-  { key: "ortofoto", image: "/services/ytmodeller/ortofoto.webp", altSv: "Ortofoto över skärgård och skog", altEn: "Orthophoto of archipelago and forest" },
-  // The old site's DTM is the colour-coded elevation image. Its file was named dsm_edited.
-  { key: "dtm", image: "/services/ytmodeller/dsm.webp", altSv: "Höjdmodell färgkodad efter höjd", altEn: "Elevation model colour-coded by height" },
-  // The old site's DSM is the bare-ground model. Its file was named DTM.jpg.
-  { key: "dsm", image: "/services/ytmodeller/dtm.webp", altSv: "Markmodell utan vegetation och byggnader", altEn: "Ground model without vegetation and buildings" },
-  { key: "konturlinjer", image: "/services/ytmodeller/konturlinjer.webp", altSv: "Höjdkurvor över en tomt", altEn: "Contour lines over a plot" },
+  { key: "ortofoto", image: "/lovable-uploads/4e712ef7-a6f2-4da9-aec3-dc83e1e0940b.png", altSv: "Ortofoto över ett bostadsområde", altEn: "Orthophoto of a residential area" },
+  { key: "dtm", image: "/lovable-uploads/09a0c538-0292-4c48-857a-37c7ad74f50c.png", altSv: "Terrängmodell färgkodad efter höjd", altEn: "Terrain model colour-coded by height" },
+  { key: "dsm", image: "/lovable-uploads/eb04d2bc-326a-4099-be2e-aa341247b64a.png", altSv: "Ytmodell med endast markytan kvar", altEn: "Surface model showing only the ground" },
+  { key: "konturlinjer", image: "/services/ytmodeller/konturlinjer.webp", altSv: "Höjdkurvor över ett område", altEn: "Contour lines over an area" },
   { key: "inmatning", image: "/lovable-uploads/cda9a75e-9bd6-4b80-9c56-7350fd00c073.png", altSv: "Inmätning av flygstöd", altEn: "Ground-control survey" },
 ] as const;
 
 const galleryImages = [
-  { src: "/services/ytmodeller/ortofoto.webp", altSv: "Ortofoto över skärgård och skog", altEn: "Orthophoto of archipelago and forest" },
-  { src: "/projects/wix/005.webp", altSv: "Ortofoto från Blaikengruvan", altEn: "Orthophoto from the Blaiken mine" },
-  { src: "/projects/wix/008.webp", altSv: "Höjdmodell från Blaikengruvan", altEn: "Elevation model from the Blaiken mine" },
-  { src: "/services/ytmodeller/konturlinjer.webp", altSv: "Höjdkurvor över en tomt", altEn: "Contour lines over a plot" },
+  { src: "/lovable-uploads/4e712ef7-a6f2-4da9-aec3-dc83e1e0940b.png", altSv: "Ortofoto över ett bostadsområde", altEn: "Orthophoto of a residential area" },
+  { src: "/services/ytmodeller/ortofoto.webp", altSv: "Ortofoto över skärgård och strand", altEn: "Orthophoto of archipelago shoreline" },
+  { src: "/lovable-uploads/09a0c538-0292-4c48-857a-37c7ad74f50c.png", altSv: "Terrängmodell färgkodad efter höjd", altEn: "Terrain model colour-coded by height" },
+  { src: "/services/ytmodeller/konturlinjer.webp", altSv: "Höjdkurvor över ett område", altEn: "Contour lines over an area" },
 ];
 
 const Ytmodeller = () => {

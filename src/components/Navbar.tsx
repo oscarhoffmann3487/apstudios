@@ -7,9 +7,6 @@ import { Button } from "./ui/button";
 
 const services = [
   { name: "FLYGFOTO", path: "/tjanster/foto", translationKey: "photo" },
-  { name: "UTSIKTSFOTO", path: "/tjanster/utsiktsfoto", translationKey: "viewPhoto" },
-  { name: "MÄKLARFOTO", path: "/tjanster/maklarfoto", translationKey: "agentPhoto" },
-  { name: "360 BILDER", path: "/tjanster/360", translationKey: "images360" },
   { name: "VIDEOPRODUKTION", path: "/tjanster/film", translationKey: "video" },
   { name: "YTMODELLER", path: "/tjanster/ytmodeller", translationKey: "surfaceModels" },
   { name: "3D MODELLER", path: "/tjanster/3d-modeller", translationKey: "models3d" },
@@ -89,7 +86,7 @@ const Navbar = () => {
                   {t.nav.services} <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
                 <div
-                  className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                  className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
                 >
                   <div className="py-1">
                     {services.map((service) => (
