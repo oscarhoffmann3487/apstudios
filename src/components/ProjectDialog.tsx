@@ -46,8 +46,15 @@ export function ProjectDialog({ project }: ProjectDialogProps) {
               {project.mediaType === "video" && (
                 <video src={project.mediaSrc} controls className="w-full rounded-lg" />
               )}
-              {project.mediaType === "iframe" && (
-                <iframe src={project.mediaSrc} className="w-full h-[400px] rounded-lg" allowFullScreen />
+              {project.mediaType === "iframe" && project.mediaSrc && (
+                <iframe
+                  src={project.mediaSrc}
+                  title={item.title}
+                  className="w-full h-[400px] rounded-lg"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
               )}
             </div>
 
