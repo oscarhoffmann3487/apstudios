@@ -36,10 +36,16 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-bold mb-6 border-b border-white/20 pb-2">{t.footer.info.title}</h3>
           <div className="space-y-2 text-sm text-gray-300">
-            <p>{t.footer.info.address}: Kunskapslänken 94</p>
-            <p>{t.footer.info.postAddress}: 583 28 Linköping</p>
+            <p>{t.footer.info.address}: Hagavägen 10</p>
+            <p>{t.footer.info.postAddress}: 169 69 Solna</p>
             <p>{t.footer.info.email}: <a href="mailto:info@apstudios.se" className="hover:underline">info@apstudios.se</a></p>
             <p>{t.footer.info.phone}: 072-544 88 60</p>
+            <p className="pt-2">
+              {t.footer.network}{" "}
+              <a href="https://platskoll.se" target="_blank" rel="noopener noreferrer" className="underline">
+                Platskoll.se
+              </a>
+            </p>
             <div className="flex items-center justify-between mt-4">
               <a href="/gdpr" className="hover:underline">GDPR</a>
             </div>

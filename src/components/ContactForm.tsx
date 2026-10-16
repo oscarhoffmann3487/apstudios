@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 import { Button } from "./ui/button";
@@ -37,7 +38,7 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="py-16 min-h-[600px] relative bg-cover bg-center bg-fixed"
+      className="py-16 min-h-[600px] relative scroll-mt-20 bg-cover bg-center bg-fixed"
       style={{
         backgroundImage:
           "url('lovable-uploads/c01f5521-3595-4db0-81df-f077b17c7643.png')",
@@ -85,6 +86,24 @@ export default function ContactForm() {
           <div>
             <Label htmlFor="message" className="text-white">{t.message}</Label>
             <Textarea id="message" name="message" required className="bg-white border-white text-black min-h-[150px]" />
+          </div>
+
+          <div className="flex items-start gap-3">
+            <input
+              id="consent"
+              name="consent"
+              type="checkbox"
+              required
+              value="ja"
+              className="mt-1 h-4 w-4"
+            />
+            <Label htmlFor="consent" className="text-white leading-snug">
+              {t.consent}{" "}
+              <Link to="/gdpr" className="underline">
+                {t.consentLink}
+              </Link>
+              .
+            </Label>
           </div>
 
           <div className="flex justify-center">

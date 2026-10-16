@@ -6,6 +6,53 @@ export const translations = {
       projects: "PROJEKT",
       contact: "KONTAKT",
     },
+    seo: {
+      home: {
+        title: "Prisvärda drönartjänster över hela Sverige | APstudios",
+        description:
+          "Vi erbjuder kompletta lösningar för drönarfoto, videoproduktion, 360 tours, inspektioner, ortofoton, ytmodeller, 3D-modeller, inmätning och volymberäkningar. Vi på APstudios är specialister på drönartjänster och konkurrenskraftiga på pris, innovation och kvalitet.",
+      },
+      foto: {
+        title: "Drönarbilder | Flygfoto | 360 Bilder | APstudios",
+        description:
+          "Med bilder från drönare får du ett helt nytt perspektiv. Fastigheter är ett utmärkt motiv att skildra från ovan. Bilder från balkonghöjder för att visa utsikten redan innan en byggnad är uppförd är ett bra användningsområde. Eller varför inte göra ett fotomontage för att visa hur planerad bebyggelse passar in i landskapet?",
+      },
+      film: {
+        title: "Videoproduktion | Filmproduktion | APstudios",
+        description:
+          "Behöver ni en säljande film för en fastighet eller ett varumärke? Med videoklipp både från marken och från luften får filmen en häftig känsla. Vi kan producera en hel film från början till slut med klippning, musik och grafik. Vi kan även leverera flygfilm till en större produktion som vill ha ett unikt perspektiv.",
+      },
+      ytmodeller: {
+        title: "Ortofoton | Ytmodeller | Höjdkurvor | Inmätning | APstudios",
+        description:
+          "Vi kan leverera ortofoton, ytmodeller och höjdkurvor med hög noggrannhet. Ortofoton från drönare ger en betydligt högre detaljrikedom än Lantmäteriets kartor. När det kommer till ytmodeller kan vi ta fram både DTM och DSM. Konturlinjer kan tas fram med önskade höjdintervaller och användas i CAD-program.",
+      },
+      modeller3d: {
+        title: "3D modeller | Punktmoln | Visualisering | APstudios",
+        description:
+          "Vi kan leverera 3D-modeller och punktmoln. Punktmolnen kan klassificeras med avancerade algoritmer för att exempelvis ta bort vegetation. 3D modeller kan användas till solstudier och visualisering i olika sammanhang. En 3D modell av en fastighet kan även kompletteras med laserskanning av insidan för att skapa en digital tvilling.",
+      },
+      volym: {
+        title: "Volymberäkningar | Bergtäkter | Flis | Stockhögar | APstudios",
+        description:
+          "Företag med stora inventarier kan dra nytta av att enkelt kunna göra noggranna volymberäkningar. Oavsett om det handlar om flis, stockhögar eller bergtäkter har vi smarta lösningar. Vi kan leverera ett inmätt punktmoln där kunden får tillgång direkt över webben och kan ta mått.",
+      },
+      inspektioner: {
+        title: "Inspektioner | Industrier | Fastigheter | APstudios",
+        description:
+          "Höghöjdsinspektion är ofta dyrt, svårt och ibland farligt men med drönare blir det enkelt och effektivt. Skorstenar, master, kraftledningar, broar, fastigheter och industrier är exempel på perfekta objekt för drönarinspektion. Leveransen kan vara bilder, film, 3D modeller eller högupplösta och mätbara ortofoton över fasader och tak.",
+      },
+      projekt: {
+        title: "Projekt | Referenser | Uppdrag | Exempel | APstudios",
+        description:
+          "Vi är specialister på drönartjänster och har många års erfarenhet av att identifiera applikationer och ta fram lösningar till kunder. Vi startade 2015 med visionen att ligga i framkant när det kommer till innovation, pris och kvalitet. Vår utrustning är därför modern och diversifierad för att kunna anpassas till kundens budget och behov.",
+      },
+      gdpr: {
+        title: "GDPR | APstudios",
+        description:
+          "Integritetspolicy för APstudios. Så behandlar vi personuppgifter när du kontaktar oss eller beställer ett uppdrag.",
+      },
+    },
     services: {
       photo: "FLYGFOTO",
       video: "VIDEOPRODUKTION",
@@ -29,7 +76,7 @@ export const translations = {
       description1:
         "Vi är specialister på drönartjänster med över 10 års erfarenhet av att identifiera applikationer och leverera skräddarsydda lösningar till våra kunder. Sedan starten 2015 har vi haft en tydlig vision: att ligga i framkant när det gäller innovation, pris och kvalitet. Därför arbetar vi med modern, diversifierad utrustning som kan anpassas efter både budget och behov.",
       description2:
-        "Vi innehar alla nödvändiga tillstånd och försäkringar som krävs för att flyga drönare och tar alltid hänsyn till regler och risker. Vi finns i Stockholm och Linköping men utför uppdrag över hela landet. Du är alltid välkommen att kontakta oss för att bolla idéer!",
+        "Vi innehar alla nödvändiga tillstånd och försäkringar som krävs för att flyga drönare och tar alltid hänsyn till regler och risker. Vi finns i Stockholm men utför uppdrag över hela landet. Du är alltid välkommen att kontakta oss för att bolla idéer!",
     },
     serviceCards: {
       photo: {
@@ -113,6 +160,7 @@ export const translations = {
         email: "Email",
         phone: "Tel",
       },
+      network: "Vi är anslutna till det rikstäckande nätverket för drönartjänster:",
     },
     servicePage: {
       imageAlt: "bild",
@@ -121,7 +169,7 @@ export const translations = {
       foto: {
         title: "FOTO",
         description:
-          "Med drönarbilder kan du skildra olika motiv från ett helt nytt perspektiv. Detta öppnar upp möjligheter i en mängd olika branscher. I fastighetsbranschen är drönarbilder väldigt relevant då man får ett helhetsintryck av både tomt och byggnad. Genom att ta utsiktsfoton kan man vid nyproduktion marknadsföra balkongutsikter från olika våningsplan. Vi kan även fota interiör från marken för att komplettera drönarbilderna, vilket passar perfekt för exempelvis mäklare.",
+          "Med drönarbilder kan du skildra olika motiv från ett helt nytt perspektiv. Detta öppnar upp möjligheter i en mängd olika branscher. I fastighetsbranschen är drönarbilder väldigt relevant då man får ett helhetsintryck av både tomt och byggnad. Genom att ta utsiktsfoton kan man vid nyproduktion marknadsföra balkongutsikter från olika våningsplan. Vi kan även fota interiör från marken för att komplettera drönarbilderna, vilket passar perfekt för exempelvis mäklare. Fotomontage lämpar sig väl för att visa hur planerad bebyggelse passar in i landskapet. Detta kan med fördel användas av arkitekter eller exploatörer. En 360 tour likt Google Street View låter användaren vandra runt i en virtuell värld och upptäcka en miljö eller fastighet.",
         sections: {
           utsiktsfoto: {
             title: "UTSIKTSFOTO",
@@ -151,6 +199,11 @@ export const translations = {
           landskapsfoto: {
             title: "LANDSKAPSFOTO",
             description: "Har du ett vackert motiv du vill fotografera? Vi fotar landskap och arkitektur på beställning.",
+          },
+          bilder360: {
+            title: "360 BILDER",
+            description:
+              "Vi kan skapa en 360 tour där användaren kan navigera runt i 360 bilder på egen hand över webben. Detta kan användas för att på ett modernt sätt visa upp en fastighet eller miljö. Vi kan också skapa floorplans där användaren får se husets interiör i en 3D-miljö.",
           },
         },
       },
@@ -214,6 +267,9 @@ export const translations = {
       },
       volymberakningar: {
         title: "VOLYMBERÄKNINGAR",
+        lead:
+          "Volymberäkningar går att utföra i de punktmoln som skapas och ligger till grund för en 3D-modell. Det kan handla om utfyllnad eller avlägsning av massor. En volymberäkning av till exempel trädstammar kan vara ett nyttigt verktyg för att uppskatta värdet. Även beräkningar som sträckor, areor och vinklar på terrängen kan utföras i punktmoln. Vi ger kunden tillgång till materialet direkt över webben så att önskade mått enkelt kan tas, eller som fil om det föredras. Volymberäkningar i punktmoln skapade med drönare är både snabbare, smidigare och billigare än traditionella inmätningsmetoder.",
+        videoTitle: "Ta gärna en titt på vår instruktionsvideo!",
         description:
           "Med hjälp av drönare och avancerad mjukvara kan vi snabbt och effektivt beräkna volymer av olika material. Våra volymberäkningar är idealiska för bergtäkter, grustag, flishögar och andra typer av materialhögar. Genom att använda fotogrammetri skapar vi exakta 3D-modeller som ger noggranna mätresultat. Detta gör det möjligt att:\n\n    • Få snabb överblick över materialvolymer\n    • Spåra förändringar över tid\n    • Optimera lagerhantering\n    • Minska mätkostnader\n    • Få tillgång till mätdata direkt via webben\n    \n    Tekniken är särskilt användbar för företag som behöver regelbunden inventering av stora materiallager.",
         accurate: {
@@ -263,6 +319,8 @@ export const translations = {
       send: "Skicka meddelande",
       thanksTitle: "Tack!",
       thanksText: "Ditt meddelande har skickats. Vi återkommer så snart vi kan.",
+      consent: "Jag godkänner att mina uppgifter samlas in och sparas i enlighet med vår",
+      consentLink: "integritetspolicy",
     },
     cookieBanner: {
       text: "Vi använder cookies för att förbättra din upplevelse på vår webbplats. Genom att fortsätta använda webbplatsen godkänner du användningen av cookies.",
@@ -425,6 +483,52 @@ export const translations = {
       projects: "PROJECTS",
       contact: "CONTACT",
     },
+    seo: {
+      home: {
+        title: "Affordable drone services across Sweden | APstudios",
+        description:
+          "We offer complete solutions for drone photography, video production, 360 tours, inspections, orthophotos, surface models, 3D models, surveying and volume calculations. APstudios specialises in drone services and competes on price, innovation and quality.",
+      },
+      foto: {
+        title: "Drone images | Aerial photography | 360 images | APstudios",
+        description:
+          "Drone images give you a completely new perspective. Properties are an excellent subject to capture from above. Images from balcony height can show the view before a building is constructed, and photomontages can show how planned development fits into the landscape.",
+      },
+      film: {
+        title: "Video production | Film production | APstudios",
+        description:
+          "Need a promotional film for a property or a brand? Clips from both the ground and the air give the film a striking feel. We can produce an entire film, with editing, music and graphics, or deliver aerial footage to a larger production.",
+      },
+      ytmodeller: {
+        title: "Orthophotos | Surface models | Contours | Surveying | APstudios",
+        description:
+          "We deliver orthophotos, surface models and contour lines with high accuracy. Drone orthophotos are far more detailed than Lantmäteriet maps. We produce both DTM and DSM, and contour lines at the interval you need for CAD.",
+      },
+      modeller3d: {
+        title: "3D models | Point clouds | Visualisation | APstudios",
+        description:
+          "We deliver 3D models and point clouds. Point clouds can be classified to remove vegetation, for example. 3D models are used for solar studies and visualisation, and a property model can be combined with interior laser scanning to create a digital twin.",
+      },
+      volym: {
+        title: "Volume calculations | Quarries | Wood chips | Log piles | APstudios",
+        description:
+          "Companies with large stockpiles can make accurate volume calculations with ease. Whether it is wood chips, log piles or quarries, we have a practical solution and can deliver a measured point cloud in the browser.",
+      },
+      inspektioner: {
+        title: "Inspections | Industry | Properties | APstudios",
+        description:
+          "High-altitude inspection is often expensive, difficult and sometimes dangerous. With a drone it becomes straightforward. Chimneys, masts, power lines, bridges, properties and industrial sites are typical subjects. Delivery can be images, film, 3D models or measurable orthophotos of facades and roofs.",
+      },
+      projekt: {
+        title: "Projects | References | Assignments | APstudios",
+        description:
+          "We specialise in drone services and have many years of experience identifying applications and developing solutions for clients. We started in 2015 with the aim of leading on innovation, price and quality, and our equipment is modern and varied so it can match a client's budget and needs.",
+      },
+      gdpr: {
+        title: "GDPR | APstudios",
+        description: "Privacy policy for APstudios. How we process personal data when you contact us or commission an assignment.",
+      },
+    },
     services: {
       photo: "AERIAL PHOTOGRAPHY",
       video: "VIDEO PRODUCTION",
@@ -448,7 +552,7 @@ export const translations = {
       description1:
         "We are specialists in drone services with many years of experience in identifying applications and developing solutions for customers. We started in 2015 with the vision of being at the forefront when it comes to innovation, price, and quality. Our equipment is therefore modern and diversified to adapt to the customer's budget and needs.",
       description2:
-        "We hold all necessary permits and insurances required to fly drones and always take regulations and risks into account. We are based in Stockholm and Linköping but carry out assignments throughout the country. You are always welcome to contact us to discuss ideas!",
+        "We hold all necessary permits and insurances required to fly drones and always take regulations and risks into account. We are based in Stockholm but carry out assignments throughout the country. You are always welcome to contact us to discuss ideas!",
     },
     serviceCards: {
       photo: {
@@ -532,6 +636,7 @@ export const translations = {
         email: "Email",
         phone: "Phone",
       },
+      network: "We are part of the nationwide drone-services network:",
     },
     servicePage: {
       imageAlt: "image",
@@ -540,7 +645,7 @@ export const translations = {
       foto: {
         title: "PHOTOGRAPHY",
         description:
-          "With drone images you can capture subjects from a whole new perspective. This opens opportunities in many industries. In real estate, drone images are highly relevant as they give an overall impression of both the plot and the building. Balcony-view images from new developments can be used to market views from different floor levels before construction. We also shoot interiors from the ground to complement the aerial images — perfect for real estate agents.",
+          "With drone images you can capture subjects from a whole new perspective. This opens opportunities in many industries. In real estate, drone images are highly relevant as they give an overall impression of both the plot and the building. Balcony-view images from new developments can be used to market views from different floor levels before construction. We also shoot interiors from the ground to complement the aerial images — perfect for real estate agents. Photomontages are a good way to show how planned development will sit in the landscape, and they are useful for architects and developers. A 360 tour, similar to Google Street View, lets the viewer walk through a virtual world and explore a place or a property.",
         sections: {
           utsiktsfoto: {
             title: "VIEW PHOTOGRAPHY",
@@ -570,6 +675,11 @@ export const translations = {
           landskapsfoto: {
             title: "LANDSCAPE PHOTOGRAPHY",
             description: "Have a beautiful subject you want photographed? We shoot landscapes and architecture on request.",
+          },
+          bilder360: {
+            title: "360 IMAGES",
+            description:
+              "We can create a 360 tour that the viewer navigates on the web. It is a modern way to present a property or an environment. We can also create floor plans that show the interior in a 3D environment.",
           },
         },
       },
@@ -633,6 +743,9 @@ export const translations = {
       },
       volymberakningar: {
         title: "VOLUME CALCULATIONS",
+        lead:
+          "Volume calculations can be made in the point clouds that form the basis of a 3D model. That can mean fill or the removal of material. Calculating the volume of tree trunks, for example, is a useful way to estimate value. Distances, areas and angles on the terrain can also be measured in the point cloud. We give the client access to the material directly on the web so the measurements they need are easy to take, or as a file if they prefer. Volume calculations in drone point clouds are faster, simpler and less expensive than traditional surveying.",
+        videoTitle: "Take a look at our instruction video.",
         description:
           "Using drones and advanced software we can quickly and efficiently calculate volumes of different materials. Our volume calculations are ideal for quarries, gravel pits, wood chip piles and other material stockpiles. Using photogrammetry we create accurate 3D models that provide precise measurement results. This makes it possible to:\n\n    • Get a quick overview of material volumes\n    • Track changes over time\n    • Optimize inventory management\n    • Reduce measurement costs\n    • Access measurement data directly via the web\n    \n    The technology is especially useful for companies that need regular inventory of large material stockpiles.",
         accurate: {
@@ -682,6 +795,8 @@ export const translations = {
       send: "Send message",
       thanksTitle: "Thank you!",
       thanksText: "Your message has been received. We will get back to you soon.",
+      consent: "I agree that my details are collected and stored in accordance with our",
+      consentLink: "privacy policy",
     },
     cookieBanner: {
       text: "We use cookies to enhance your experience on our website. By continuing to use the website, you consent to the use of cookies.",

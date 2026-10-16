@@ -2,12 +2,12 @@
 
 > Professionella drönartjänster i Sverige — flygfoto, videoproduktion, 3D-modeller, ortofoton, volymberäkningar och inspektioner.
 
-APstudios är specialister på drönartjänster sedan 2015, baserade i Stockholm och Linköping med uppdrag i hela landet.
+APstudios är specialister på drönartjänster sedan 2015, baserade i Stockholm med uppdrag i hela landet.
 
 ## Pages
 
 - [Hem](/): Översikt över tjänster, projekt och kontakt.
-- [Flygfoto](/tjanster/foto): Utsiktsfoto, fotomontage, fastighets- och mäklarfoto.
+- [Flygfoto](/tjanster/foto): Utsiktsfoto, fotomontage, fastighets- och mäklarfoto samt 360-bilder.
 - [Videoproduktion](/tjanster/film): Flygfilm och markbaserad film med gimbal.
 - [Ortofoton & Ytmodeller](/tjanster/ytmodeller): Ortofoton, DTM, DSM och konturlinjer.
 - [3D-modeller](/tjanster/3d-modeller): Punktmoln, 3D-modeller och digitala tvillingar.

@@ -1,4 +1,5 @@
 import ServicePage from "@/components/ServicePage";
+import { Seo } from "@/components/Seo";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 
@@ -9,13 +10,18 @@ const sectionMeta = [
   { key: "maklarfoto", imageSrc: "/lovable-uploads/d3daeb2a-5100-485e-b15d-9324a92ff1f0.png" },
   { key: "evenemang", imageSrc: "/lovable-uploads/50c1a4e4-1c78-482b-8f2d-ea8d422dc5c3.png" },
   { key: "landskapsfoto", imageSrc: "/lovable-uploads/d1c31bcf-d6a7-4ed7-8e5d-bcc048891161.png" },
+  { key: "bilder360", imageSrc: "/services/foto/360-tour.webp" },
 ] as const;
 
 const Foto = () => {
   const { language } = useLanguage();
-  const t = translations[language].servicePages.foto;
+  const copy = translations[language];
+  const t = copy.servicePages.foto;
+  const seo = copy.seo.foto;
 
   return (
+    <>
+    <Seo title={seo.title} description={seo.description} path="/tjanster/foto" />
     <ServicePage
       title={t.title}
       description={t.description}
@@ -49,6 +55,7 @@ const Foto = () => {
         </div>
       </div>
     </ServicePage>
+    </>
   );
 };
 

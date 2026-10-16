@@ -1,4 +1,5 @@
 import ServicePage from "@/components/ServicePage";
+import { Seo } from "@/components/Seo";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 
@@ -10,13 +11,20 @@ const images = [
   "/lovable-uploads/17f25583-1430-4e02-a812-e048cf591f57.png",
   "/lovable-uploads/99600917-39a3-4938-a526-75dd031a0226.png",
   "/lovable-uploads/38365479-74a9-4de1-9603-9bf835b935fb.png",
+  { src: "/services/inspektion/dji-0031.webp", alt: "Närbild av antenner och utrustning i en mast" },
+  { src: "/services/inspektion/dji-0036.webp", alt: "Antenner på en telemast fotograferade med drönare" },
+  { src: "/services/inspektion/enskede-tak.webp", alt: "Tak på Enskede gårds gymnasium" },
 ];
 
 const Inspektioner = () => {
   const { language } = useLanguage();
-  const t = translations[language].servicePages.inspektioner;
+  const copy = translations[language];
+  const t = copy.servicePages.inspektioner;
+  const seo = copy.seo.inspektioner;
 
   return (
+    <>
+    <Seo title={seo.title} description={seo.description} path="/tjanster/inspektioner" />
     <ServicePage title={t.title} description={t.description} images={images}>
       <div className="space-y-12 text-white">
         <div>
@@ -41,6 +49,7 @@ const Inspektioner = () => {
         </div>
       </div>
     </ServicePage>
+    </>
   );
 };
 

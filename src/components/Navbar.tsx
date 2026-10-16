@@ -39,9 +39,14 @@ const Navbar = () => {
 
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    const element = document.getElementById('contact');
+    setIsOpen(false);
+    if (location.pathname !== "/") {
+      navigate("/#contact");
+      return;
+    }
+    const element = document.getElementById("contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -206,13 +211,12 @@ const Navbar = () => {
             >
               {t.nav.projects}
             </Link>
-            <a
-              href="#contact"
-              className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
+            <button
+              onClick={handleContactClick}
+              className="hover:text-primary block w-full text-left px-3 py-2 rounded-md text-base font-medium"
             >
               {t.nav.contact}
-            </a>
+            </button>
             <div className="group relative inline-block">
               <Button
                 variant="ghost"

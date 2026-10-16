@@ -1,14 +1,18 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Seo } from "@/components/Seo";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 
 const GDPRPolicy = () => {
   const { language } = useLanguage();
-  const t = translations[language].gdpr;
+  const copy = translations[language];
+  const t = copy.gdpr;
+  const seo = copy.seo.gdpr;
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo title={seo.title} description={seo.description} path="/gdpr" />
       <Navbar />
       <div className="pt-20 px-4">
         <div className="max-w-3xl mx-auto py-16">

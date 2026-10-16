@@ -6,13 +6,18 @@ import { translations } from "@/translations";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { type CarouselApi } from "@/components/ui/carousel";
 
+export type ServiceImage = string | { src: string; alt: string };
+
 interface ServicePageProps {
   title: string;
   description?: string;
-  images?: string[];
+  images?: ServiceImage[];
   children?: React.ReactNode;
   beforeContent?: React.ReactNode;
 }
+
+const imageSrc = (image: ServiceImage) => (typeof image === "string" ? image : image.src);
+const imageAltText = (image: ServiceImage, fallback: string) => (typeof image === "string" ? fallback : image.alt);
 
 const ServicePage = ({ title, description, images, children, beforeContent }: ServicePageProps) => {
   const { language } = useLanguage();
@@ -52,8 +57,8 @@ const ServicePage = ({ title, description, images, children, beforeContent }: Se
                   <CarouselItem key={index}>
                     <div className="w-full h-[60vh] relative">
                       <img
-                        src={image}
-                        alt={`${title} – ${imageAlt} ${index + 1}`}
+                        src={imageSrc(image)}
+                        alt={imageAltText(image, `${title} – ${imageAlt} ${index + 1}`)}
                         className="w-full h-full object-cover"
                       />
                     </div>
