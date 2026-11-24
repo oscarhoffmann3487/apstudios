@@ -110,7 +110,7 @@ export default function Projects() {
     <div className="min-h-screen bg-white">
       <Seo title={seo.title} description={seo.description} path="/projekt" />
       <Navbar />
-      <main className="pt-16">
+      <main className="pt-[calc(4rem+env(safe-area-inset-top))]">
         <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
             <div>
