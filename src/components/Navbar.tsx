@@ -16,6 +16,7 @@ const services = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -37,9 +38,14 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+    setIsLangOpen(false);
+  };
+
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    setIsOpen(false);
+    closeMenu();
     if (location.pathname !== "/") {
       navigate("/#contact");
       return;
@@ -143,8 +149,12 @@ const Navbar = () => {
           </div>
           <div className="md:hidden">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => {
+                setIsOpen((open) => !open);
+                setIsLangOpen(false);
+              }}
               className="inline-flex items-center justify-center p-2 rounded-md focus:outline-none"
+              aria-expanded={isOpen}
             >
               <span className="sr-only">Öppna meny</span>
               {!isOpen ? (
@@ -184,13 +194,11 @@ const Navbar = () => {
       </div>
       {isOpen && (
         <div className="md:hidden">
-          <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 ${
-            isScrolled ? "bg-white" : "bg-black"
-          }`}>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white text-gray-900 shadow-lg">
             <Link
               to="/#top"
-              className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
+              className="hover:text-primary hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium text-gray-900"
+              onClick={closeMenu}
             >
               {t.nav.home}
             </Link>
@@ -198,50 +206,59 @@ const Navbar = () => {
               <Link
                 key={service.path}
                 to={service.path}
-                className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsOpen(false)}
+                className="hover:text-primary hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium text-gray-900"
+                onClick={closeMenu}
               >
                 {t.services[service.translationKey]}
               </Link>
             ))}
             <Link
               to="/projekt"
-              className="hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
+              className="hover:text-primary hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium text-gray-900"
+              onClick={closeMenu}
             >
               {t.nav.projects}
             </Link>
             <button
               onClick={handleContactClick}
-              className="hover:text-primary block w-full text-left px-3 py-2 rounded-md text-base font-medium"
+              className="hover:text-primary hover:bg-gray-100 block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-900"
             >
               {t.nav.contact}
             </button>
-            <div className="group relative inline-block">
-              <Button
-                variant="ghost"
-                className="w-full justify-start"
-              >
-                <Globe className="h-4 w-4 mr-2" />
-                {language.toUpperCase()}
-              </Button>
-              <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="py-1">
-                  <button
-                    onClick={() => setLanguage('sv')}
-                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Svenska
-                  </button>
-                  <button
-                    onClick={() => setLanguage('en')}
-                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    English
-                  </button>
-                </div>
+            <button
+              type="button"
+              onClick={() => setIsLangOpen((open) => !open)}
+              className="hover:bg-gray-100 flex w-full items-center px-3 py-2 rounded-md text-base font-medium text-gray-900"
+              aria-expanded={isLangOpen}
+            >
+              <Globe className="h-4 w-4 mr-2" />
+              {language === "sv" ? "Svenska" : "English"}
+              <ChevronDown className={`ml-auto h-4 w-4 transition-transform ${isLangOpen ? "rotate-180" : ""}`} />
+            </button>
+            {isLangOpen && (
+              <div className="mx-3 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setLanguage("sv");
+                    setIsLangOpen(false);
+                  }}
+                  className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Svenska
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setLanguage("en");
+                    setIsLangOpen(false);
+                  }}
+                  className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  English
+                </button>
               </div>
-            </div>
+            )}
           </div>
         </div>
       )}
