@@ -43,7 +43,7 @@ const ServicePage = ({ title, description, images, children, beforeContent }: Se
   return (
     <div className="min-h-screen flex flex-col bg-[#222324]">
       <Navbar />
-      <main className="flex-grow pt-16">
+      <main className="flex-grow pt-[calc(4rem+env(safe-area-inset-top))]">
         {beforeContent}
         {images && images.length > 0 && (
           <div className="w-full h-[60vh] relative mb-8">
