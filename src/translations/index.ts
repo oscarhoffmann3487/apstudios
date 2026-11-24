@@ -474,6 +474,11 @@ export const translations = {
       responsibilityText:
         "APstudios är personuppgiftsansvarig, vilket innebär att vi är ansvariga för hur dina personuppgifter behandlas och att dina rättigheter tas tillvara.",
     },
+    notFound: {
+      title: "Sidan hittades inte",
+      text: "Adressen finns inte. Gå tillbaka till startsidan.",
+      home: "Till startsidan",
+    },
   },
 
   en: {
@@ -913,6 +918,11 @@ export const translations = {
       responsibilityTitle: "Responsibility",
       responsibilityText:
         "APstudios is the data controller, which means that we are responsible for how your personal data is processed and that your rights are safeguarded.",
+    },
+    notFound: {
+      title: "Page not found",
+      text: "That address does not exist. Go back to the homepage.",
+      home: "Back to the homepage",
     },
   },
 };

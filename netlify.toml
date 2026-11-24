@@ -4,3 +4,10 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Rewrite unknown paths to the SPA shell. Netlify still serves real files
+# in dist (JS, CSS, images) because this rule is not forced.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
