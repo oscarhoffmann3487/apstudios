@@ -14,7 +14,7 @@ const GDPRPolicy = () => {
     <div className="min-h-screen bg-white">
       <Seo title={seo.title} description={seo.description} path="/gdpr" />
       <Navbar />
-      <div className="pt-20 px-4">
+      <div className="pt-[calc(5rem+env(safe-area-inset-top))] px-4">
         <div className="max-w-3xl mx-auto py-16">
           <h1 className="text-4xl font-bold mb-8">{t.pageTitle}</h1>
 

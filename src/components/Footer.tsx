@@ -7,7 +7,7 @@ const Footer = () => {
   const t = translations[language];
 
   return (
-    <footer className="bg-[#222324] text-white py-16">
+    <footer className="bg-[#222324] text-white pt-16 pb-[calc(4rem+env(safe-area-inset-bottom))]">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
           <h3 className="text-xl font-bold mb-6 border-b border-white/20 pb-2">{t.footer.about.title}</h3>

@@ -36,15 +36,21 @@ export default function ContactForm() {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-16 min-h-[600px] relative scroll-mt-20 bg-cover bg-center bg-fixed"
-      style={{
-        backgroundImage:
-          "url('lovable-uploads/c01f5521-3595-4db0-81df-f077b17c7643.png')",
-      }}
-    >
-      <div className="absolute inset-0"></div>
+    <section id="contact" className="contact-band py-16 min-h-[600px] relative scroll-mt-20">
+      {/*
+        Phones get a top-aligned crop of the same photo. Covering the full
+        form height with background-size:cover zooms a 1920×1281 landscape
+        into a narrow strip, and background-attachment:fixed makes iOS scale
+        that strip even further. md+ keeps the original fixed cover.
+      */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[70vh] max-h-[620px] md:hidden" aria-hidden="true">
+        <img
+          src="/lovable-uploads/c01f5521-3595-4db0-81df-f077b17c7643.png"
+          alt=""
+          className="h-full w-full object-cover object-[right_center]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-[#222324]" />
+      </div>
       <div className="max-w-4xl mx-auto px-4 relative z-10">
         <h2 className="text-3xl font-bold text-center mb-8 text-white">{t.title}</h2>
         <p className="text-center mb-12 text-gray-100">{t.intro}</p>
