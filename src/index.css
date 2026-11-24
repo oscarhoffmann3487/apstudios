@@ -110,3 +110,29 @@
     @apply bg-background text-foreground;
   }
 }
+
+/*
+  Contact band. Desktop (and tablets at md+) keep the original full-bleed
+  fixed cover. Phones use the <img> crop in ContactForm instead, because
+  background-attachment:fixed is broken on iOS and cover on a tall narrow
+  section only shows a pixelated slice of sky.
+*/
+.contact-band {
+  background-color: #222324;
+}
+
+@media (min-width: 768px) {
+  .contact-band {
+    background-image: url("/lovable-uploads/c01f5521-3595-4db0-81df-f077b17c7643.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
+
+@media (min-width: 768px) and (hover: none) and (pointer: coarse) {
+  .contact-band {
+    background-attachment: scroll;
+  }
+}
